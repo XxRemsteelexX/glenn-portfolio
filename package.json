@@ -1,13 +1,11 @@
 {
   "name": "app",
   "private": true,
-  "scripts": {
+   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "postinstall": "prisma generate",
-    "db:setup": "prisma db push && tsx scripts/seed.ts"
+    "lint": "next lint"
   }
 
 
