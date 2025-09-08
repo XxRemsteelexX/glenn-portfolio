@@ -3,12 +3,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && prisma db push && tsx scripts/seed.ts && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "db:setup": "prisma db push && tsx scripts/seed.ts"
+  }
 
-  },
+
   "prisma": {
     "seed": "tsx --require dotenv/config scripts/seed.ts"
   },
