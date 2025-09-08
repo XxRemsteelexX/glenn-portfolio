@@ -1,0 +1,79 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Contact {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  subject     String
+  message     String
+  phone       String?
+  company     String?
+  createdAt   DateTime @default(now())
+  status      String   @default("new") // new, read, responded
+  
+  @@map("contacts")
+}
+
+model Project {
+  id            String   @id @default(cuid())
+  name          String
+  description   String
+  longDescription String?
+  githubUrl     String?
+  liveUrl       String?
+  technologies  String[] // Array of tech stack items
+  imageUrl      String?
+  featured      Boolean  @default(false)
+  stars         Int      @default(0)
+  forks         Int      @default(0)
+  language      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  lastSyncAt    DateTime @default(now())
+  
+  @@map("projects")
+}
+
+model Skill {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  category    String   // "Programming Languages", "Frameworks", "Tools", etc.
+  proficiency String   // "Beginner", "Intermediate", "Advanced", "Expert"
+  yearsExp    Int?     // Years of experience
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  
+  @@map("skills")
+}
+
+model Resume {
+  id            String   @id @default(cuid())
+  filename      String
+  originalName  String
+  cloudStoragePath String // S3 key for the resume file
+  version       String   @default("1.0")
+  isActive      Boolean  @default(true)
+  uploadedAt    DateTime @default(now())
+  fileSize      Int?     // File size in bytes
+  
+  @@map("resumes")
+}
+
+model GitHubSync {
+  id          String   @id @default(cuid())
+  username    String   @unique @default("XxRemsteelexX")
+  lastSyncAt  DateTime @default(now())
+  totalRepos  Int      @default(0)
+  syncStatus  String   @default("pending") // pending, success, error
+  errorMsg    String?
+  
+  @@map("github_sync")
+}

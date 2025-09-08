@@ -1,0 +1,250 @@
+{
+  "personal_info": {
+    "name": "Glenn Dalbey",
+    "github_username": "XxRemsteelexX",
+    "github_url": "https://github.com/XxRemsteelexX",
+    "linkedin_url": "https://www.linkedin.com/in/glenn-dalbey-205b7a44/"
+  },
+  "education": {
+    "institution": "Western Governors University",
+    "degree": "Data Science",
+    "graduation_status": "Recent graduate (August 2025)",
+    "notable_projects": [
+      "Capstone project in multi-modal AI healthcare systems",
+      "NFL rookie statistics analysis project"
+    ]
+  },
+  "professional_background": {
+    "note": "LinkedIn profile content was not accessible for scraping",
+    "additional_info": "Web search indicates potential employment history at John Deere in Facilities Management, though this may be outdated or refer to a different individual"
+  },
+  "github_projects": [
+    {
+      "name": "Capstone_MS (Apollo Healthcare Connect)",
+      "description": "A Production-Grade Multi-Modal Deep Learning Medical Triage System developed as Western Governors University Data Science Capstone Project",
+      "technologies": [
+        "Python",
+        "PyTorch", 
+        "TensorFlow/Keras",
+        "DistilBERT (Hugging Face Transformers)",
+        "Flask",
+        "OpenCV",
+        "Albumentations",
+        "AWS S3",
+        "HTML/CSS/JavaScript"
+      ],
+      "notable_features": [
+        "Live production deployment at apollohealthcareconnect.com",
+        "93.8% combined multi-modal accuracy",
+        "98.0% burn classification accuracy", 
+        "Handles extreme class imbalance (29.7:1 ratio)",
+        "5-model ensemble architecture",
+        "Real-time inference with sub-second response times",
+        "Conservative routing protocols for patient safety",
+        "Multi-modal AI combining text and image analysis"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/Capstone_MS",
+      "primary_language": "HTML",
+      "project_type": "Original - Academic Capstone",
+      "deployment_status": "Live Production System"
+    },
+    {
+      "name": "TandemAI",
+      "description": "Local-First LLM Ensemble Orchestration Platform that enables multiple AI models to collaborate through relay, debate, and verification modes",
+      "technologies": [
+        "TypeScript",
+        "Node.js/Yarn",
+        "React/Next.js",
+        "API Integrations (OpenAI, Anthropic, Groq, etc.)",
+        "Local LLM Support (Ollama, LM Studio, vLLM)",
+        "Tauri (Desktop packaging)",
+        "Electron (Alternative packaging)"
+      ],
+      "notable_features": [
+        "4 orchestration modes: Conversation, Answer, Argumentative, Research",
+        "Universal provider support for 10+ LLM providers",
+        "Local-first privacy with offline capability",
+        "Real-time streaming and monitoring",
+        "Mix local and API providers",
+        "Export capabilities and conversation history",
+        "Drag-and-drop model reordering",
+        "Temperature control and early stopping"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/TandemAI",
+      "primary_language": "TypeScript",
+      "project_type": "Original - AI/ML Platform",
+      "deployment_status": "Development/Desktop Application"
+    },
+    {
+      "name": "NFL_Rookie_WR_1K_Analysis", 
+      "description": "Advanced Machine Learning Analysis with Feature Optimization and Temporal Validation to predict which NFL rookie wide receivers will achieve 1000+ yard receiving seasons",
+      "technologies": [
+        "Python",
+        "Jupyter Notebook",
+        "scikit-learn",
+        "XGBoost", 
+        "pandas",
+        "numpy",
+        "matplotlib/seaborn",
+        "Logistic Regression",
+        "Random Forest",
+        "Ensemble Methods"
+      ],
+      "notable_features": [
+        "90.9% ROC AUC on future data validation",
+        "Overfitting reduction from 18.5% to 0.4% gap",
+        "Feature optimization from 46 to 20 features", 
+        "Temporal validation strategy",
+        "Comprehensive data pipeline (2006-2024)",
+        "Advanced class imbalance handling",
+        "Production-ready model for draft analysis",
+        "Extensive visualization and interpretation"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis",
+      "primary_language": "Jupyter Notebook", 
+      "project_type": "Original - Academic Capstone",
+      "deployment_status": "Research/Analysis Complete"
+    },
+    {
+      "name": "amazon_optimization",
+      "description": "Linear Programming solution to optimize Amazon's multi-tier cargo distribution network, minimizing transportation costs while satisfying constraints",
+      "technologies": [
+        "Python",
+        "PuLP (Linear Programming)",
+        "CBC Solver",
+        "pandas",
+        "numpy", 
+        "Excel/openpyxl",
+        "Jupyter Notebook"
+      ],
+      "notable_features": [
+        "25.4% cost reduction through route optimization",
+        "Multi-tier network optimization (2 hubs, 3 focus cities, 65 distribution centers)",
+        "Constraint satisfaction (capacity, flow balance, demand)",
+        "Academic project for Western Governors University D605 Advanced Analytics",
+        "Complete optimization pipeline with data processing"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/amazon_optimization",
+      "primary_language": "Jupyter Notebook",
+      "project_type": "Original - Academic Assignment", 
+      "deployment_status": "Academic Project Complete"
+    },
+    {
+      "name": "NYC-Airbnb-ML-Pipeline",
+      "description": "Forked from Udacity project for building machine learning pipelines with NYC Airbnb data",
+      "technologies": [
+        "Python", 
+        "Jupyter Notebook",
+        "Machine Learning Pipeline",
+        "Data Processing"
+      ],
+      "notable_features": [
+        "ML pipeline development experience",
+        "Data preprocessing and feature engineering",
+        "Model training and validation",
+        "Udacity coursework completion"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/NYC-Airbnb-ML-Pipeline",
+      "primary_language": "Jupyter Notebook",
+      "project_type": "Forked - Educational",
+      "deployment_status": "Learning Project"
+    },
+    {
+      "name": "Deploying-a-Scalable-ML-Pipeline-with-FastAPI",
+      "description": "Forked from Udacity project focusing on ML model deployment using FastAPI framework",
+      "technologies": [
+        "Python",
+        "FastAPI", 
+        "Machine Learning Deployment",
+        "API Development",
+        "GitHub Actions",
+        "pytest",
+        "Flake8"
+      ],
+      "notable_features": [
+        "RESTful API development with FastAPI",
+        "ML model serving and inference endpoints",
+        "CI/CD pipeline with GitHub Actions", 
+        "Unit testing and code quality (pytest, flake8)",
+        "Model card documentation",
+        "Production deployment practices"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/Deploying-a-Scalable-ML-Pipeline-with-FastAPI",
+      "primary_language": "Python",
+      "project_type": "Forked - Educational",
+      "deployment_status": "Learning Project"
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": [
+      "Python",
+      "TypeScript/JavaScript", 
+      "HTML/CSS",
+      "SQL"
+    ],
+    "machine_learning_frameworks": [
+      "PyTorch",
+      "TensorFlow/Keras",
+      "scikit-learn",
+      "XGBoost", 
+      "Hugging Face Transformers"
+    ],
+    "web_technologies": [
+      "Flask",
+      "FastAPI",
+      "React/Next.js",
+      "Node.js"
+    ],
+    "data_science_tools": [
+      "pandas",
+      "numpy", 
+      "matplotlib/seaborn",
+      "Jupyter Notebook",
+      "OpenCV",
+      "Albumentations"
+    ],
+    "cloud_and_deployment": [
+      "AWS S3",
+      "GitHub Actions", 
+      "Gunicorn",
+      "Docker (implied)",
+      "Production deployment"
+    ],
+    "specialized_skills": [
+      "Multi-modal AI systems",
+      "Deep Learning", 
+      "Computer Vision",
+      "Natural Language Processing",
+      "Linear Programming/Optimization",
+      "LLM Orchestration",
+      "Healthcare AI",
+      "Sports Analytics"
+    ]
+  },
+  "project_themes": [
+    "Healthcare AI and Medical Triage Systems",
+    "AI/ML Model Orchestration and Collaboration", 
+    "Sports Analytics and Predictive Modeling",
+    "Supply Chain and Operations Optimization",
+    "Production ML Deployment and MLOps",
+    "Multi-modal AI combining text and vision",
+    "Academic Research and Capstone Projects"
+  ],
+  "notable_achievements": [
+    "Successfully deployed live production AI healthcare system",
+    "Achieved 93.8% accuracy in multi-modal medical triage",
+    "Reduced ML model overfitting by 97.8% through feature optimization", 
+    "Created innovative LLM ensemble orchestration platform",
+    "Demonstrated end-to-end ML project lifecycle management",
+    "25.4% cost reduction in supply chain optimization",
+    "Graduated from Western Governors University Data Science program"
+  ],
+  "research_interests": [
+    "Multi-modal AI systems",
+    "Healthcare applications of machine learning",
+    "AI model collaboration and ensemble methods",
+    "Production ML deployment and scalability", 
+    "Sports analytics and predictive modeling",
+    "Operations research and optimization"
+  ]
+}
