@@ -3,15 +3,29 @@ import { S3Client, PutObjectCommand, GetObjectCommand, DeleteObjectCommand } fro
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { createS3Client, getBucketConfig } from "./aws-config";
 
-const s3Client = createS3Client();
-const { bucketName, folderPrefix } = getBucketConfig();
+let s3Client: S3Client | null = null;
+let bucketConfig: { bucketName: string; folderPrefix: string } | null = null;
+
+try {
+  const config = getBucketConfig();
+  if (config) {
+    s3Client = createS3Client();
+    bucketConfig = config;
+  }
+} catch (error) {
+  console.log('AWS S3 not configured, file operations will be disabled');
+}
 
 export async function uploadFile(buffer: Buffer, fileName: string): Promise<string> {
-  const key = `${folderPrefix}${fileName}`;
+  if (!s3Client || !bucketConfig) {
+    throw new Error('S3 not configured');
+  }
+  
+  const key = `${bucketConfig.folderPrefix}${fileName}`;
   
   try {
     const command = new PutObjectCommand({
-      Bucket: bucketName,
+      Bucket: bucketConfig.bucketName,
       Key: key,
       Body: buffer,
     });
@@ -25,9 +39,13 @@ export async function uploadFile(buffer: Buffer, fileName: string): Promise<stri
 }
 
 export async function downloadFile(key: string): Promise<string> {
+  if (!s3Client || !bucketConfig) {
+    throw new Error('S3 not configured');
+  }
+  
   try {
     const command = new GetObjectCommand({
-      Bucket: bucketName,
+      Bucket: bucketConfig.bucketName,
       Key: key,
     });
     
@@ -40,9 +58,13 @@ export async function downloadFile(key: string): Promise<string> {
 }
 
 export async function deleteFile(key: string): Promise<void> {
+  if (!s3Client || !bucketConfig) {
+    throw new Error('S3 not configured');
+  }
+  
   try {
     const command = new DeleteObjectCommand({
-      Bucket: bucketName,
+      Bucket: bucketConfig.bucketName,
       Key: key,
     });
     
@@ -54,11 +76,15 @@ export async function deleteFile(key: string): Promise<void> {
 }
 
 export async function renameFile(oldKey: string, newKey: string): Promise<string> {
+  if (!s3Client || !bucketConfig) {
+    throw new Error('S3 not configured');
+  }
+  
   // S3 doesn't have a rename operation, so we need to copy and delete
   try {
     // First, get the object
     const getCommand = new GetObjectCommand({
-      Bucket: bucketName,
+      Bucket: bucketConfig.bucketName,
       Key: oldKey,
     });
     
@@ -80,7 +106,7 @@ export async function renameFile(oldKey: string, newKey: string): Promise<string
     
     // Upload to new location
     const putCommand = new PutObjectCommand({
-      Bucket: bucketName,
+      Bucket: bucketConfig.bucketName,
       Key: newKey,
       Body: buffer,
     });

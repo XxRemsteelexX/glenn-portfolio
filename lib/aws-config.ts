@@ -6,10 +6,10 @@ interface BucketConfig {
   folderPrefix: string;
 }
 
-export function getBucketConfig(): BucketConfig {
+export function getBucketConfig(): BucketConfig | null {
   const bucketName = process.env.AWS_BUCKET_NAME;
   if (!bucketName) {
-    throw new Error('AWS_BUCKET_NAME environment variable is not set');
+    return null;
   }
   
   return {
