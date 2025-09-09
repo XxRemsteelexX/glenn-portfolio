@@ -143,13 +143,13 @@ export function AboutSection() {
                 <p>
                   The turning point came when I developed Apollo Healthcare Connect - a 
                   multi-modal AI system that combines natural language processing with computer 
-                  vision to provide medical triage with 93.8% accuracy. Seeing this system 
-                  help real patients find appropriate care reinforced my commitment to 
+                  vision to provide medical triage with 93.8% accuracy. Seeing this system develop
+                  into a tool that could help real patients find appropriate care reinforced my commitment to 
                   practical, impactful AI applications.
                 </p>
                 <p>
                   Today, I specialize in bridging the gap between cutting-edge AI research 
-                  and real-world deployment, with particular expertise in healthcare applications, 
+                  and real-world deployment, with particular expertise in data analytics, 
                   multi-modal systems, and production ML pipelines.
                 </p>
               </div>
