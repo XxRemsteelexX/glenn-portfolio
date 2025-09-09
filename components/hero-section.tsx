@@ -47,7 +47,7 @@ export function HeroSection() {
             </h1>
             <p className="hero-subtitle text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               AI Engineer & Data Scientist specializing in{" "}
-              <span className="text-primary font-semibold">healthcare AI</span>,{" "}
+              <span className="text-primary font-semibold">Data Analytics</span>,{" "}
               <span className="text-primary font-semibold">multi-modal systems</span>, and{" "}
               <span className="text-primary font-semibold">production ML deployments</span>
             </p>
