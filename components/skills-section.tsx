@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -23,26 +22,6 @@ interface SkillCategory {
   icon: React.ReactNode;
   skills: Skill[];
 }
-
-const getProficiencyLevel = (proficiency: string): number => {
-  switch (proficiency.toLowerCase()) {
-    case 'expert': return 95;
-    case 'advanced': return 80;
-    case 'intermediate': return 65;
-    case 'beginner': return 40;
-    default: return 50;
-  }
-};
-
-const getProficiencyColor = (proficiency: string): string => {
-  switch (proficiency.toLowerCase()) {
-    case 'expert': return 'bg-green-500';
-    case 'advanced': return 'bg-blue-500';
-    case 'intermediate': return 'bg-yellow-500';
-    case 'beginner': return 'bg-orange-500';
-    default: return 'bg-gray-500';
-  }
-};
 
 export function SkillsSection() {
   const [skills, setSkills] = useState<Skill[]>([]);
@@ -82,21 +61,22 @@ export function SkillsSection() {
       'AI/ML Frameworks': <Brain className="w-6 h-6" />,
       'Web Frameworks': <Code className="w-6 h-6" />,
       'Cloud & Deployment': <Cloud className="w-6 h-6" />,
-      'Data & Analytics': <BarChart className="w-6 h-6" />,
+      'Data Science Libraries': <BarChart className="w-6 h-6" />,
+      'Databases': <BarChart className="w-6 h-6" />,
+      'MLOps Tools': <Brain className="w-6 h-6" />,
+      'Data Visualization': <BarChart className="w-6 h-6" />,
       'AI Specializations': <Brain className="w-6 h-6" />,
+      'Data Engineering': <BarChart className="w-6 h-6" />,
     };
 
     return Array.from(categories.entries()).map(([name, skillsList]) => ({
       name,
       icon: categoryIcons[name] || <Code className="w-6 h-6" />,
       skills: skillsList.sort((a, b) => {
-        // Sort by featured first, then by proficiency level, then by name
+        // Sort by featured first, then by years of experience (desc), then by name
         if (a.featured && !b.featured) return -1;
         if (!a.featured && b.featured) return 1;
-        const proficiencyOrder = { 'Expert': 4, 'Advanced': 3, 'Intermediate': 2, 'Beginner': 1 };
-        const aLevel = proficiencyOrder[a.proficiency as keyof typeof proficiencyOrder] || 0;
-        const bLevel = proficiencyOrder[b.proficiency as keyof typeof proficiencyOrder] || 0;
-        if (aLevel !== bLevel) return bLevel - aLevel;
+        if ((a.yearsExp || 0) !== (b.yearsExp || 0)) return (b.yearsExp || 0) - (a.yearsExp || 0);
         return a.name.localeCompare(b.name);
       })
     }));
@@ -192,20 +172,14 @@ export function SkillsSection() {
                             )}
                           </div>
                           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                            <Badge 
-                              variant="secondary" 
-                              className={`text-xs ${getProficiencyColor(skill.proficiency)} text-white`}
-                            >
-                              {skill.proficiency}
-                            </Badge>
                             {skill.yearsExp && (
-                              <span>{skill.yearsExp}y</span>
+                              <span className="font-medium">{skill.yearsExp} years</span>
                             )}
                           </div>
                         </div>
                         <Progress 
-                          value={getProficiencyLevel(skill.proficiency)} 
-                          className="h-2"
+                          value={100} 
+                          className="h-3 bg-muted"
                         />
                       </motion.div>
                     ))}
@@ -229,15 +203,15 @@ export function SkillsSection() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-primary">
-                    {skills.filter(s => s.proficiency === 'Expert').length}
+                    {skills.length}
                   </div>
-                  <div className="text-sm text-muted-foreground">Expert Skills</div>
+                  <div className="text-sm text-muted-foreground">Total Skills</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-primary">
-                    {skills.filter(s => s.proficiency === 'Advanced').length}
+                    {skills.filter(s => s.featured).length}
                   </div>
-                  <div className="text-sm text-muted-foreground">Advanced Skills</div>
+                  <div className="text-sm text-muted-foreground">Featured Skills</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-primary">
