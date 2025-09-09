@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
 GLENN'S PROFILE:
 - Data Scientist & AI/ML Engineer with 3-4 years experience (NOT 7 years)
-- Master's in Data Analytics - Data Science (WGU, graduating Aug 2025)
+- Master's in Data Analytics - Data Science (WGU, Aug 2025)
 - Bachelor's in Data Analytics (WGU, Mar 2023 - Sep 2024)
 - Associate degrees from Clinton Community College (IT/Programming, Data Analytics)
 
