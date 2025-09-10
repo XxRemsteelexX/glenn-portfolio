@@ -112,7 +112,7 @@ export function HeroSection() {
           >
             <h3 className="text-lg font-semibold mb-2">Featured Project</h3>
             <p className="text-muted-foreground mb-4">
-              Apollo Healthcare Connect - Live AI triage system serving real patients with 93.8% accuracy
+              Apollo Healthcare Connect - Live AI triage system serving patients with 93.8% accuracy
             </p>
             <div className="flex flex-wrap gap-2 justify-center">
               <Link
