@@ -106,11 +106,11 @@ export function ResumeSection() {
                   <div className="flex flex-wrap justify-center items-center gap-6 text-muted-foreground">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-4 h-4" />
-                      <span>319.830.4446</span>
+                      <span>319.233.4445</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4" />
-                      <span>dabneys4@gmail.com</span>
+                      <span>dalbeyglenn@gmail.com</span>
                     </div>
                     <Link
                       href="https://www.linkedin.com/in/glenn-dalbey-205b7a44"
@@ -140,7 +140,7 @@ export function ResumeSection() {
                     Professional Summary
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Data Science professional with <strong>Master's in Data Science</strong> and proven expertise in AI/ML implementation. 
+                    Data Science professional with <strong>Master's in Data Science and Analytics</strong> with proven expertise in AI/ML implementation. 
                     Demonstrated success deploying production healthcare systems with <strong>93.8% accuracy</strong> and developing 
                     advanced predictive models. Strong background in multi-modal AI, deep learning, and MLOps with experience 
                     serving real-world applications. Currently providing data science consulting services with focus on analytics 
