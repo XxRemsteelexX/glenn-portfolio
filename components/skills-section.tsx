@@ -172,9 +172,9 @@ export function SkillsSection() {
                             )}
                           </div>
                           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                            {skill.yearsExp && (
+                            {/*{skill.yearsExp && (
                               <span className="font-medium">{skill.yearsExp} years</span>
-                            )}
+                            )} */}
                           </div>
                         </div>
                         <Progress 
