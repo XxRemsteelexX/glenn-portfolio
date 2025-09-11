@@ -26,10 +26,10 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-muted-foreground">
             <p className="mb-2">
-              © 2025 Glenn Dalbey. Built with Next.js, TypeScript, and AI assistance.
+              © 2025 Glenn Dalbey. Built with Next.js, TypeScript.
             </p>
             <p className="text-sm">
-              Specializing in AI, Machine Learning, and Data Science Solutions
+              Specializing in Analytics, Machine Learning, and Data Science Solutions
             </p>
           </div>
         </div>
