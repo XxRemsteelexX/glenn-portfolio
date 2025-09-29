@@ -69,7 +69,8 @@ export async function POST(request: Request) {
     const resendClient = getResendClient();
     if (resendClient) {
       try {
-        await resendClient.emails.send({
+        console.log('Attempting to send email notification...');
+        const result = await resendClient.emails.send({
           from: 'Portfolio Contact <onboarding@resend.dev>',
           to: 'dalbeyglenn@gmail.com',
           subject: `New Contact: ${body.subject}`,
@@ -85,10 +86,13 @@ export async function POST(request: Request) {
             <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
           `
         });
+        console.log('Email sent successfully:', result);
       } catch (emailError) {
         console.error('Failed to send email notification:', emailError);
         // Continue even if email fails
       }
+    } else {
+      console.log('Resend client not initialized - check RESEND_API_KEY');
     }
 
     // Send SMS notification
