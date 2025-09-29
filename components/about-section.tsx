@@ -161,18 +161,36 @@ export function AboutSection() {
                 <GraduationCap className="w-6 h-6 text-blue-500" />
                 <h3 className="text-xl font-semibold">Education</h3>
               </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-medium">Master of Science, Data Science</div>
-                    <div className="text-sm text-muted-foreground">Western Governors University</div>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <div>
+                      <div className="font-medium">Master of Science, Data Science and Data Analytics</div>
+                      <div className="text-sm text-muted-foreground">Western Governors University</div>
+                    </div>
+                    <Badge variant="secondary">2025</Badge>
                   </div>
-                  <Badge variant="secondary">2025</Badge>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Advanced graduate program focused on machine learning, statistical analysis, and practical AI applications.
+                    Completed advanced capstone projects in healthcare AI and sports analytics with production deployment.
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Advanced graduate program focused on machine learning, statistical analysis, and practical AI applications. 
-                  Completed advanced capstone projects in healthcare AI and sports analytics with production deployment.
-                </p>
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <div>
+                      <div className="font-medium">Bachelor of Science, Data Analytics</div>
+                      <div className="text-sm text-muted-foreground">Western Governors University</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between mb-1">
+                    <div>
+                      <div className="font-medium">Associate of Science, IT Programming</div>
+                      <div className="text-sm text-muted-foreground">Western Governors University</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Card>
           </motion.div>

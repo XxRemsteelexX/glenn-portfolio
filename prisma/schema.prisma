@@ -74,6 +74,20 @@ model GitHubSync {
   totalRepos  Int      @default(0)
   syncStatus  String   @default("pending") // pending, success, error
   errorMsg    String?
-  
+
   @@map("github_sync")
+}
+
+model Certification {
+  id          String   @id @default(cuid())
+  name        String
+  issuer      String   // CompTIA, AWS, Udacity, etc.
+  issueDate   DateTime
+  expiryDate  DateTime?
+  credentialId String?
+  credentialUrl String?
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@map("certifications")
 }

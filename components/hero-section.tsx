@@ -126,7 +126,7 @@ export function HeroSection() {
                 </Button>
               </Link>
               <Link
-                href="https://github.com/XxRemsteelexX/Capstone_MS"
+                href="https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -7,8 +7,12 @@
   },
   "education": {
     "institution": "Western Governors University",
-    "degree": "Data Science",
-    "graduation_status": "Recent graduate (August 2025)",
+    "degree": "Master of Science in Data Science and Data Analytics",
+    "graduation_status": "Graduated 2025",
+    "additional_degrees": [
+      "Bachelor of Science in Data Analytics",
+      "Associate of Science in IT Programming"
+    ],
     "notable_projects": [
       "Capstone project in multi-modal AI healthcare systems",
       "NFL rookie statistics analysis project"
@@ -20,7 +24,7 @@
   },
   "github_projects": [
     {
-      "name": "Capstone_MS (Apollo Healthcare Connect)",
+      "name": "Apollo_Healthcare_Connect",
       "description": "A Production-Grade Multi-Modal Deep Learning Medical Triage System developed as Western Governors University Data Science Capstone Project",
       "technologies": [
         "Python",
@@ -43,7 +47,7 @@
         "Conservative routing protocols for patient safety",
         "Multi-modal AI combining text and image analysis"
       ],
-      "repo_url": "https://github.com/XxRemsteelexX/Capstone_MS",
+      "repo_url": "https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect",
       "primary_language": "HTML",
       "project_type": "Original - Academic Capstone",
       "deployment_status": "Live Production System"

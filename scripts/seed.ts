@@ -25,6 +25,16 @@ interface SkillData {
   featured: boolean;
 }
 
+interface CertificationData {
+  name: string;
+  issuer: string;
+  issueDate: Date;
+  expiryDate?: Date;
+  credentialId?: string;
+  credentialUrl?: string;
+  featured: boolean;
+}
+
 const projects: ProjectData[] = [
   {
     name: "Blue-Zones-Longevity-Analysis",
@@ -54,6 +64,15 @@ const projects: ProjectData[] = [
     language: "TypeScript"
   },
   {
+    name: "Ml-Model-Recommender",
+    description: "Automated ML model selection for tabular data. Analyzes datasets, compares preprocessing strategies, trains baselines, and provides actionable recommendations.",
+    longDescription: "Intelligent machine learning assistant that automates the model selection process for tabular datasets. Features comprehensive EDA, automatic problem type inference, smart preprocessing techniques, high-cardinality and class imbalance detection, model baseline generation with cross-validation, and exportable diagnostic reports in markdown and HTML formats.",
+    githubUrl: "https://github.com/XxRemsteelexX/Ml-Model-Recommender",
+    technologies: ["Jupyter Notebook", "Python", "Machine Learning", "AutoML", "Data Analysis", "scikit-learn", "Model Selection"],
+    featured: true,
+    language: "Jupyter Notebook"
+  },
+  {
     name: "Computer-Vision-Portfolio",
     description: "Advanced computer vision portfolio featuring GAN face generation and CNN landmark classification with production-ready implementations",
     longDescription: "Comprehensive computer vision portfolio showcasing advanced techniques including Generative Adversarial Networks for face generation and Convolutional Neural Networks for landmark classification. Features production-ready implementations with optimized performance and deployment considerations.",
@@ -63,10 +82,10 @@ const projects: ProjectData[] = [
     language: "HTML"
   },
   {
-    name: "Capstone_MS",
+    name: "Apollo_Healthcare_Connect",
     description: "Multi-modal AI healthcare triage system with deep learning models for intelligent patient routing and provider preparation",
     longDescription: "Apollo Healthcare Connect - A comprehensive AI-powered healthcare triage system that analyzes both text descriptions and medical images to provide accurate initial assessments with 93.8% accuracy. Combines DistilBERT for NLP and computer vision models for image analysis. Live production deployment serving real patients.",
-    githubUrl: "https://github.com/XxRemsteelexX/Capstone_MS",
+    githubUrl: "https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect",
     liveUrl: "https://apollohealthcareconnect.com",
     technologies: ["HTML", "Python", "PyTorch", "TensorFlow", "DistilBERT", "Flask", "AWS", "Multi-modal AI", "Healthcare AI"],
     featured: true,
@@ -158,9 +177,13 @@ const projects: ProjectData[] = [
 const skills: SkillData[] = [
   // Programming Languages
   { name: "Python", category: "Programming Languages", proficiency: "Expert", yearsExp: 4, featured: true },
+  { name: "R", category: "Programming Languages", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "TypeScript", category: "Programming Languages", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "JavaScript", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: true },
   { name: "SQL", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: false },
+  { name: "C++", category: "Programming Languages", proficiency: "Intermediate", yearsExp: 3, featured: false },
+  { name: "C#", category: "Programming Languages", proficiency: "Intermediate", yearsExp: 3, featured: false },
+  { name: "Java", category: "Programming Languages", proficiency: "Intermediate", yearsExp: 3, featured: false },
   { name: "HTML/CSS", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: false },
   
   // AI/ML Frameworks
@@ -180,12 +203,16 @@ const skills: SkillData[] = [
   { name: "AWS", category: "Cloud & Deployment", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Docker", category: "Cloud & Deployment", proficiency: "Intermediate", yearsExp: 1, featured: false },
   { name: "CI/CD", category: "Cloud & Deployment", proficiency: "Intermediate", yearsExp: 1, featured: false },
+  { name: "Weights & Biases", category: "Cloud & Deployment", proficiency: "Advanced", yearsExp: 1, featured: false },
   
   // Data & Analytics
   { name: "pandas", category: "Data & Analytics", proficiency: "Expert", yearsExp: 4, featured: true },
   { name: "numpy", category: "Data & Analytics", proficiency: "Expert", yearsExp: 4, featured: false },
+  { name: "Tableau", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Data Visualization", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 3, featured: true },
   { name: "Statistical Analysis", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 3, featured: false },
+  { name: "MongoDB", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 1, featured: false },
+  { name: "PostgreSQL", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 1, featured: false },
   
   // Specializations
   { name: "Computer Vision", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
@@ -193,6 +220,68 @@ const skills: SkillData[] = [
   { name: "Multi-modal AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Healthcare AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },
   { name: "LLM Orchestration", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: false }
+];
+
+const certifications: CertificationData[] = [
+  {
+    name: "CompTIA Data+",
+    issuer: "CompTIA",
+    issueDate: new Date("2024-02-01"),
+    expiryDate: new Date("2027-02-01"),
+    credentialId: "FBVPDK8621RQ1TW2",
+    featured: true
+  },
+  {
+    name: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services (AWS)",
+    issueDate: new Date("2024-01-01"),
+    expiryDate: new Date("2027-01-01"),
+    featured: true
+  },
+  {
+    name: "CompTIA A+",
+    issuer: "CompTIA",
+    issueDate: new Date("2023-06-01"),
+    expiryDate: new Date("2026-06-01"),
+    credentialId: "EJL6T0MQE2RQ149L",
+    featured: false
+  },
+  {
+    name: "Advanced Computer Vision and Deep Learning",
+    issuer: "Udacity",
+    issueDate: new Date("2025-07-01"),
+    featured: true
+  },
+  {
+    name: "Machine Learning DevOps",
+    issuer: "Udacity",
+    issueDate: new Date("2025-02-01"),
+    featured: true
+  },
+  {
+    name: "Building Generative Adversarial Networks",
+    issuer: "Udacity",
+    issueDate: new Date("2025-02-01"),
+    featured: false
+  },
+  {
+    name: "Convolutional Neural Networks",
+    issuer: "Udacity",
+    issueDate: new Date("2025-02-01"),
+    featured: false
+  },
+  {
+    name: "Transformer Models and BERT Model with Google Cloud",
+    issuer: "Udacity",
+    issueDate: new Date("2025-02-01"),
+    featured: false
+  },
+  {
+    name: "Introduction to Deep Learning",
+    issuer: "Udacity",
+    issueDate: new Date("2025-04-01"),
+    featured: false
+  }
 ];
 
 async function main() {
@@ -204,6 +293,7 @@ async function main() {
     await prisma.contact.deleteMany();
     await prisma.project.deleteMany();
     await prisma.skill.deleteMany();
+    await prisma.certification.deleteMany();
     await prisma.resume.deleteMany();
     await prisma.gitHubSync.deleteMany();
     
@@ -232,7 +322,19 @@ async function main() {
       });
     }
     console.log(`✅ Created ${skills.length} skills`);
-    
+
+    // Seed Certifications
+    console.log('📜 Seeding certifications...');
+    for (const certification of certifications) {
+      await prisma.certification.create({
+        data: {
+          ...certification,
+          createdAt: new Date()
+        }
+      });
+    }
+    console.log(`✅ Created ${certifications.length} certifications`);
+
     // Create initial GitHub sync record
     console.log('🔄 Creating GitHub sync record...');
     await prisma.gitHubSync.create({
