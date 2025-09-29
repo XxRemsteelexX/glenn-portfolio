@@ -320,7 +320,7 @@ function OnePageResume() {
         <div className="main-content">
           <div className="main-section-title">PROFESSIONAL SUMMARY</div>
           <div className="compact-summary">
-            Results-driven Data Science professional with MS in Data Science and proven expertise in production AI/ML systems. Successfully deployed healthcare AI serving global users with 93.8% accuracy and sub-second response times. Demonstrated success in advanced predictive modeling (90.9% ROC AUC), multi-modal AI, and MLOps. Combines technical expertise with 15+ years of operational excellence and continuous improvement leadership.
+            Results-driven Data Science professional with MS in Data Science and proven expertise in production AI/ML systems. Built and deployed production healthcare AI triage system achieving 93.8% accuracy with sub-second response times. Demonstrated success in advanced predictive modeling (90.9% ROC AUC), multi-modal AI, and MLOps. Combines technical expertise with 15+ years of operational excellence and continuous improvement leadership.
           </div>
 
           <div className="main-section-title">FEATURED PROJECTS</div>
@@ -328,7 +328,7 @@ function OnePageResume() {
           <div className="project-title">Apollo Healthcare Connect | apollohealthcareconnect.com</div>
           <div className="project-subtitle">Production Multi-modal AI Healthcare Triage System | MS Capstone</div>
           <ul>
-            <li>Deployed live healthcare AI system serving global users with 93.8% accuracy and sub-second response</li>
+            <li>Built and deployed production healthcare AI triage system achieving 93.8% accuracy with sub-second response</li>
             <li>Implemented 5-model ensemble combining DistilBERT (NLP) and CNNs (Computer Vision)</li>
             <li>Successfully handled extreme class imbalance (29.7:1) with advanced loss functions</li>
             <li>Built production pipeline with Flask API, AWS S3 integration, and safety protocols</li>
@@ -373,7 +373,7 @@ function OnePageResume() {
 
           <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
           <ul>
-            <li>Deployed live AI healthcare system serving global users with 93.8% accuracy</li>
+            <li>Built and deployed production healthcare AI triage system achieving 93.8% accuracy</li>
             <li>Built and deployed 5+ production systems across healthcare, business analytics, and research</li>
             <li>Reduced ML model overfitting by 97.8% through advanced feature optimization techniques</li>
             <li>Published 15+ open-source projects on GitHub with comprehensive documentation</li>
@@ -629,7 +629,7 @@ function DetailedResume() {
         <div className="main-content">
           <div className="main-section-title">PROFESSIONAL SUMMARY</div>
           <p style={{ fontSize: "11pt", lineHeight: 1.4, marginBottom: "16pt" }}>
-            Results-driven Data Science professional with MS in Data Science and proven expertise in production AI/ML systems. Successfully deployed healthcare AI serving global users with 93.8% accuracy and sub-second response times. Demonstrated success in advanced predictive modeling (90.9% ROC AUC), multi-modal AI, computer vision, NLP, and MLOps. Combines 15+ years of operational excellence and continuous improvement leadership at John Deere with cutting-edge technical expertise in Python, deep learning, and cloud technologies.
+            Results-driven Data Science professional with MS in Data Science and proven expertise in production AI/ML systems. Built and deployed production healthcare AI triage system achieving 93.8% accuracy with sub-second response times. Demonstrated success in advanced predictive modeling (90.9% ROC AUC), multi-modal AI, computer vision, NLP, and MLOps. Combines 15+ years of operational excellence and continuous improvement leadership at John Deere with cutting-edge technical expertise in Python, deep learning, and cloud technologies.
           </p>
 
           <div className="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
@@ -638,7 +638,7 @@ function DetailedResume() {
           <div className="project-subtitle">Production Multi-modal AI Healthcare Triage System | MS Capstone</div>
           <div className="project-url">apollohealthcareconnect.com</div>
           <ul>
-            <li>Deployed live healthcare AI system serving global users with sub-second response times</li>
+            <li>Built and deployed production healthcare AI triage system with sub-second response times</li>
             <li>Achieved 93.8% combined multi-modal accuracy and 98.0% burn classification accuracy</li>
             <li>Implemented 5-model ensemble architecture combining DistilBERT (NLP) and CNNs (Computer Vision)</li>
             <li>Successfully handled extreme class imbalance (29.7:1 ratio) with advanced loss functions</li>
@@ -702,7 +702,7 @@ function DetailedResume() {
 
           <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
           <ul>
-            <li>Deployed live AI healthcare system serving global users with 93.8% accuracy and sub-second response</li>
+            <li>Built and deployed production healthcare AI triage system achieving 93.8% accuracy and sub-second response</li>
             <li>Achieved 90.9% ROC AUC on temporal validation for sports analytics with production deployment</li>
             <li>Built and deployed 5+ live production systems across healthcare, business analytics, and research</li>
             <li>Successfully handled extreme class imbalance (29.7:1 ratio) in medical imaging classification</li>

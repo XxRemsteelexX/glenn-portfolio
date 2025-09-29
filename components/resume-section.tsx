@@ -274,7 +274,7 @@ export function ResumeSection() {
                   </div>
                   <p className="text-sm text-primary font-medium mb-2">Multi-modal AI Healthcare Triage System</p>
                   <ul className="text-sm text-muted-foreground space-y-1 mb-3">
-                    <li>• Deployed production healthcare system serving global users</li>
+                    <li>• Built and deployed production healthcare AI triage system</li>
                     <li>• Achieved <strong>93.8% combined multi-modal accuracy</strong> and <strong>98.0% burn classification accuracy</strong></li>
                     <li>• Implemented 5-model ensemble architecture with advanced loss functions and safety protocols</li>
                   </ul>
@@ -411,7 +411,7 @@ export function ResumeSection() {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Deployed live healthcare AI system serving global users with sub-second response times
+                      Built and deployed production healthcare AI triage system with sub-second response times
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
