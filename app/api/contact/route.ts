@@ -5,7 +5,15 @@ import { Resend } from 'resend';
 import twilio from 'twilio';
 
 const prisma = new PrismaClient();
-const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Initialize Resend client (lazy initialization)
+let resend: Resend | null = null;
+function getResendClient() {
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 // Initialize Twilio client
 let twilioClient: ReturnType<typeof twilio> | null = null;
@@ -58,26 +66,29 @@ export async function POST(request: Request) {
     });
 
     // Send email notification
-    try {
-      await resend.emails.send({
-        from: 'Portfolio Contact <onboarding@resend.dev>',
-        to: 'dalbeyglenn@gmail.com',
-        subject: `New Contact: ${body.subject}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>From:</strong> ${body.name} (${body.email})</p>
-          ${body.phone ? `<p><strong>Phone:</strong> ${body.phone}</p>` : ''}
-          ${body.company ? `<p><strong>Company:</strong> ${body.company}</p>` : ''}
-          <p><strong>Subject:</strong> ${body.subject}</p>
-          <p><strong>Message:</strong></p>
-          <p>${body.message.replace(/\n/g, '<br>')}</p>
-          <hr>
-          <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
-        `
-      });
-    } catch (emailError) {
-      console.error('Failed to send email notification:', emailError);
-      // Continue even if email fails
+    const resendClient = getResendClient();
+    if (resendClient) {
+      try {
+        await resendClient.emails.send({
+          from: 'Portfolio Contact <onboarding@resend.dev>',
+          to: 'dalbeyglenn@gmail.com',
+          subject: `New Contact: ${body.subject}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>From:</strong> ${body.name} (${body.email})</p>
+            ${body.phone ? `<p><strong>Phone:</strong> ${body.phone}</p>` : ''}
+            ${body.company ? `<p><strong>Company:</strong> ${body.company}</p>` : ''}
+            <p><strong>Subject:</strong> ${body.subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>${body.message.replace(/\n/g, '<br>')}</p>
+            <hr>
+            <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
+          `
+        });
+      } catch (emailError) {
+        console.error('Failed to send email notification:', emailError);
+        // Continue even if email fails
+      }
     }
 
     // Send SMS notification
