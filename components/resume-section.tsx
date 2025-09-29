@@ -33,19 +33,10 @@ export function ResumeSection() {
     setMounted(true);
   }, []);
 
-  const downloadPDF = () => {
+  const downloadFile = (filename: string) => {
     const link = document.createElement('a');
-    link.href = '/resume/Glenn_Dalbey_Resume.pdf';
-    link.download = 'Glenn_Dalbey_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  const downloadDOCX = () => {
-    const link = document.createElement('a');
-    link.href = '/resume/Glenn_Dalbey_Resume.docx';
-    link.download = 'Glenn_Dalbey_Resume.docx';
+    link.href = `/resume/${filename}`;
+    link.download = filename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -76,16 +67,65 @@ export function ResumeSection() {
             Complete professional resume showcasing my experience in AI, data science, and machine learning.
           </p>
 
+          {/* View Resume Button */}
+          <div className="flex justify-center mb-6">
+            <Link href="/resume">
+              <Button size="lg" className="hover-lift">
+                <FileText className="w-5 h-5 mr-2" />
+                View Full Resume
+              </Button>
+            </Link>
+          </div>
+
           {/* Download buttons */}
-          <div className="flex justify-center space-x-4">
-            <Button onClick={downloadPDF} className="hover-lift">
-              <Download className="w-4 h-4 mr-2" />
-              Download PDF
-            </Button>
-            <Button variant="outline" onClick={downloadDOCX} className="hover-lift">
-              <Download className="w-4 h-4 mr-2" />
-              Download DOCX
-            </Button>
+          <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-col items-center space-y-2">
+              <span className="text-sm font-medium text-muted-foreground">One Page</span>
+              <div className="flex space-x-2">
+                <Button
+                  size="sm"
+                  onClick={() => downloadFile('Glenn_Dalbey_Resume_OnePage.pdf')}
+                  className="hover-lift"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  PDF
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => downloadFile('Glenn_Dalbey_Resume_OnePage.docx')}
+                  className="hover-lift"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Word
+                </Button>
+              </div>
+            </div>
+
+            <div className="h-16 w-px bg-border mx-2"></div>
+
+            <div className="flex flex-col items-center space-y-2">
+              <span className="text-sm font-medium text-muted-foreground">Detailed</span>
+              <div className="flex space-x-2">
+                <Button
+                  size="sm"
+                  onClick={() => downloadFile('Glenn_Dalbey_Resume_Detailed.pdf')}
+                  className="hover-lift"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  PDF
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => downloadFile('Glenn_Dalbey_Resume_Detailed.docx')}
+                  className="hover-lift"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Word
+                </Button>
+              </div>
+            </div>
           </div>
         </motion.div>
 
