@@ -41,7 +41,8 @@ const projects: ProjectData[] = [
     description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
     longDescription: "Cutting-edge research project combining gravitational physics with longevity studies. Uses advanced machine learning ensembles to analyze patterns in Blue Zones regions where people live exceptionally long lives. Features comprehensive statistical analysis and provides actionable policy recommendations based on scientific findings.",
     githubUrl: "https://github.com/XxRemsteelexX/Blue-Zones-Longevity-Analysis",
-    technologies: ["Jupyter Notebook", "Machine Learning", "Statistical Analysis", "Research", "Data Science", "Ensemble Methods"],
+    liveUrl: "https://xxremsteelexx-blue-zones-longevity--blue-zones-dashboard-xgbvew.streamlit.app/",
+    technologies: ["Jupyter Notebook", "Machine Learning", "Statistical Analysis", "Research", "Data Science", "Ensemble Methods", "Streamlit"],
     featured: true,
     language: "Jupyter Notebook"
   },
@@ -50,6 +51,7 @@ const projects: ProjectData[] = [
     description: "AI-powered Excel analytics platform for Thompson Parking & Mobility Consultants. Upload Excel files, get instant business insights, generate professional charts, and chat with your data using natural language queries.",
     longDescription: "Professional business intelligence platform built for Thompson PMC. Features natural language querying of Excel data, automated chart generation, executive-ready visualizations, and AI-powered business insights. Built with Next.js and Thompson PMC branding for enterprise use.",
     githubUrl: "https://github.com/XxRemsteelexX/business-analytics-AI-platform",
+    liveUrl: "https://business-analytics-ai-platform-production.up.railway.app/",
     technologies: ["TypeScript", "Next.js", "AI", "Excel Processing", "Business Intelligence", "Natural Language Processing"],
     featured: true,
     language: "TypeScript"
@@ -196,6 +198,7 @@ const skills: SkillData[] = [
   // Web Frameworks
   { name: "Flask", category: "Web Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "FastAPI", category: "Web Frameworks", proficiency: "Advanced", yearsExp: 2, featured: false },
+  { name: "Streamlit", category: "Web Frameworks", proficiency: "Advanced", yearsExp: 2, featured: false },
   { name: "React", category: "Web Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Node.js", category: "Web Frameworks", proficiency: "Advanced", yearsExp: 2, featured: false },
   
