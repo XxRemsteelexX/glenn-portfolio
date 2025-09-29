@@ -44,6 +44,7 @@ export function Navigation({ className }: NavigationProps) {
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
     { href: "#skills", label: "Skills" },
+    { href: "#certifications", label: "Certifications" },
     { href: "#ai-chat", label: "AI Assistant" },
     { href: "#resume", label: "Resume" },
     { href: "#contact", label: "Contact" },
