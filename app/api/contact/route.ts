@@ -28,6 +28,8 @@ export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
   try {
+    console.log('[CONTACT] Processing contact form submission');
+    console.log('[CONTACT] RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
     const body = await request.json();
     
     // Validate required fields
@@ -66,10 +68,13 @@ export async function POST(request: Request) {
     });
 
     // Send email notification
+    console.log('[CONTACT] About to initialize Resend client');
     const resendClient = getResendClient();
+    console.log('[CONTACT] Resend client initialized:', !!resendClient);
+
     if (resendClient) {
       try {
-        console.log('Attempting to send email notification...');
+        console.log('[CONTACT] Attempting to send email notification to dalbeyglenn@gmail.com');
         const result = await resendClient.emails.send({
           from: 'Portfolio Contact <onboarding@resend.dev>',
           to: 'dalbeyglenn@gmail.com',
