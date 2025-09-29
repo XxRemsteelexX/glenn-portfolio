@@ -1,0 +1,150 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Award, Calendar, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
+
+interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  issueDate: string;
+  expiryDate?: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  featured: boolean;
+}
+
+export function CertificationsSection() {
+  const [certifications, setCertifications] = useState<Certification[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchCertifications();
+  }, []);
+
+  const fetchCertifications = async () => {
+    try {
+      const response = await fetch('/api/certifications');
+      if (response.ok) {
+        const data = await response.json();
+        setCertifications(data.certifications || []);
+      }
+    } catch (error) {
+      console.error('Failed to fetch certifications:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short'
+    });
+  };
+
+  const isExpired = (expiryDate?: string) => {
+    if (!expiryDate) return false;
+    return new Date(expiryDate) < new Date();
+  };
+
+  if (loading) {
+    return (
+      <section className="py-20 section-bg">
+        <div className="container mx-auto px-4">
+          <div className="loading-skeleton w-full h-96"></div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section id="certifications" className="py-20 section-bg">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold mb-4">Certifications</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Professional certifications and completed courses demonstrating expertise
+            in data science, machine learning, and cloud technologies.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={cert.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <Card className="h-full hover-lift glass-effect">
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-2">
+                    <Award className="w-8 h-8 text-primary flex-shrink-0" />
+                    {cert.featured && (
+                      <Badge variant="secondary" className="ml-2">
+                        Featured
+                      </Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-lg">{cert.name}</CardTitle>
+                  <p className="text-sm text-muted-foreground font-medium">
+                    {cert.issuer}
+                  </p>
+                </CardHeader>
+
+                <CardContent className="space-y-3">
+                  <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                    <Calendar className="w-4 h-4" />
+                    <span>Issued {formatDate(cert.issueDate)}</span>
+                  </div>
+
+                  {cert.expiryDate && (
+                    <div className="flex items-center space-x-2">
+                      <Badge
+                        variant={isExpired(cert.expiryDate) ? "destructive" : "outline"}
+                        className="text-xs"
+                      >
+                        {isExpired(cert.expiryDate)
+                          ? `Expired ${formatDate(cert.expiryDate)}`
+                          : `Expires ${formatDate(cert.expiryDate)}`}
+                      </Badge>
+                    </div>
+                  )}
+
+                  {cert.credentialId && (
+                    <div className="text-xs text-muted-foreground pt-2 border-t border-border/50">
+                      <span className="font-medium">ID:</span> {cert.credentialId}
+                    </div>
+                  )}
+
+                  {cert.credentialUrl && (
+                    <a
+                      href={cert.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-1 text-sm text-primary hover:underline"
+                    >
+                      <span>View Credential</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
+                  )}
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
