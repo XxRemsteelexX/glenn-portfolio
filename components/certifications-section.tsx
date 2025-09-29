@@ -78,10 +78,37 @@ export function CertificationsSection() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">Certifications</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Professional certifications and completed courses demonstrating expertise
             in data science, machine learning, and cloud technologies.
           </p>
+
+          <div className="max-w-4xl mx-auto text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Industry Certifications</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• CompTIA Data+ (Valid until Feb 2027)</li>
+                  <li>• AWS Certified Cloud Practitioner (Valid until Jan 2027)</li>
+                  <li>• CompTIA A+ (Valid until Jun 2026)</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Specialized Training</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Advanced Computer Vision & Deep Learning - Udacity</li>
+                  <li>• Machine Learning DevOps - Udacity</li>
+                  <li>• Introduction to Deep Learning - Udacity</li>
+                  <li>• Building Generative Adversarial Networks - Udacity</li>
+                  <li>• Convolutional Neural Networks - Udacity</li>
+                  <li>• Transformer Models & BERT with Google Cloud - Udacity</li>
+                  <li>• PostgreSQL Essential Training - LinkedIn Learning</li>
+                  <li>• Learning MongoDB - LinkedIn Learning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
