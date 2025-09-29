@@ -76,8 +76,8 @@ export async function POST(request: Request) {
       try {
         console.log('[CONTACT] Attempting to send email notification to dalbeyglenn@gmail.com');
         const result = await resendClient.emails.send({
-          from: 'Portfolio Contact <onboarding@resend.dev>',
-          to: 'dalbeyglenn@gmail.com',
+          from: 'Acme <onboarding@resend.dev>',
+          to: ['dalbeyglenn@gmail.com'],
           subject: `New Contact: ${body.subject}`,
           html: `
             <h2>New Contact Form Submission</h2>
