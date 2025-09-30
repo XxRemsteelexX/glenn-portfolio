@@ -259,7 +259,7 @@ function OnePageResume() {
           319-233-4445 | dalbeyglenn@gmail.com<br />
           <a href="https://linkedin.com/in/glenn-dalbey-205b7a44">LinkedIn</a> |{" "}
           <a href="https://github.com/XxRemsteelexX">GitHub</a> |{" "}
-          <a href="https://glenndalbey.com">Portfolio</a>
+          <a href="https://www.glenndalbey.com">Portfolio</a>
         </div>
       </div>
 
@@ -558,7 +558,7 @@ function DetailedResume() {
           319-233-4445 | dalbeyglenn@gmail.com<br />
           <a href="https://linkedin.com/in/glenn-dalbey-205b7a44">LinkedIn</a> |{" "}
           <a href="https://github.com/XxRemsteelexX">GitHub</a> |{" "}
-          <a href="https://glenndalbey.com">Portfolio</a>
+          <a href="https://www.glenndalbey.com">Portfolio</a>
         </div>
       </div>
 
