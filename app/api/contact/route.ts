@@ -10,7 +10,18 @@ const prisma = new PrismaClient();
 let resend: Resend | null = null;
 function getResendClient() {
   if (!resend && process.env.RESEND_API_KEY) {
-    resend = new Resend(process.env.RESEND_API_KEY);
+    // Clean the API key by removing any problematic characters
+    const cleanApiKey = process.env.RESEND_API_KEY
+      .replace(/^Bearer\s*/i, '')  // Remove "Bearer " prefix
+      .replace(/^=+/, '')           // Remove leading equals signs
+      .trim()                        // Remove whitespace
+      .replace(/\n/g, '');          // Remove newlines
+
+    console.log('[CONTACT] Original key length:', process.env.RESEND_API_KEY.length);
+    console.log('[CONTACT] Cleaned key length:', cleanApiKey.length);
+    console.log('[CONTACT] Cleaned key starts with:', cleanApiKey.substring(0, 5));
+
+    resend = new Resend(cleanApiKey);
   }
   return resend;
 }
