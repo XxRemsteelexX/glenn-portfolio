@@ -6,7 +6,7 @@ import { Download, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function ResumePage() {
-  const [activeVersion, setActiveVersion] = useState<"onepage" | "detailed">("onepage");
+  const [activeVersion, setActiveVersion] = useState<"onepage" | "detailed">("detailed");
 
   const downloadFile = (filename: string) => {
     const link = document.createElement('a');
