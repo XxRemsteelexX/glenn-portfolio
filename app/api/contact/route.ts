@@ -11,11 +11,13 @@ let resend: Resend | null = null;
 function getResendClient() {
   if (!resend && process.env.RESEND_API_KEY) {
     // Clean the API key by removing any problematic characters
-    const cleanApiKey = process.env.RESEND_API_KEY
+    let cleanApiKey = process.env.RESEND_API_KEY
       .replace(/^Bearer\s*/i, '')  // Remove "Bearer " prefix
-      .replace(/^=+/, '')           // Remove leading equals signs
       .trim()                        // Remove whitespace
       .replace(/\n/g, '');          // Remove newlines
+
+    // Remove leading equals signs (must be after trim)
+    cleanApiKey = cleanApiKey.replace(/^=+/, '');
 
     console.log('[CONTACT] Original key length:', process.env.RESEND_API_KEY.length);
     console.log('[CONTACT] Cleaned key length:', cleanApiKey.length);
