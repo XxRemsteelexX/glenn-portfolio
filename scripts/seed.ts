@@ -71,7 +71,7 @@ const projects: ProjectData[] = [
     longDescription: "Innovative AI orchestration platform that enables multiple Large Language Models to collaborate through different modes including relay, debate, and verification. Supports 10+ providers including local models (Ollama, LM Studio) and cloud APIs (OpenAI, Anthropic, Groq). Features real-time streaming, conversation history, and privacy-first design.",
     githubUrl: "https://github.com/XxRemsteelexX/TandemAI",
     technologies: ["TypeScript", "React", "Node.js", "AI Orchestration", "LLM Integration", "Privacy-First"],
-    featured: true,
+    featured: false,
     language: "TypeScript"
   },
   {
