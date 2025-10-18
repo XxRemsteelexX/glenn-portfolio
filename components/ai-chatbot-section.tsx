@@ -368,10 +368,11 @@ export function AIChatbotSection() {
             {[
               "Apollo Healthcare Connect project",
               "Multi-modal AI implementation",
+              "YouTube Video Analyzer with Whisper",
               "Production ML deployment experience",
               "TensorFlow vs PyTorch preference",
               "Healthcare AI challenges",
-              "Data science methodology"
+              "Audio-visual fusion techniques"
             ].map((question) => (
               <Button
                 key={question}
