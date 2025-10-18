@@ -46,6 +46,16 @@ const projects: ProjectData[] = [
     language: "Python"
   },
   {
+    name: "missing-persons-outlier-detection",
+    description: "Statistical analysis of 41K missing persons cases to detect serial crime patterns and trafficking corridors",
+    longDescription: "Statistical outlier detection system analyzing 41,200 cases (15,457 bodies + 25,743 missing persons) across 54 states and 101 years. Uses standard deviation methodology to identify anomalous crime patterns. Detected I-35 corridor trafficking crisis (+170% increase), validated against known serial killers (Ridgway 4.38σ detected, Gacy 1.34σ detected). Flags 269 counties (2.9%) for priority investigation. Interactive Streamlit dashboard with geospatial visualization, temporal forecasting, and multi-tier correlation analysis.",
+    githubUrl: "https://github.com/XxRemsteelexX/missing-persons-outlier-detection",
+    liveUrl: "https://xxremsteelexx-missing-persons-outlier-dete-streamlit-app-dwe4j4.streamlit.app/",
+    technologies: ["Python", "Streamlit", "Plotly", "Statistical Analysis", "Geospatial Analysis", "Time Series Forecasting", "Crime Analytics", "Data Visualization"],
+    featured: true,
+    language: "Python"
+  },
+  {
     name: "Blue-Zones-Longevity-Analysis",
     description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
     longDescription: "Cutting-edge research project combining gravitational physics with longevity studies. Uses advanced machine learning ensembles to analyze patterns in Blue Zones regions where people live exceptionally long lives. Features comprehensive statistical analysis and provides actionable policy recommendations based on scientific findings.",
@@ -182,6 +192,15 @@ const projects: ProjectData[] = [
     technologies: ["Jupyter Notebook", "Python", "PuLP", "Linear Programming", "Optimization", "Operations Research", "Supply Chain"],
     featured: false,
     language: "Jupyter Notebook"
+  },
+  {
+    name: "YouTube_Video_Analyzer",
+    description: "GPU-accelerated multimodal AI for YouTube video analysis with transcription, visual frame analysis, and comprehensive summaries",
+    longDescription: "Advanced multimodal AI tool that analyzes YouTube videos using GPU-accelerated models. Features Whisper for audio transcription with timestamps, BLIP for visual frame captioning, smart audio-visual fusion with 84% average confidence, and BART for comprehensive summaries. Real-time processing updates with Streamlit UI and FastAPI backend. Exports to multiple formats including TXT, SRT subtitles, and Markdown reports.",
+    githubUrl: "https://github.com/XxRemsteelexX/XxRemsteelexX-YouTube_Video_text_-_Description_Analyzer",
+    technologies: ["Python", "FastAPI", "Streamlit", "PyTorch", "Whisper", "BLIP", "BART", "Multi-modal AI", "Computer Vision", "NLP", "GPU Acceleration"],
+    featured: false,
+    language: "Python"
   }
 ];
 
