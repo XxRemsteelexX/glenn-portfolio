@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Star, GitFork, Calendar, Zap } from "lucide-react";
-import { motion } from "framer-motion";
+import { Github, ExternalLink, Star, GitFork, Calendar, Zap, Eye } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 interface Project {
@@ -28,6 +28,7 @@ export function ProjectsSection() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'featured'>('all');
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   useEffect(() => {
     fetchProjects();
@@ -103,8 +104,49 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="relative"
+              onMouseEnter={() => project.liveUrl && setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
-              <Card className="h-full hover-lift glass-effect group">
+              <Card className="h-full hover-lift glass-effect group relative overflow-hidden">
+                {/* Live Preview Overlay */}
+                <AnimatePresence>
+                  {project.liveUrl && hoveredProject === project.id && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.3 }}
+                      className="absolute inset-0 z-50 bg-background/95 backdrop-blur-sm p-4 flex flex-col"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <div className="flex items-center space-x-2">
+                          <Eye className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-semibold">Live Preview</span>
+                        </div>
+                        <Link
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button size="sm" variant="default">
+                            <ExternalLink className="w-3 h-3 mr-1" />
+                            Open Full
+                          </Button>
+                        </Link>
+                      </div>
+                      <div className="flex-1 rounded-lg overflow-hidden border-2 border-primary/20 bg-white">
+                        <iframe
+                          src={project.liveUrl}
+                          className="w-full h-full"
+                          title={`${project.name} preview`}
+                          sandbox="allow-scripts allow-same-origin allow-forms"
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -192,10 +234,12 @@ export function ProjectsSection() {
                       >
                         <Button
                           size="sm"
-                          className="w-full"
+                          className="w-full relative group/btn"
                         >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Live Demo
+                          <Eye className="w-4 h-4 mr-2 group-hover/btn:hidden" />
+                          <ExternalLink className="w-4 h-4 mr-2 hidden group-hover/btn:inline-block" />
+                          <span className="group-hover/btn:hidden">Preview</span>
+                          <span className="hidden group-hover/btn:inline">Open Live</span>
                         </Button>
                       </Link>
                     )}
