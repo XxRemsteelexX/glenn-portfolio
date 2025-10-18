@@ -109,9 +109,10 @@ export function ProjectsSection() {
               onMouseLeave={() => setHoveredProject(null)}
             >
               <Card className="h-full hover-lift glass-effect group relative overflow-hidden">
-                {/* Live Preview Overlay */}
+                {/* Live Preview Overlay - Only for apps that allow iframe embedding (not Streamlit) */}
                 <AnimatePresence>
-                  {project.liveUrl && hoveredProject === project.id && (
+                  {project.liveUrl && hoveredProject === project.id &&
+                   (project.name === "Apollo_Healthcare_Connect" || project.name === "business-analytics-AI-platform") && (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
