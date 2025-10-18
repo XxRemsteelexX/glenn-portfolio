@@ -20,7 +20,22 @@ const demos = [
       accuracy: "93.8%",
       users: "Live Production",
       models: "2 AI Models"
-    }
+    },
+    allowsIframe: true
+  },
+  {
+    id: "thompson",
+    name: "Thompson PMC Analytics Platform",
+    url: "https://business-analytics-ai-platform-production.up.railway.app/",
+    description: "AI-powered Excel analytics with natural language queries and automated chart generation",
+    icon: Activity,
+    technologies: ["Next.js", "Azure OpenAI", "Excel Processing", "Business Intelligence"],
+    stats: {
+      formats: "Excel, CSV, PDF",
+      charts: "Auto-Generated",
+      privacy: "Enterprise Grade"
+    },
+    allowsIframe: true
   },
   {
     id: "blue-zones",
@@ -33,7 +48,8 @@ const demos = [
       regions: "5 Blue Zones",
       factors: "15+ Analysis Points",
       models: "Ensemble Methods"
-    }
+    },
+    allowsIframe: false
   },
   {
     id: "missing-persons",
@@ -46,7 +62,8 @@ const demos = [
       cases: "41,200 Cases",
       alerts: "269 Counties Flagged",
       years: "101 Years Data"
-    }
+    },
+    allowsIframe: false
   }
 ];
 
@@ -72,14 +89,19 @@ export default function LiveDemosPage() {
 
         {/* Tabs */}
         <Tabs value={activeDemo} onValueChange={setActiveDemo} className="w-full">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
             {demos.map((demo) => {
               const Icon = demo.icon;
               return (
                 <TabsTrigger key={demo.id} value={demo.id} className="flex items-center space-x-2">
                   <Icon className="w-4 h-4" />
                   <span className="hidden sm:inline">{demo.name}</span>
-                  <span className="sm:hidden">{demo.id === 'apollo' ? 'Apollo' : demo.id === 'blue-zones' ? 'Blue Zones' : 'Missing Persons'}</span>
+                  <span className="sm:hidden">
+                    {demo.id === 'apollo' ? 'Apollo' :
+                     demo.id === 'thompson' ? 'Thompson' :
+                     demo.id === 'blue-zones' ? 'Blue Zones' :
+                     'Missing Persons'}
+                  </span>
                 </TabsTrigger>
               );
             })}
@@ -146,26 +168,45 @@ export default function LiveDemosPage() {
                         <span className="font-semibold">Live Application</span>
                       </div>
                       <Link href={demo.url} target="_blank" rel="noopener noreferrer">
-                        <Button variant="outline" size="sm">
-                          <Maximize2 className="w-4 h-4 mr-2" />
-                          Fullscreen
+                        <Button size="lg">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Open Live Demo
                         </Button>
                       </Link>
                     </div>
 
-                    {/* Iframe Container */}
-                    <div className="relative w-full bg-white rounded-lg overflow-hidden border-2 border-primary/20" style={{ height: "70vh" }}>
-                      <iframe
-                        src={demo.url}
-                        className="w-full h-full"
-                        title={demo.name}
-                        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-                      />
-                    </div>
-
-                    <p className="text-xs text-muted-foreground mt-4 text-center">
-                      Interactive live demo - click elements to explore. Open fullscreen for best experience.
-                    </p>
+                    {/* Iframe Container - Only for apps that allow embedding (not Streamlit) */}
+                    {demo.allowsIframe ? (
+                      <>
+                        <div className="relative w-full bg-white rounded-lg overflow-hidden border-2 border-primary/20" style={{ height: "70vh" }}>
+                          <iframe
+                            src={demo.url}
+                            className="w-full h-full"
+                            title={demo.name}
+                            sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+                          />
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-4 text-center">
+                          Interactive live demo - click elements to explore. Open fullscreen for best experience.
+                        </p>
+                      </>
+                    ) : (
+                      <div className="relative w-full rounded-lg overflow-hidden border-2 border-primary/20 bg-muted/20 flex items-center justify-center" style={{ height: "70vh" }}>
+                        <div className="text-center p-8">
+                          <ExternalLink className="w-16 h-16 mx-auto mb-4 text-primary" />
+                          <h3 className="text-2xl font-bold mb-2">Streamlit Cloud Application</h3>
+                          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                            This app uses Streamlit Cloud and cannot be embedded. Click the button above to open the full interactive dashboard in a new tab.
+                          </p>
+                          <Link href={demo.url} target="_blank" rel="noopener noreferrer">
+                            <Button size="lg">
+                              <ExternalLink className="w-5 h-5 mr-2" />
+                              Launch {demo.name}
+                            </Button>
+                          </Link>
+                        </div>
+                      </div>
+                    )}
                   </Card>
                 </motion.div>
               </TabsContent>

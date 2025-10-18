@@ -63,6 +63,11 @@ export function Navigation({ className }: NavigationProps) {
       description: "Multi-modal AI healthcare triage"
     },
     {
+      name: "Thompson PMC Analytics Platform",
+      url: "https://business-analytics-ai-platform-production.up.railway.app/",
+      description: "AI-powered Excel analytics & business intelligence"
+    },
+    {
       name: "Blue Zones Longevity Analysis",
       url: "https://xxremsteelexx-blue-zones-longevity--blue-zones-dashboard-xgbvew.streamlit.app/",
       description: "Gravitational physics & longevity ML research"
