@@ -37,6 +37,15 @@ interface CertificationData {
 
 const projects: ProjectData[] = [
   {
+    name: "RSNA_Intracranial_Aneurysm_Detection",
+    description: "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
+    longDescription: "Advanced 3D medical imaging project for Kaggle RSNA competition. Trained 105 models (21 architectures × 5 folds), tested 51 ensemble configurations. Best ensemble achieved AUC 0.8624. Key discovery: smaller models outperform larger ones on limited medical data (r=-0.42, p<0.01). Multi-GPU training on 4 GPUs with complete DICOM→NIfTI→ROI extraction→Training→Ensemble pipeline.",
+    githubUrl: "https://github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle",
+    technologies: ["Python", "PyTorch", "3D CNNs", "SE-ResNet", "DenseNet", "EfficientNet", "Medical Imaging", "DICOM/NIfTI", "Multi-GPU Training", "Kaggle"],
+    featured: true,
+    language: "Python"
+  },
+  {
     name: "Blue-Zones-Longevity-Analysis",
     description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
     longDescription: "Cutting-edge research project combining gravitational physics with longevity studies. Uses advanced machine learning ensembles to analyze patterns in Blue Zones regions where people live exceptionally long lives. Features comprehensive statistical analysis and provides actionable policy recommendations based on scientific findings.",
@@ -219,6 +228,7 @@ const skills: SkillData[] = [
   
   // Specializations
   { name: "Computer Vision", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
+  { name: "3D Medical Imaging", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },
   { name: "Natural Language Processing", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Multi-modal AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Healthcare AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },

@@ -38,6 +38,7 @@ CERTIFICATIONS:
 - Udacity: Deep Learning, Computer Vision, GANs, Transformers, ML DevOps
 
 KEY PROJECTS:
+- RSNA_Intracranial_Aneurysm_Detection: 3D medical imaging Kaggle competition - 105 models trained (21 architectures × 5 folds), best ensemble AUC 0.8624, multi-GPU training on 4 GPUs
 - Apollo Healthcare Connect: Multi-modal AI healthcare triage (93.8% accuracy), live at apollohealthcareconnect.com
 - business-analytics-AI-platform: AI-powered Excel analytics for Thompson PMC
 - TandemAI: LLM ensemble orchestration platform (Ollama, OpenAI, Anthropic)
