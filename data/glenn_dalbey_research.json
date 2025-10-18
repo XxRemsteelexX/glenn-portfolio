@@ -24,6 +24,39 @@
   },
   "github_projects": [
     {
+      "name": "RSNA_Intracranial_Aneurysm_Detection",
+      "description": "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "3D CNNs",
+        "SE-ResNet",
+        "DenseNet",
+        "EfficientNet",
+        "nibabel",
+        "DICOM/NIfTI",
+        "scikit-learn",
+        "Mixed Precision Training (FP16)",
+        "Multi-GPU Training"
+      ],
+      "notable_features": [
+        "105 models trained (21 architectures × 5 folds)",
+        "51 ensemble configurations tested",
+        "Best single model: SE-ResNet18 Stable (AUC 0.8585)",
+        "Best ensemble: META_E_top3_weighted (AUC 0.8624)",
+        "Key discovery: Smaller models outperform larger ones on limited medical data (r=-0.42, p<0.01)",
+        "4 GPUs running simultaneously (2× RTX 5090, RTX 3090 Ti, RTX 3090)",
+        "Complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble",
+        "Multi-label classification (14 classes: 13 anatomical locations + presence flag)",
+        "Handles severe class imbalance (1.2% to 42.8% across classes)",
+        "6 comprehensive Jupyter notebooks documenting all experiments"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle",
+      "primary_language": "Python",
+      "project_type": "Original - Kaggle Competition",
+      "deployment_status": "Research Complete - Production Ready Pipeline"
+    },
+    {
       "name": "Apollo_Healthcare_Connect",
       "description": "A Production-Grade Multi-Modal Deep Learning Medical Triage System developed as Western Governors University Data Science Capstone Project",
       "technologies": [
@@ -216,38 +249,47 @@
     ],
     "specialized_skills": [
       "Multi-modal AI systems",
-      "Deep Learning", 
+      "Deep Learning",
       "Computer Vision",
+      "3D Medical Imaging",
       "Natural Language Processing",
       "Linear Programming/Optimization",
       "LLM Orchestration",
       "Healthcare AI",
-      "Sports Analytics"
+      "Sports Analytics",
+      "Multi-GPU Training"
     ]
   },
   "project_themes": [
     "Healthcare AI and Medical Triage Systems",
-    "AI/ML Model Orchestration and Collaboration", 
+    "3D Medical Imaging and Radiology AI",
+    "AI/ML Model Orchestration and Collaboration",
     "Sports Analytics and Predictive Modeling",
     "Supply Chain and Operations Optimization",
     "Production ML Deployment and MLOps",
     "Multi-modal AI combining text and vision",
-    "Academic Research and Capstone Projects"
+    "Academic Research and Capstone Projects",
+    "Kaggle Competitions and Systematic ML Experimentation"
   ],
   "notable_achievements": [
+    "Trained 105 deep learning models for 3D medical imaging (21 architectures × 5 folds)",
+    "Discovered smaller models outperform larger ones on limited medical data (statistically significant)",
     "Successfully deployed live production AI healthcare system",
     "Achieved 93.8% accuracy in multi-modal medical triage",
-    "Reduced ML model overfitting by 97.8% through feature optimization", 
+    "Built complete 3D medical imaging pipeline from DICOM to ensemble predictions",
+    "Reduced ML model overfitting by 97.8% through feature optimization",
     "Created innovative LLM ensemble orchestration platform",
-    "Demonstrated end-to-end ML project lifecycle management",
+    "Demonstrated end-to-end ML project lifecycle management across multiple domains",
     "25.4% cost reduction in supply chain optimization",
     "Graduated from Western Governors University Data Science program"
   ],
   "research_interests": [
     "Multi-modal AI systems",
     "Healthcare applications of machine learning",
+    "3D medical imaging and radiology AI",
     "AI model collaboration and ensemble methods",
-    "Production ML deployment and scalability", 
+    "Production ML deployment and scalability",
+    "Systematic ML experimentation and architecture search",
     "Sports analytics and predictive modeling",
     "Operations research and optimization"
   ]
