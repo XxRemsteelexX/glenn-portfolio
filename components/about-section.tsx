@@ -187,7 +187,7 @@ export function AboutSection() {
                   <div className="flex items-center justify-between mb-1">
                     <div>
                       <div className="font-medium">Associate of Science, IT Programming</div>
-                      <div className="text-sm text-muted-foreground">Western Governors University</div>
+                      <div className="text-sm text-muted-foreground">Clinton Community College</div>
                     </div>
                   </div>
                 </div>
