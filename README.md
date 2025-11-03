@@ -328,15 +328,6 @@ Configured to support:
 - Last 2 versions of major browsers
 - Actively maintained browsers
 
-## Contributing
-
-This is a personal portfolio project. However, if you find bugs or have suggestions:
-
-1. Open an issue describing the problem or enhancement
-2. Fork the repository
-3. Create a feature branch
-4. Submit a pull request with detailed description
-
 ## License
 
 This project is private and proprietary. All rights reserved.
