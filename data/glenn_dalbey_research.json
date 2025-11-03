@@ -86,31 +86,64 @@
       "deployment_status": "Live Production System"
     },
     {
-      "name": "TandemAI",
-      "description": "Local-First LLM Ensemble Orchestration Platform that enables multiple AI models to collaborate through relay, debate, and verification modes",
+      "name": "missing-persons-outlier-detection",
+      "description": "Statistical anomaly detection system analyzing 41,200 missing persons and unidentified bodies cases across 101 years to identify trafficking corridors, cartel activity, and organized crime patterns",
       "technologies": [
-        "TypeScript",
-        "Node.js/Yarn",
-        "React/Next.js",
-        "API Integrations (OpenAI, Anthropic, Groq, etc.)",
-        "Local LLM Support (Ollama, LM Studio, vLLM)",
-        "Tauri (Desktop packaging)",
-        "Electron (Alternative packaging)"
+        "Python",
+        "pandas",
+        "numpy",
+        "scipy",
+        "plotly",
+        "Streamlit",
+        "Statistical Analysis",
+        "Linear Regression",
+        "Z-Score Analysis"
       ],
       "notable_features": [
-        "4 orchestration modes: Conversation, Answer, Argumentative, Research",
-        "Universal provider support for 10+ LLM providers",
-        "Local-first privacy with offline capability",
-        "Real-time streaming and monitoring",
-        "Mix local and API providers",
-        "Export capabilities and conversation history",
-        "Drag-and-drop model reordering",
-        "Temperature control and early stopping"
+        "Analyzed 41,200 cases over 101 years (9,204 county-decade combinations)",
+        "Identified I-35 corridor trafficking pattern (+10.80 cases/year acceleration)",
+        "Discovered Texas border worsening (+81%) while CA/AZ improved",
+        "Pima County, AZ: 44.75 standard deviations above baseline (529 bodies)",
+        "7-page interactive dashboard with geospatial visualization",
+        "Validated against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)",
+        "Multi-decade trend analysis with 5-year forecasting",
+        "Law enforcement analytics for trafficking and organized crime detection"
       ],
-      "repo_url": "https://github.com/XxRemsteelexX/TandemAI",
-      "primary_language": "TypeScript",
-      "project_type": "Original - AI/ML Platform",
-      "deployment_status": "Development/Desktop Application"
+      "repo_url": "https://github.com/XxRemsteelexX/missing-persons-outlier-detection",
+      "primary_language": "Python",
+      "project_type": "Original - Data Analytics/Social Impact",
+      "deployment_status": "Interactive Dashboard Complete"
+    },
+    {
+      "name": "Kaggle_House_Prices_Advanced_Regression",
+      "description": "Comprehensive machine learning solution for Kaggle House Prices competition featuring advanced feature engineering, ensemble methods, and modern AutoML techniques",
+      "technologies": [
+        "Python",
+        "XGBoost",
+        "LightGBM",
+        "CatBoost",
+        "TabPFN",
+        "AutoGluon",
+        "scikit-learn",
+        "pandas",
+        "numpy",
+        "GPU Acceleration (CUDA)",
+        "Jupyter Notebook"
+      ],
+      "notable_features": [
+        "100+ engineered features (age-based, quality interactions, aggregations)",
+        "20+ model ensemble (XGBoost, LightGBM, CatBoost, Ridge, Lasso, ElasticNet)",
+        "Modern AutoML integration (TabPFN, AutoGluon 2024-2025)",
+        "GPU-accelerated training pipeline",
+        "Multi-level stacking with optimized weighted blending",
+        "Complete ML pipeline: EDA → Feature Engineering → Model Training → Ensemble",
+        "5 comprehensive Jupyter notebooks documenting full workflow",
+        "Cross-validation with inverse RMSE weighting strategy"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/Kaggle--House-Prices---Advanced-Regression-Techniques",
+      "primary_language": "Jupyter Notebook",
+      "project_type": "Original - Kaggle Competition",
+      "deployment_status": "Research/Analysis Complete"
     },
     {
       "name": "NFL_Rookie_WR_1K_Analysis", 
@@ -223,7 +256,11 @@
       "PyTorch",
       "TensorFlow/Keras",
       "scikit-learn",
-      "XGBoost", 
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "AutoGluon",
+      "TabPFN",
       "Hugging Face Transformers"
     ],
     "web_technologies": [
@@ -234,8 +271,11 @@
     ],
     "data_science_tools": [
       "pandas",
-      "numpy", 
+      "numpy",
+      "scipy",
       "matplotlib/seaborn",
+      "plotly",
+      "Streamlit",
       "Jupyter Notebook",
       "OpenCV",
       "Albumentations"
@@ -253,23 +293,27 @@
       "Computer Vision",
       "3D Medical Imaging",
       "Natural Language Processing",
+      "Statistical Anomaly Detection",
       "Linear Programming/Optimization",
-      "LLM Orchestration",
+      "Advanced Feature Engineering",
+      "Ensemble Learning & Model Stacking",
       "Healthcare AI",
       "Sports Analytics",
-      "Multi-GPU Training"
+      "Multi-GPU Training",
+      "AutoML & Modern ML Tools"
     ]
   },
   "project_themes": [
     "Healthcare AI and Medical Triage Systems",
     "3D Medical Imaging and Radiology AI",
-    "AI/ML Model Orchestration and Collaboration",
+    "Statistical Analysis and Anomaly Detection",
     "Sports Analytics and Predictive Modeling",
     "Supply Chain and Operations Optimization",
     "Production ML Deployment and MLOps",
     "Multi-modal AI combining text and vision",
     "Academic Research and Capstone Projects",
-    "Kaggle Competitions and Systematic ML Experimentation"
+    "Kaggle Competitions and Systematic ML Experimentation",
+    "Law Enforcement Analytics and Social Impact"
   ],
   "notable_achievements": [
     "Trained 105 deep learning models for 3D medical imaging (21 architectures × 5 folds)",
@@ -277,8 +321,9 @@
     "Successfully deployed live production AI healthcare system",
     "Achieved 93.8% accuracy in multi-modal medical triage",
     "Built complete 3D medical imaging pipeline from DICOM to ensemble predictions",
+    "Analyzed 41,200 missing persons cases identifying trafficking corridors and organized crime patterns",
     "Reduced ML model overfitting by 97.8% through feature optimization",
-    "Created innovative LLM ensemble orchestration platform",
+    "Engineered 100+ features for advanced regression ensemble achieving competitive Kaggle performance",
     "Demonstrated end-to-end ML project lifecycle management across multiple domains",
     "25.4% cost reduction in supply chain optimization",
     "Graduated from Western Governors University Data Science program"
@@ -287,10 +332,13 @@
     "Multi-modal AI systems",
     "Healthcare applications of machine learning",
     "3D medical imaging and radiology AI",
-    "AI model collaboration and ensemble methods",
+    "Statistical anomaly detection and pattern recognition",
+    "Advanced ensemble methods and model stacking",
     "Production ML deployment and scalability",
     "Systematic ML experimentation and architecture search",
+    "Feature engineering and representation learning",
     "Sports analytics and predictive modeling",
-    "Operations research and optimization"
+    "Operations research and optimization",
+    "Modern AutoML techniques (TabPFN, AutoGluon)"
   ]
 }
