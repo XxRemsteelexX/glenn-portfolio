@@ -4,7 +4,7 @@ A modern, full-stack portfolio website showcasing professional experience, proje
 
 ## Overview
 
-This portfolio website is built with cutting-edge web technologies to provide a responsive, performant, and interactive experience. It features automated GitHub project synchronization, an AI-powered chatbot assistant, dynamic resume management, and a comprehensive contact system with email and SMS notifications.
+This portfolio website is built with web technologies to provide a responsive, performant, and interactive experience. It features automated GitHub project synchronization, an AI-powered chatbot assistant, dynamic resume management, and a comprehensive contact system with email and SMS notifications.
 
 ## Key Features
 
