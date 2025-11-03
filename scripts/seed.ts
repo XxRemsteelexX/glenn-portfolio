@@ -56,6 +56,15 @@ const projects: ProjectData[] = [
     language: "Python"
   },
   {
+    name: "Kaggle_House_Prices_Advanced_Regression",
+    description: "Comprehensive machine learning solution for Kaggle House Prices competition featuring advanced feature engineering, ensemble methods, and modern AutoML techniques",
+    longDescription: "Advanced regression project implementing 100+ engineered features (age-based, quality interactions, aggregations) with 20+ model ensemble including XGBoost, LightGBM, CatBoost, Ridge, Lasso, and ElasticNet. Integrates modern AutoML tools (TabPFN, AutoGluon 2024-2025) with GPU-accelerated training. Features multi-level stacking with optimized weighted blending and complete ML pipeline documented across 5 comprehensive Jupyter notebooks. Demonstrates systematic experimentation with cross-validation and inverse RMSE weighting strategy.",
+    githubUrl: "https://github.com/XxRemsteelexX/Kaggle--House-Prices---Advanced-Regression-Techniques",
+    technologies: ["Python", "Jupyter Notebook", "XGBoost", "LightGBM", "CatBoost", "TabPFN", "AutoGluon", "scikit-learn", "GPU Acceleration", "Feature Engineering", "Ensemble Learning", "Kaggle"],
+    featured: true,
+    language: "Jupyter Notebook"
+  },
+  {
     name: "Blue-Zones-Longevity-Analysis",
     description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
     longDescription: "Cutting-edge research project combining gravitational physics with longevity studies. Uses advanced machine learning ensembles to analyze patterns in Blue Zones regions where people live exceptionally long lives. Features comprehensive statistical analysis and provides actionable policy recommendations based on scientific findings.",
@@ -220,6 +229,11 @@ const skills: SkillData[] = [
   { name: "PyTorch", category: "AI/ML Frameworks", proficiency: "Expert", yearsExp: 3, featured: true },
   { name: "TensorFlow", category: "AI/ML Frameworks", proficiency: "Expert", yearsExp: 3, featured: true },
   { name: "scikit-learn", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 4, featured: true },
+  { name: "XGBoost", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
+  { name: "LightGBM", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
+  { name: "CatBoost", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
+  { name: "AutoGluon", category: "AI/ML Frameworks", proficiency: "Intermediate", yearsExp: 1, featured: false },
+  { name: "TabPFN", category: "AI/ML Frameworks", proficiency: "Intermediate", yearsExp: 1, featured: false },
   { name: "Transformers", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "OpenAI API", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: false },
   
@@ -251,7 +265,9 @@ const skills: SkillData[] = [
   { name: "Natural Language Processing", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Multi-modal AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Healthcare AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },
-  { name: "LLM Orchestration", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: false }
+  { name: "Ensemble Learning", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
+  { name: "Feature Engineering", category: "AI Specializations", proficiency: "Advanced", yearsExp: 3, featured: true },
+  { name: "Statistical Anomaly Detection", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: false }
 ];
 
 const certifications: CertificationData[] = [
