@@ -277,7 +277,12 @@ const skills: SkillData[] = [
   { name: "Healthcare AI", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },
   { name: "Ensemble Learning", category: "AI Specializations", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Feature Engineering", category: "AI Specializations", proficiency: "Advanced", yearsExp: 3, featured: true },
-  { name: "Statistical Anomaly Detection", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: false }
+  { name: "Statistical Anomaly Detection", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: false },
+  { name: "Spatial-Temporal Transformers", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },
+  { name: "Trajectory Prediction", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true },
+  { name: "GRU/RNN Architectures", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 1, featured: false },
+  { name: "Geometric Deep Learning", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: false },
+  { name: "Sports Analytics", category: "AI Specializations", proficiency: "Advanced", yearsExp: 1, featured: true }
 ];
 
 const certifications: CertificationData[] = [
