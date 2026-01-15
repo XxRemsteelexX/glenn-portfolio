@@ -24,6 +24,40 @@
   },
   "github_projects": [
     {
+      "name": "NFL_Big_Data_Bowl_2026",
+      "description": "Deep learning solution for predicting NFL player trajectories from tracking data. Bronze Medal (94th/1,134 teams) in Kaggle's NFL Big Data Bowl 2026 competition. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
+      "technologies": [
+        "Python",
+        "PyTorch",
+        "Spatial-Temporal Transformers",
+        "GRU/RNN",
+        "Multi-scale CNN",
+        "Geometric Attention Networks",
+        "Perceiver IO",
+        "scikit-learn",
+        "Mixed Precision Training",
+        "Multi-GPU Training",
+        "Test-Time Augmentation"
+      ],
+      "notable_features": [
+        "Bronze Medal - 94th place out of 1,134 teams (Top 8%)",
+        "847+ experiments across 15+ model architectures",
+        "Best ensemble: 0.540 Public LB (3-model: ST Transformer + CNN + GRU)",
+        "Best single model: 6-Layer ST Transformer (0.547 Public LB)",
+        "20-fold cross-validation with multi-seed ensembling",
+        "Novel geometric attention with Voronoi tessellation and spatial distance modulation",
+        "167 engineered features (kinematics, ball-relative, temporal, geometric)",
+        "Key discovery: Architecture diversity in ensembles outperforms model stacking",
+        "Test-Time Augmentation providing +0.005-0.010 improvement",
+        "Frozen encoder fine-tuning for transfer learning",
+        "13 comprehensive Jupyter notebooks documenting all experiments"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-",
+      "primary_language": "Python",
+      "project_type": "Original - Kaggle Competition",
+      "deployment_status": "Competition Complete - Bronze Medal"
+    },
+    {
       "name": "RSNA_Intracranial_Aneurysm_Detection",
       "description": "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
       "technologies": [
@@ -316,6 +350,8 @@
     "Law Enforcement Analytics and Social Impact"
   ],
   "notable_achievements": [
+    "Bronze Medal in NFL Big Data Bowl 2026 (94th/1,134 teams) - Player Trajectory Prediction",
+    "847+ deep learning experiments across 15+ architectures for trajectory prediction",
     "Trained 105 deep learning models for 3D medical imaging (21 architectures × 5 folds)",
     "Discovered smaller models outperform larger ones on limited medical data (statistically significant)",
     "Successfully deployed live production AI healthcare system",
@@ -332,6 +368,8 @@
     "Multi-modal AI systems",
     "Healthcare applications of machine learning",
     "3D medical imaging and radiology AI",
+    "Trajectory prediction and sequence modeling",
+    "Spatial-temporal transformers and geometric attention",
     "Statistical anomaly detection and pattern recognition",
     "Advanced ensemble methods and model stacking",
     "Production ML deployment and scalability",
