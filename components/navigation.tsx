@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Menu, X, Github, Linkedin, Mail, MessageSquare, ExternalLink, ChevronDown } from "lucide-react";
+import { Moon, Sun, Menu, X, Github, Linkedin, Mail, MessageSquare, ExternalLink, ChevronDown, Server } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import {
@@ -79,6 +79,12 @@ export function Navigation({ className }: NavigationProps) {
     },
   ];
 
+  const infrastructureLink = {
+    name: "AI Homelab Infrastructure",
+    url: "/infrastructure",
+    description: "10Gb AI lab with dual RTX 5090, 256GB unified memory inference, RAG pipeline"
+  };
+
   return (
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -127,6 +133,18 @@ export function Navigation({ className }: NavigationProps) {
                   >
                     <MessageSquare className="w-4 h-4" />
                     <span>View All Demos (Interactive)</span>
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    href={infrastructureLink.url}
+                    className="flex items-start space-x-3 p-3 cursor-pointer bg-gradient-to-r from-yellow-500/5 to-purple-500/5 border-l-2 border-yellow-500"
+                  >
+                    <Server className="w-4 h-4 mt-1 text-yellow-500 flex-shrink-0" />
+                    <div className="flex-1">
+                      <div className="font-semibold text-sm mb-1">{infrastructureLink.name}</div>
+                      <div className="text-xs text-muted-foreground">{infrastructureLink.description}</div>
+                    </div>
                   </Link>
                 </DropdownMenuItem>
                 <div className="h-px bg-border my-1" />
@@ -215,6 +233,19 @@ export function Navigation({ className }: NavigationProps) {
                   {item.label}
                 </Link>
               ))}
+
+              {/* Mobile Infrastructure Link */}
+              <Link
+                href={infrastructureLink.url}
+                className="flex items-start space-x-3 px-3 py-3 mt-2 hover:bg-muted rounded-md transition-colors bg-gradient-to-r from-yellow-500/5 to-purple-500/5 border-l-2 border-yellow-500"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Server className="w-4 h-4 mt-1 text-yellow-500 flex-shrink-0" />
+                <div className="flex-1">
+                  <div className="font-medium text-sm">{infrastructureLink.name}</div>
+                  <div className="text-xs text-muted-foreground">{infrastructureLink.description}</div>
+                </div>
+              </Link>
 
               {/* Mobile Live Demos Section */}
               <div className="pt-4 border-t border-border/50">

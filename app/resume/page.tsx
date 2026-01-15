@@ -279,6 +279,9 @@ function OnePageResume() {
           <div className="skills-category">Cloud & Deployment</div>
           <div className="skills-list">AWS (Certified), Multi-GPU Training, Mixed Precision, Docker, Flask, FastAPI</div>
 
+          <div className="skills-category">Homelab & Systems</div>
+          <div className="skills-list">Proxmox, pfSense, n8n, RAG Pipelines, 10Gb Networking, Ubuntu Server</div>
+
           <div className="skills-category">Specializations</div>
           <div className="skills-list">Trajectory Prediction, 3D Medical Imaging, Computer Vision, NLP, Multi-modal AI</div>
 
@@ -578,6 +581,9 @@ function DetailedResume() {
           <div className="skills-category">Cloud & Infrastructure</div>
           <div className="skills-list">AWS (Certified), Multi-GPU Training, Mixed Precision (FP16), PostgreSQL, S3, Weights & Biases</div>
 
+          <div className="skills-category">Homelab & Systems</div>
+          <div className="skills-list">Proxmox VE, pfSense, Ubuntu Server, n8n Automation, RAG Pipelines, 10Gb Networking, VLAN</div>
+
           <div className="skills-category">Web & Deployment</div>
           <div className="skills-list">Flask, FastAPI, Streamlit, React/Next.js, Docker, CI/CD, GitHub Actions</div>
 
@@ -688,6 +694,16 @@ function DetailedResume() {
             <li>Reduced overfitting gap from 18.5% to 0.4% (97.8% reduction) through feature optimization (46→20 features)</li>
             <li>Implemented temporal validation strategy ensuring model generalization to future NFL seasons</li>
             <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
+          </ul>
+
+          <div className="project-title">AI Homelab & Active Memory Network</div>
+          <div className="project-subtitle">Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline</div>
+          <div className="project-url">glenndalbey.com/infrastructure</div>
+          <ul>
+            <li>Designed and operate multi-tier AI homelab: <strong>dual RTX 5090</strong> training node + RTX 3090 Ti/3090 secondary node</li>
+            <li>Built 256GB unified memory LLM inference cluster (2× Ryzen AI Max+ 395) running Kimi K2, Qwen 3, GLM 4.6</li>
+            <li>Implemented automated active-memory pipeline with n8n orchestration, RAG storage, and hot/warm/cold tiering</li>
+            <li>Deployed Proxmox VE backbone with pfSense firewall, VLAN segmentation, and 10Gb networking (100TB+ storage)</li>
           </ul>
 
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
