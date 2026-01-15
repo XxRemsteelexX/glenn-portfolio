@@ -37,6 +37,16 @@ interface CertificationData {
 
 const projects: ProjectData[] = [
   {
+    name: "NFL_Big_Data_Bowl_2026",
+    description: "Bronze Medal (94th/1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
+    longDescription: "Bronze Medal achievement in Kaggle's NFL Big Data Bowl 2026 competition (94th place out of 1,134 teams, Top 8%). Developed comprehensive deep learning pipeline for player trajectory prediction featuring: 8 model architectures (Spatial-Temporal Transformers, Multi-scale CNN, GRU, Position-Specific ST, Geometric Network, Perceiver IO, Co4), 20-fold cross-validation with multi-seed ensembling, 167 engineered features (kinematics, ball-relative, temporal, geometric), novel geometric attention with Voronoi tessellation, and Test-Time Augmentation providing +0.005-0.010 improvement. Best ensemble achieved 0.540 Public LB score. Key discovery: Architecture diversity in ensembles outperforms model stacking.",
+    githubUrl: "https://github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-",
+    imageUrl: "https://storage.googleapis.com/kaggle-media/Images/competition-medals/bronze-medal-2026.png",
+    technologies: ["Python", "PyTorch", "Spatial-Temporal Transformers", "GRU/RNN", "Multi-scale CNN", "Geometric Attention", "Perceiver IO", "Mixed Precision Training", "Multi-GPU Training", "Test-Time Augmentation", "Kaggle Competition"],
+    featured: true,
+    language: "Python"
+  },
+  {
     name: "RSNA_Intracranial_Aneurysm_Detection",
     description: "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
     longDescription: "Advanced 3D medical imaging project for Kaggle RSNA competition. Trained 105 models (21 architectures × 5 folds), tested 51 ensemble configurations. Best ensemble achieved AUC 0.8624. Key discovery: smaller models outperform larger ones on limited medical data (r=-0.42, p<0.01). Multi-GPU training on 4 GPUs with complete DICOM→NIfTI→ROI extraction→Training→Ensemble pipeline.",
