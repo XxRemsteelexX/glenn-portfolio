@@ -268,19 +268,19 @@ function OnePageResume() {
           <div className="section-title">TECHNICAL SKILLS</div>
 
           <div className="skills-category">Programming</div>
-          <div className="skills-list">Python (Expert), R, SQL, TypeScript, JavaScript, C++</div>
+          <div className="skills-list">Python (Expert), SQL, TypeScript, JavaScript, R, C++</div>
 
-          <div className="skills-category">ML & AI</div>
-          <div className="skills-list">PyTorch, TensorFlow, scikit-learn, XGBoost, Hugging Face, DistilBERT</div>
+          <div className="skills-category">Deep Learning</div>
+          <div className="skills-list">PyTorch, TensorFlow, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Geometric Attention</div>
 
-          <div className="skills-category">Data Science</div>
-          <div className="skills-list">Pandas, NumPy, Tableau, Statistical Analysis, Predictive Modeling</div>
+          <div className="skills-category">ML & Data Science</div>
+          <div className="skills-list">scikit-learn, XGBoost, Pandas, NumPy, Ensemble Methods, Feature Engineering</div>
 
-          <div className="skills-category">Cloud & Web</div>
-          <div className="skills-list">AWS (Certified), PostgreSQL, Flask, FastAPI, React, Docker</div>
+          <div className="skills-category">Cloud & Deployment</div>
+          <div className="skills-list">AWS (Certified), Multi-GPU Training, Mixed Precision, Docker, Flask, FastAPI</div>
 
           <div className="skills-category">Specializations</div>
-          <div className="skills-list">Computer Vision, NLP, Multi-modal AI, Healthcare AI, MLOps</div>
+          <div className="skills-list">Trajectory Prediction, 3D Medical Imaging, Computer Vision, NLP, Multi-modal AI</div>
 
           <div className="section-title">EDUCATION</div>
 
@@ -320,34 +320,34 @@ function OnePageResume() {
         <div className="main-content">
           <div className="main-section-title">PROFESSIONAL SUMMARY</div>
           <div className="compact-summary">
-            Results-driven Data Science professional with MS in Data Science and proven expertise in production AI/ML systems. Built and deployed production healthcare AI triage system achieving 93.8% accuracy with sub-second response times. Demonstrated success in advanced predictive modeling (90.9% ROC AUC), multi-modal AI, and MLOps. Combines technical expertise with 15+ years of operational excellence and continuous improvement leadership.
+            Data Science professional with MS in Data Science and proven expertise in deep learning and competitive ML. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8%, 94th/1,134 teams) with 847+ experiments across 15+ architectures. Built production healthcare AI achieving 93.8% accuracy, trained 105 3D medical imaging models, and deployed multiple live systems. Expert in spatial-temporal modeling, trajectory prediction, and ensemble methods.
           </div>
 
           <div className="main-section-title">FEATURED PROJECTS</div>
 
+          <div className="project-title">NFL Big Data Bowl 2026 | Kaggle Bronze Medal</div>
+          <div className="project-subtitle">Player Trajectory Prediction | 94th/1,134 teams (Top 8%)</div>
+          <ul>
+            <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories</li>
+            <li>Conducted 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)</li>
+            <li>Best ensemble: 3-model blend achieving 0.540 Public LB with architecture diversity strategy</li>
+            <li>Engineered 167 features (kinematics, ball-relative, temporal, geometric with Voronoi tessellation)</li>
+          </ul>
+
+          <div className="project-title">RSNA Intracranial Aneurysm Detection | Kaggle Competition</div>
+          <div className="project-subtitle">3D Medical Imaging Deep Learning | 105 Models Trained</div>
+          <ul>
+            <li>Trained 105 models (21 architectures × 5 folds) for CT angiography aneurysm detection</li>
+            <li>Best ensemble AUC 0.8624 with discovery that smaller models outperform larger on limited medical data</li>
+            <li>Built complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble on 4 GPUs</li>
+          </ul>
+
           <div className="project-title">Apollo Healthcare Connect | apollohealthcareconnect.com</div>
-          <div className="project-subtitle">Production Multi-modal AI Healthcare Triage System | MS Capstone</div>
+          <div className="project-subtitle">Production Multi-modal AI Healthcare Triage | MS Capstone</div>
           <ul>
-            <li>Built and deployed production healthcare AI triage system achieving 93.8% accuracy with sub-second response</li>
-            <li>Implemented 5-model ensemble combining DistilBERT (NLP) and CNNs (Computer Vision)</li>
-            <li>Successfully handled extreme class imbalance (29.7:1) with advanced loss functions</li>
-            <li>Built production pipeline with Flask API, AWS S3 integration, and safety protocols</li>
-          </ul>
-
-          <div className="project-title">TandemAI - LLM Ensemble Orchestration</div>
-          <div className="project-subtitle">Local-First AI Model Collaboration System | github.com/XxRemsteelexX/TandemAI</div>
-          <ul>
-            <li>Built platform enabling multiple LLMs to collaborate through 4 orchestration modes</li>
-            <li>Designed universal provider support for 10+ platforms (OpenAI, Anthropic, Ollama, etc.)</li>
-            <li>Implemented real-time streaming, conversation history, and privacy-first architecture</li>
-          </ul>
-
-          <div className="project-title">NFL Rookie Performance Prediction</div>
-          <div className="project-subtitle">Advanced ML Analysis | BS Capstone | github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis</div>
-          <ul>
-            <li>Achieved 90.9% ROC AUC on temporal validation for predicting 1000+ yard seasons</li>
-            <li>Reduced overfitting from 18.5% to 0.4% through feature optimization (46→20 features)</li>
-            <li>Created production-ready ensemble model with comprehensive data pipeline (2006-2024)</li>
+            <li>Live production healthcare AI triage achieving <strong>93.8% accuracy</strong> with sub-second response</li>
+            <li>5-model ensemble combining DistilBERT (NLP) and CNNs; handled 29.7:1 class imbalance</li>
+            <li>Full production pipeline with Flask API, AWS S3, and safety protocols</li>
           </ul>
 
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
@@ -373,11 +373,11 @@ function OnePageResume() {
 
           <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
           <ul>
-            <li>Built and deployed production healthcare AI triage system achieving 93.8% accuracy</li>
-            <li>Built and deployed 5+ production systems across healthcare, business analytics, and research</li>
-            <li>Reduced ML model overfitting by 97.8% through advanced feature optimization techniques</li>
-            <li>Published 15+ open-source projects on GitHub with comprehensive documentation</li>
-            <li>Successfully handled extreme class imbalance (29.7:1) in medical imaging classification</li>
+            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (94th/1,134 teams, Top 8%)</li>
+            <li>847+ deep learning experiments across 15+ architectures; 105 3D medical imaging models trained</li>
+            <li>Production healthcare AI achieving 93.8% accuracy with sub-second response</li>
+            <li>Identified trafficking patterns at 44.75σ significance from 41,200 missing persons cases</li>
+            <li>Published 15+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
           </ul>
         </div>
       </div>
@@ -567,22 +567,22 @@ function DetailedResume() {
           <div className="section-title">TECHNICAL SKILLS</div>
 
           <div className="skills-category">Programming</div>
-          <div className="skills-list">Python (Expert), R, SQL, TypeScript, JavaScript, C++, C#, Java, HTML/CSS</div>
+          <div className="skills-list">Python (Expert), SQL, TypeScript, JavaScript, R, C++, HTML/CSS</div>
 
-          <div className="skills-category">ML & AI</div>
-          <div className="skills-list">PyTorch, TensorFlow/Keras, scikit-learn, XGBoost, Hugging Face, DistilBERT, OpenAI API</div>
+          <div className="skills-category">Deep Learning</div>
+          <div className="skills-list">PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention Networks</div>
 
-          <div className="skills-category">Data Science</div>
-          <div className="skills-list">Pandas, NumPy, Tableau, Statistical Analysis, Data Mining, Predictive Modeling, Big Data</div>
+          <div className="skills-category">ML & Data Science</div>
+          <div className="skills-list">scikit-learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Advanced Ensemble Methods, Feature Engineering</div>
 
-          <div className="skills-category">Cloud & Database</div>
-          <div className="skills-list">AWS (Certified), PostgreSQL, MongoDB, S3, Weights & Biases</div>
+          <div className="skills-category">Cloud & Infrastructure</div>
+          <div className="skills-list">AWS (Certified), Multi-GPU Training, Mixed Precision (FP16), PostgreSQL, S3, Weights & Biases</div>
 
           <div className="skills-category">Web & Deployment</div>
-          <div className="skills-list">Flask, FastAPI, Streamlit, React, Next.js, Docker, CI/CD, GitHub Actions</div>
+          <div className="skills-list">Flask, FastAPI, Streamlit, React/Next.js, Docker, CI/CD, GitHub Actions</div>
 
           <div className="skills-category">Specializations</div>
-          <div className="skills-list">Computer Vision, NLP, Multi-modal AI, Healthcare AI, Deep Learning, LLM Orchestration</div>
+          <div className="skills-list">Trajectory Prediction, 3D Medical Imaging (DICOM/NIfTI), Computer Vision, NLP, Multi-modal AI, Test-Time Augmentation</div>
 
           <div className="section-title">EDUCATION</div>
 
@@ -629,50 +629,65 @@ function DetailedResume() {
         <div className="main-content">
           <div className="main-section-title">PROFESSIONAL SUMMARY</div>
           <p style={{ fontSize: "11pt", lineHeight: 1.4, marginBottom: "16pt" }}>
-            Results-driven Data Science professional with MS in Data Science and proven expertise in production AI/ML systems. Built and deployed production healthcare AI triage system achieving 93.8% accuracy with sub-second response times. Demonstrated success in advanced predictive modeling (90.9% ROC AUC), multi-modal AI, computer vision, NLP, and MLOps. Combines 15+ years of operational excellence and continuous improvement leadership at John Deere with cutting-edge technical expertise in Python, deep learning, and cloud technologies.
+            Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (94th/1,134 teams, Top 8%) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
           </p>
 
           <div className="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
+
+          <div className="project-title">NFL Big Data Bowl 2026 - Kaggle Bronze Medal</div>
+          <div className="project-subtitle">Deep Learning Player Trajectory Prediction | 94th/1,134 teams (Top 8%)</div>
+          <div className="project-url">github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-</div>
+          <ul>
+            <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories from tracking data</li>
+            <li>Conducted systematic exploration of 847+ experiments across 15+ neural network architectures</li>
+            <li>Best single model: 6-Layer Spatial-Temporal Transformer achieving 0.547 Public LB score</li>
+            <li>Best ensemble: 3-model blend (ST Transformer + CNN + GRU) achieving 0.540 Public LB with architecture diversity</li>
+            <li>Engineered 167 features including kinematics, ball-relative positions, temporal patterns, and geometric features with Voronoi tessellation</li>
+            <li>Implemented novel geometric attention with spatial distance modulation and frozen encoder fine-tuning</li>
+            <li>Utilized multi-GPU training, mixed precision (FP16), and test-time augmentation for +0.005-0.010 improvement</li>
+          </ul>
+
+          <div className="project-title">RSNA Intracranial Aneurysm Detection - Kaggle Competition</div>
+          <div className="project-subtitle">3D Deep Learning Medical Imaging | 105 Models Trained</div>
+          <div className="project-url">github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle</div>
+          <ul>
+            <li>Trained 105 deep learning models (21 architectures × 5 folds) for CT angiography aneurysm detection</li>
+            <li>Tested 51 ensemble configurations; best ensemble META_E_top3_weighted achieved AUC 0.8624</li>
+            <li>Key discovery: Smaller models (SE-ResNet18) statistically outperform larger models on limited medical data (r=-0.42, p&lt;0.01)</li>
+            <li>Built complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble across 4 GPUs simultaneously</li>
+            <li>Multi-label classification across 14 classes with severe class imbalance handling (1.2% to 42.8%)</li>
+          </ul>
 
           <div className="project-title">Apollo Healthcare Connect</div>
           <div className="project-subtitle">Production Multi-modal AI Healthcare Triage System | MS Capstone</div>
           <div className="project-url">apollohealthcareconnect.com</div>
           <ul>
-            <li>Built and deployed production healthcare AI triage system with sub-second response times</li>
-            <li>Achieved 93.8% combined multi-modal accuracy and 98.0% burn classification accuracy</li>
+            <li>Built and deployed live production healthcare AI triage system with sub-second response times</li>
+            <li>Achieved <strong>93.8% combined multi-modal accuracy</strong> and <strong>98.0% burn classification accuracy</strong></li>
             <li>Implemented 5-model ensemble architecture combining DistilBERT (NLP) and CNNs (Computer Vision)</li>
             <li>Successfully handled extreme class imbalance (29.7:1 ratio) with advanced loss functions</li>
             <li>Built production pipeline with Flask API, AWS S3 integration, and comprehensive safety protocols</li>
           </ul>
 
-          <div className="project-title">TandemAI - LLM Ensemble Orchestration Platform</div>
-          <div className="project-subtitle">Local-First AI Model Collaboration System</div>
-          <div className="project-url">github.com/XxRemsteelexX/TandemAI</div>
+          <div className="project-title">Missing Persons Outlier Detection</div>
+          <div className="project-subtitle">Statistical Anomaly Detection for Trafficking & Organized Crime Analysis</div>
+          <div className="project-url">github.com/XxRemsteelexX/missing-persons-outlier-detection</div>
           <ul>
-            <li>Built innovative platform enabling multiple LLMs to collaborate through 4 orchestration modes</li>
-            <li>Designed universal provider support for 10+ platforms (Ollama, OpenAI, Anthropic, Groq, LM Studio)</li>
-            <li>Implemented real-time streaming, conversation history, and privacy-first local architecture</li>
-            <li>Created cross-platform deployment with Tauri and Electron for desktop applications</li>
+            <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
+            <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
+            <li>Discovered Pima County, AZ anomaly: 44.75 standard deviations above baseline (529 bodies)</li>
+            <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
+            <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
           </ul>
 
           <div className="project-title">NFL Rookie Wide Receiver Performance Prediction</div>
           <div className="project-subtitle">Advanced ML Analysis with Feature Optimization | BS Capstone</div>
           <div className="project-url">github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis</div>
           <ul>
-            <li>Developed predictive model achieving 90.9% ROC AUC on future data validation for 1000+ yard seasons</li>
-            <li>Reduced overfitting gap from 18.5% to 0.4% through sophisticated feature optimization (46→20 features)</li>
+            <li>Developed predictive model achieving <strong>90.9% ROC AUC</strong> on future data validation for 1000+ yard seasons</li>
+            <li>Reduced overfitting gap from 18.5% to 0.4% (97.8% reduction) through feature optimization (46→20 features)</li>
             <li>Implemented temporal validation strategy ensuring model generalization to future NFL seasons</li>
-            <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline</li>
-          </ul>
-
-          <div className="project-title">Business Analytics AI Platform</div>
-          <div className="project-subtitle">AI-Powered Excel Analytics for Enterprise</div>
-          <div className="project-url">business-analytics-ai-platform-production.up.railway.app</div>
-          <ul>
-            <li>Built professional business intelligence platform with enterprise branding</li>
-            <li>Implemented natural language querying enabling non-technical users to analyze Excel data</li>
-            <li>Developed automated chart generation and executive-ready visualizations</li>
-            <li>Integrated AI-powered analytics for instant business intelligence from uploaded data</li>
+            <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
           </ul>
 
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
@@ -702,13 +717,14 @@ function DetailedResume() {
 
           <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
           <ul>
-            <li>Built and deployed production healthcare AI triage system achieving 93.8% accuracy and sub-second response</li>
-            <li>Achieved 90.9% ROC AUC on temporal validation for sports analytics with production deployment</li>
-            <li>Built and deployed 5+ live production systems across healthcare, business analytics, and research</li>
-            <li>Successfully handled extreme class imbalance (29.7:1 ratio) in medical imaging classification</li>
-            <li>Reduced ML model overfitting by 97.8% (18.5% to 0.4% gap) through feature optimization</li>
+            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (94th/1,134 teams, Top 8%)</li>
+            <li>Conducted 847+ deep learning experiments across 15+ architectures with systematic hyperparameter optimization</li>
+            <li>Trained 105 3D medical imaging models achieving AUC 0.8624 in ensemble configuration</li>
+            <li>Built and deployed production healthcare AI achieving 93.8% accuracy with sub-second response</li>
+            <li>Discovered smaller models outperform larger on limited medical data (statistically significant: r=-0.42, p&lt;0.01)</li>
+            <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at 44.75σ significance</li>
+            <li>Achieved 90.9% ROC AUC on temporal validation for NFL rookie prediction with 97.8% overfitting reduction</li>
             <li>Published 15+ open-source projects on GitHub with comprehensive documentation</li>
-            <li>Developed scalable ML pipelines and REST APIs for real-world applications with safety protocols</li>
           </ul>
         </div>
       </div>

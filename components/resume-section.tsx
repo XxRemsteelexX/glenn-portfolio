@@ -180,11 +180,10 @@ export function ResumeSection() {
                     Professional Summary
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Data Science professional with <strong>Master's in Data Science and Analytics</strong> with proven expertise in AI/ML implementation. 
-                    Demonstrated success deploying production healthcare systems with <strong>93.8% accuracy</strong> and developing 
-                    advanced predictive models. Strong background in multi-modal AI, deep learning, and MLOps with experience 
-                    serving real-world applications. Currently providing data science consulting services with focus on analytics 
-                    and machine learning solutions.
+                    Data Science professional with <strong>Master's in Data Science and Analytics</strong> and proven expertise in competitive ML.
+                    <strong> Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8%, 94th/1,134 teams) with 847+ experiments across 15+ architectures.
+                    Trained 105 3D medical imaging models and deployed production healthcare AI achieving <strong>93.8% accuracy</strong>.
+                    Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI.
                   </p>
                 </div>
               </CardContent>
@@ -208,32 +207,32 @@ export function ResumeSection() {
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold mb-3">Programming Languages</h4>
+                    <h4 className="font-semibold mb-3">Programming & Deep Learning</h4>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {["Python", "SQL", "TypeScript", "JavaScript", "HTML/CSS"].map((skill) => (
+                      {["Python", "PyTorch", "TensorFlow", "SQL", "TypeScript"].map((skill) => (
                         <Badge key={skill} variant="secondary">{skill}</Badge>
                       ))}
                     </div>
 
-                    <h4 className="font-semibold mb-3">Machine Learning & AI</h4>
+                    <h4 className="font-semibold mb-3">Neural Network Architectures</h4>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {["PyTorch", "TensorFlow/Keras", "Scikit-learn", "XGBoost", "Hugging Face"].map((skill) => (
+                      {["Spatial-Temporal Transformers", "GRU/RNN", "3D CNNs", "Geometric Attention"].map((skill) => (
                         <Badge key={skill} variant="secondary">{skill}</Badge>
                       ))}
                     </div>
                   </div>
-                  
+
                   <div>
-                    <h4 className="font-semibold mb-3">Data Science Libraries</h4>
+                    <h4 className="font-semibold mb-3">ML & Infrastructure</h4>
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {["Pandas", "NumPy", "OpenCV", "Plotly", "Boto3"].map((skill) => (
+                      {["scikit-learn", "XGBoost", "Multi-GPU Training", "Mixed Precision", "AWS"].map((skill) => (
                         <Badge key={skill} variant="secondary">{skill}</Badge>
                       ))}
                     </div>
 
                     <h4 className="font-semibold mb-3">Specializations</h4>
                     <div className="flex flex-wrap gap-2">
-                      {["Computer Vision", "NLP", "Multi-modal AI", "Model Ensemble"].map((skill) => (
+                      {["Trajectory Prediction", "3D Medical Imaging", "Multi-modal AI", "Ensemble Methods"].map((skill) => (
                         <Badge key={skill} variant="default">{skill}</Badge>
                       ))}
                     </div>
@@ -258,8 +257,51 @@ export function ResumeSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                {/* Apollo Healthcare Connect */}
+                {/* NFL Big Data Bowl 2026 */}
+                <div className="border-l-4 border-yellow-500 pl-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="font-bold text-lg">NFL Big Data Bowl 2026 - Kaggle Bronze Medal</h4>
+                    <Link
+                      href="https://github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-primary hover:underline"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-1" />
+                      GitHub
+                    </Link>
+                  </div>
+                  <p className="text-sm text-primary font-medium mb-2">Player Trajectory Prediction | 94th/1,134 teams (Top 8%)</p>
+                  <ul className="text-sm text-muted-foreground space-y-1 mb-3">
+                    <li>• <strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories</li>
+                    <li>• 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)</li>
+                    <li>• Engineered 167 features with Voronoi tessellation and geometric attention</li>
+                  </ul>
+                  <div className="flex flex-wrap gap-1">
+                    {["PyTorch", "Transformers", "GRU", "Multi-GPU", "TTA"].map((tech) => (
+                      <Badge key={tech} variant="outline" className="text-xs">{tech}</Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* RSNA Medical Imaging */}
                 <div className="border-l-4 border-primary pl-6">
+                  <h4 className="font-bold text-lg mb-2">RSNA Intracranial Aneurysm Detection</h4>
+                  <p className="text-sm text-primary font-medium mb-2">3D Medical Imaging | 105 Models Trained</p>
+                  <ul className="text-sm text-muted-foreground space-y-1 mb-3">
+                    <li>• Trained 105 deep learning models (21 architectures × 5 folds) for CT angiography</li>
+                    <li>• Best ensemble <strong>AUC 0.8624</strong>; discovered smaller models outperform larger on limited data</li>
+                    <li>• Complete pipeline: DICOM→NIfTI→ROI→Training→Ensemble on 4 GPUs</li>
+                  </ul>
+                  <div className="flex flex-wrap gap-1">
+                    {["PyTorch", "3D CNNs", "SE-ResNet", "nibabel", "Multi-GPU"].map((tech) => (
+                      <Badge key={tech} variant="outline" className="text-xs">{tech}</Badge>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Apollo Healthcare Connect */}
+                <div className="border-l-4 border-green-500 pl-6">
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="font-bold text-lg">Apollo Healthcare Connect</h4>
                     <Link
@@ -272,44 +314,13 @@ export function ResumeSection() {
                       Live System
                     </Link>
                   </div>
-                  <p className="text-sm text-primary font-medium mb-2">Multi-modal AI Healthcare Triage System</p>
+                  <p className="text-sm text-primary font-medium mb-2">Production Multi-modal AI Healthcare Triage | MS Capstone</p>
                   <ul className="text-sm text-muted-foreground space-y-1 mb-3">
-                    <li>• Built and deployed production healthcare AI triage system</li>
-                    <li>• Achieved <strong>93.8% combined multi-modal accuracy</strong> and <strong>98.0% burn classification accuracy</strong></li>
-                    <li>• Implemented 5-model ensemble architecture with advanced loss functions and safety protocols</li>
+                    <li>• Live production system achieving <strong>93.8% accuracy</strong> with sub-second response</li>
+                    <li>• 5-model ensemble combining DistilBERT and CNNs; handled 29.7:1 class imbalance</li>
                   </ul>
                   <div className="flex flex-wrap gap-1">
                     {["PyTorch", "TensorFlow", "Flask", "DistilBERT", "AWS S3"].map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs">{tech}</Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* NFL Rookie Performance */}
-                <div className="border-l-4 border-green-500 pl-6">
-                  <h4 className="font-bold text-lg mb-2">NFL Rookie Performance Prediction Model</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1 mb-3">
-                    <li>• Developed advanced machine learning model with <strong>90.9% ROC AUC</strong> on future data</li>
-                    <li>• Reduced overfitting gap from 18.5% to 0.4% through feature optimization and temporal validation</li>
-                    <li>• Implemented production-ready model for NFL draft analysis</li>
-                  </ul>
-                  <div className="flex flex-wrap gap-1">
-                    {["Python", "Scikit-learn", "XGBoost", "Pandas"].map((tech) => (
-                      <Badge key={tech} variant="outline" className="text-xs">{tech}</Badge>
-                    ))}
-                  </div>
-                </div>
-
-                {/* TandemAI */}
-                <div className="border-l-4 border-blue-500 pl-6">
-                  <h4 className="font-bold text-lg mb-2">TandemAI - LLM Ensemble Orchestration Platform</h4>
-                  <ul className="text-sm text-muted-foreground space-y-1 mb-3">
-                    <li>• Built local-first AI model collaboration system with 4 orchestration modes</li>
-                    <li>• Designed universal provider support for multiple AI platforms (Ollama, OpenAI, Anthropic)</li>
-                    <li>• Implemented real-time monitoring and cross-platform deployment capabilities</li>
-                  </ul>
-                  <div className="flex flex-wrap gap-1">
-                    {["TypeScript", "Node.js", "Multiple AI APIs"].map((tech) => (
                       <Badge key={tech} variant="outline" className="text-xs">{tech}</Badge>
                     ))}
                   </div>
@@ -410,31 +421,31 @@ export function ResumeSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start">
-                      <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Built and deployed production healthcare AI triage system with sub-second response times
+                      <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-yellow-500 flex-shrink-0" />
+                      <strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8%, 94th/1,134)
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Achieved 90.9% ROC AUC on temporal validation for sports analytics prediction
+                      847+ deep learning experiments across 15+ neural network architectures
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Successfully handled extreme class imbalance (29.7:1 ratio) in medical imaging
+                      Trained 105 3D medical imaging models achieving AUC 0.8624 ensemble
                     </li>
                   </ul>
-                  
+
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Developed production-ready ensemble models with advanced safety protocols
+                      Production healthcare AI achieving 93.8% accuracy with sub-second response
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Created scalable ML pipelines and APIs for real-world applications
+                      Analyzed 41,200 cases identifying trafficking patterns at 44.75σ significance
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Open Source Contributions (14+ GitHub repositories)
+                      Published 15+ open-source projects on GitHub
                     </li>
                   </ul>
                 </div>
