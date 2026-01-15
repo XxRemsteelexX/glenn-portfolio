@@ -104,32 +104,51 @@ function OnePageResume() {
     }}>
       <style jsx>{`
         .resume-header {
-          text-align: center;
-          padding: 0.2in 0.4in 0.15in;
-          background: #f8f9fa;
-          border-bottom: 2px solid #e9ecef;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.15in 0.3in;
+          background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+          border-bottom: 3px solid #3498db;
+        }
+        .header-left {
+          display: flex;
+          align-items: center;
+          gap: 12px;
         }
         .resume-name {
-          font-size: 20pt;
+          font-size: 22pt;
           font-weight: bold;
-          color: #2c3e50;
-          margin-bottom: 4pt;
+          color: #fff;
           letter-spacing: 1pt;
+          margin: 0;
+        }
+        .name-divider {
+          width: 2px;
+          height: 28px;
+          background: #3498db;
         }
         .resume-title {
-          font-size: 11pt;
-          color: #34495e;
-          margin-bottom: 4pt;
+          font-size: 10pt;
+          color: #bdc3c7;
           font-style: italic;
+          margin: 0;
         }
-        .contact-info {
-          font-size: 9pt;
-          color: #555;
-          line-height: 1.2;
+        .header-right {
+          text-align: right;
         }
-        .contact-info a {
-          color: #3498db;
+        .contact-row {
+          font-size: 8.5pt;
+          color: #ecf0f1;
+          line-height: 1.4;
+        }
+        .contact-row a {
+          color: #85c1e9;
           text-decoration: none;
+        }
+        .contact-separator {
+          color: #7f8c8d;
+          margin: 0 4px;
         }
         .resume-body {
           display: grid;
@@ -137,13 +156,25 @@ function OnePageResume() {
         }
         .sidebar {
           background: #f8f9fa;
-          padding: 0.25in 0.25in;
+          padding: 0.2in 0.2in;
           border-right: 2px solid #e9ecef;
         }
         .main-content {
-          padding: 0.25in 0.4in;
+          padding: 0.2in 0.35in;
         }
         .section-title {
+          font-size: 10pt;
+          font-weight: bold;
+          color: #2c3e50;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 2pt;
+          margin-bottom: 5pt;
+          margin-top: 8pt;
+        }
+        .section-title:first-child {
+          margin-top: 0;
+        }
+        .main-section-title {
           font-size: 11pt;
           font-weight: bold;
           color: #2c3e50;
@@ -152,18 +183,6 @@ function OnePageResume() {
           margin-bottom: 6pt;
           margin-top: 10pt;
         }
-        .section-title:first-child {
-          margin-top: 0;
-        }
-        .main-section-title {
-          font-size: 12pt;
-          font-weight: bold;
-          color: #2c3e50;
-          border-bottom: 3px solid #3498db;
-          padding-bottom: 3pt;
-          margin-bottom: 8pt;
-          margin-top: 12pt;
-        }
         .main-section-title:first-child {
           margin-top: 0;
         }
@@ -171,17 +190,17 @@ function OnePageResume() {
           font-size: 9pt;
           font-weight: bold;
           color: #2c3e50;
-          margin-bottom: 2pt;
-          margin-top: 6pt;
+          margin-bottom: 1pt;
+          margin-top: 5pt;
         }
         .skills-list {
           font-size: 8pt;
           color: #555;
-          margin-bottom: 6pt;
-          line-height: 1.2;
+          margin-bottom: 4pt;
+          line-height: 1.15;
         }
         .education-item {
-          margin-bottom: 8pt;
+          margin-bottom: 6pt;
         }
         .degree {
           font-size: 9pt;
@@ -216,13 +235,13 @@ function OnePageResume() {
         .company {
           font-size: 9pt;
           color: #555;
-          margin-bottom: 1pt;
+          margin-bottom: 4pt;
           font-style: italic;
         }
-        .dates {
+        .dates-inline {
           font-size: 8pt;
           color: #777;
-          margin-bottom: 6pt;
+          font-style: normal;
         }
         .project-title {
           font-size: 10pt;
@@ -237,29 +256,34 @@ function OnePageResume() {
           margin-bottom: 4pt;
         }
         ul {
-          margin-left: 14pt;
-          margin-bottom: 8pt;
+          margin-left: 12pt;
+          margin-bottom: 6pt;
         }
         li {
-          margin-bottom: 2pt;
+          margin-bottom: 1pt;
           font-size: 9pt;
-          line-height: 1.2;
+          line-height: 1.15;
         }
         .compact-summary {
-          font-size: 10pt;
-          line-height: 1.3;
-          margin-bottom: 12pt;
+          font-size: 9pt;
+          line-height: 1.25;
+          margin-bottom: 8pt;
         }
       `}</style>
 
       <div className="resume-header">
-        <div className="resume-name">GLENN DALBEY</div>
-        <div className="resume-title">Data Science & Analytics Professional</div>
-        <div className="contact-info">
-          319-233-4445 | dalbeyglenn@gmail.com<br />
-          <a href="https://linkedin.com/in/glenn-dalbey-205b7a44">LinkedIn</a> |{" "}
-          <a href="https://github.com/XxRemsteelexX">GitHub</a> |{" "}
-          <a href="https://www.glenndalbey.com">Portfolio</a>
+        <div className="header-left">
+          <div className="resume-name">GLENN DALBEY</div>
+          <div className="name-divider"></div>
+          <div className="resume-title">Data Science & Analytics</div>
+        </div>
+        <div className="header-right">
+          <div className="contact-row">
+            319-233-4445<span className="contact-separator">|</span>dalbeyglenn@gmail.com
+          </div>
+          <div className="contact-row">
+            <a href="https://linkedin.com/in/glenn-dalbey-205b7a44">LinkedIn</a><span className="contact-separator">|</span><a href="https://github.com/XxRemsteelexX">GitHub</a><span className="contact-separator">|</span><a href="https://www.glenndalbey.com">Portfolio</a>
+          </div>
         </div>
       </div>
 
@@ -364,8 +388,7 @@ function OnePageResume() {
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
           <div className="job-title">Freelance Data Science Consultant</div>
-          <div className="company">Thompson Parking & Mobility Consultants</div>
-          <div className="dates">Current</div>
+          <div className="company">Thompson Parking & Mobility Consultants <span className="dates-inline">— Current</span></div>
           <ul>
             <li>Develop AI-powered Excel analytics platform enabling natural language data queries</li>
             <li>Design custom analytical solutions and machine learning models for client challenges</li>
@@ -373,8 +396,7 @@ function OnePageResume() {
           </ul>
 
           <div className="job-title">Continuous Improvement Leader & Material Specialist</div>
-          <div className="company">John Deere, Waterloo Works & Ankeny Works</div>
-          <div className="dates">2005-2020, 2021-Present</div>
+          <div className="company">John Deere, Waterloo Works & Ankeny Works <span className="dates-inline">— 2005-2020, 2021-Present</span></div>
           <ul>
             <li>Led CI Department as Representative and Trainer, facilitating process improvement frameworks</li>
             <li>Designed and implemented Zones Project, modernizing material flow training systems</li>
