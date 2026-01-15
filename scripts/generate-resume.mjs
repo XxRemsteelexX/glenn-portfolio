@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } from 'docx';
+import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, convertInchesToTwip } from 'docx';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -803,36 +803,34 @@ const detailedHTML = `
 function createATSWordDoc(isOnePage = false) {
   const sections = [];
 
-  // Header
+  // Header - compact, no extra spacing
   sections.push(
     new Paragraph({
-      children: [new TextRun({ text: "GLENN DALBEY", bold: true, size: 32 })],
+      children: [new TextRun({ text: "GLENN DALBEY", bold: true, size: 28 })],
       alignment: AlignmentType.CENTER,
     }),
     new Paragraph({
-      children: [new TextRun({ text: "Data Science & Analytics Professional", italics: true, size: 24 })],
+      children: [new TextRun({ text: "Data Science & Analytics Professional", italics: true, size: 22 })],
       alignment: AlignmentType.CENTER,
     }),
     new Paragraph({
-      children: [new TextRun({ text: "319-233-4445 | dalbeyglenn@gmail.com | linkedin.com/in/glenn-dalbey-205b7a44 | github.com/XxRemsteelexX | glenndalbey.com", size: 20 })],
+      children: [new TextRun({ text: "319-233-4445 | dalbeyglenn@gmail.com | linkedin.com/in/glenn-dalbey-205b7a44 | github.com/XxRemsteelexX | glenndalbey.com", size: 18 })],
       alignment: AlignmentType.CENTER,
-      spacing: { after: 200 },
-    }),
-    new Paragraph({ text: "" })
+      spacing: { after: 120 },
+    })
   );
 
   // Professional Summary
   sections.push(
     new Paragraph({
-      text: "PROFESSIONAL SUMMARY",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "PROFESSIONAL SUMMARY", bold: true, size: 24 })],
+      spacing: { before: 100, after: 60 },
     }),
     new Paragraph({
       children: [
         new TextRun({ text: "Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. " }),
         new TextRun({ text: "Kaggle Bronze Medalist", bold: true }),
-        new TextRun({ text: " in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI." }),
+        new TextRun({ text: " in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment." }),
       ],
       spacing: { after: 200 },
     })
@@ -841,9 +839,8 @@ function createATSWordDoc(isOnePage = false) {
   // Technical Skills
   sections.push(
     new Paragraph({
-      text: "TECHNICAL SKILLS",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "TECHNICAL SKILLS", bold: true, size: 24 })],
+      spacing: { before: 120, after: 60 },
     }),
     new Paragraph({ children: [new TextRun({ text: "Programming: ", bold: true }), new TextRun("Python (Expert), SQL, TypeScript, JavaScript, R, C++")] }),
     new Paragraph({ children: [new TextRun({ text: "Deep Learning: ", bold: true }), new TextRun("PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention")] }),
@@ -855,9 +852,8 @@ function createATSWordDoc(isOnePage = false) {
   // Featured Projects
   sections.push(
     new Paragraph({
-      text: "FEATURED PROJECTS",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "FEATURED PROJECTS", bold: true, size: 24 })],
+      spacing: { before: 120, after: 60 },
     }),
 
     new Paragraph({ children: [new TextRun({ text: "NFL Big Data Bowl 2026 - Kaggle Bronze Medal", bold: true })] }),
@@ -898,9 +894,8 @@ function createATSWordDoc(isOnePage = false) {
   // Professional Experience
   sections.push(
     new Paragraph({
-      text: "PROFESSIONAL EXPERIENCE",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "PROFESSIONAL EXPERIENCE", bold: true, size: 24 })],
+      spacing: { before: 120, after: 60 },
     }),
 
     new Paragraph({ children: [new TextRun({ text: "Freelance Data Science Consultant", bold: true })] }),
@@ -917,9 +912,8 @@ function createATSWordDoc(isOnePage = false) {
   // Education
   sections.push(
     new Paragraph({
-      text: "EDUCATION",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "EDUCATION", bold: true, size: 24 })],
+      spacing: { before: 120, after: 60 },
     }),
     new Paragraph({ children: [new TextRun({ text: "MS, Data Science & Analytics", bold: true }), new TextRun(" - Western Governors University (Aug 2024 - Aug 2025)")] }),
     new Paragraph({ children: [new TextRun({ text: "BS, Data Analytics", bold: true }), new TextRun(" - Western Governors University (Mar 2023 - Sep 2024)")] }),
@@ -930,9 +924,8 @@ function createATSWordDoc(isOnePage = false) {
   // Certifications
   sections.push(
     new Paragraph({
-      text: "CERTIFICATIONS",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "CERTIFICATIONS", bold: true, size: 24 })],
+      spacing: { before: 120, after: 60 },
     }),
     new Paragraph({ text: "• CompTIA Data+ (2024-2027)", bullet: { level: 0 } }),
     new Paragraph({ text: "• AWS Cloud Practitioner (2024-2027)", bullet: { level: 0 } }),
@@ -943,9 +936,8 @@ function createATSWordDoc(isOnePage = false) {
   // Key Accomplishments
   sections.push(
     new Paragraph({
-      text: "KEY ACCOMPLISHMENTS",
-      heading: HeadingLevel.HEADING_1,
-      spacing: { before: 200, after: 100 },
+      children: [new TextRun({ text: "KEY ACCOMPLISHMENTS", bold: true, size: 24 })],
+      spacing: { before: 120, after: 60 },
     }),
     new Paragraph({ text: "• Kaggle Bronze Medal - NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams)", bullet: { level: 0 } }),
     new Paragraph({ text: "• 847+ deep learning experiments; 105 3D medical imaging models trained", bullet: { level: 0 } }),
@@ -955,7 +947,16 @@ function createATSWordDoc(isOnePage = false) {
 
   return new Document({
     sections: [{
-      properties: {},
+      properties: {
+        page: {
+          margin: {
+            top: convertInchesToTwip(0.4),
+            bottom: convertInchesToTwip(0.3),
+            left: convertInchesToTwip(0.5),
+            right: convertInchesToTwip(0.5),
+          },
+        },
+      },
       children: sections,
     }],
   });
