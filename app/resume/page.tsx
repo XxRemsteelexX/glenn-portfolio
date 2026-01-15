@@ -316,9 +316,8 @@ function OnePageResume() {
           <div className="section-title">CERTIFICATIONS</div>
           <div className="cert-item">• CompTIA Data+ (2024-2027)</div>
           <div className="cert-item">• AWS Cloud Practitioner (2024-2027)</div>
-          <div className="cert-item">• Advanced Computer Vision & Deep Learning</div>
-          <div className="cert-item">• ML DevOps & Model Deployment</div>
-          <div className="cert-item">• Transformer Models & BERT</div>
+          <div className="cert-item">• CompTIA A+ (2023-2026)</div>
+          <div className="cert-item">• Udacity: Deep Learning, CV, GANs, CNNs, Transformers, ML DevOps</div>
 
           <div className="section-title">HONORS</div>
           <div className="cert-item">• National Society of Leadership and Success</div>
@@ -646,11 +645,11 @@ function DetailedResume() {
           <div className="cert-item">• AWS Cloud Practitioner (2024-2027)</div>
           <div className="cert-item">• CompTIA A+ (2023-2026)</div>
 
-          <div className="cert-category">Specialized Training</div>
+          <div className="cert-category">Udacity Nanodegrees</div>
           <div className="cert-item">• Advanced Computer Vision & Deep Learning</div>
           <div className="cert-item">• ML DevOps & Model Deployment</div>
           <div className="cert-item">• Transformer Models & BERT</div>
-          <div className="cert-item">• GANs & CNN Architecture</div>
+          <div className="cert-item">• GANs & Convolutional Neural Networks</div>
 
           <div className="section-title">HONORS</div>
           <div className="cert-item">• National Society of Leadership and Success</div>
