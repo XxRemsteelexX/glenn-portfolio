@@ -105,21 +105,21 @@ function OnePageResume() {
       <style jsx>{`
         .resume-header {
           text-align: center;
-          padding: 0.4in 0.5in 0.3in;
+          padding: 0.2in 0.4in 0.15in;
           background: #f8f9fa;
           border-bottom: 2px solid #e9ecef;
         }
         .resume-name {
-          font-size: 22pt;
+          font-size: 20pt;
           font-weight: bold;
           color: #2c3e50;
-          margin-bottom: 6pt;
+          margin-bottom: 4pt;
           letter-spacing: 1pt;
         }
         .resume-title {
-          font-size: 12pt;
+          font-size: 11pt;
           color: #34495e;
-          margin-bottom: 8pt;
+          margin-bottom: 4pt;
           font-style: italic;
         }
         .contact-info {
@@ -137,20 +137,20 @@ function OnePageResume() {
         }
         .sidebar {
           background: #f8f9fa;
-          padding: 0.5in 0.3in;
+          padding: 0.25in 0.25in;
           border-right: 2px solid #e9ecef;
         }
         .main-content {
-          padding: 0.5in 0.5in;
+          padding: 0.25in 0.4in;
         }
         .section-title {
           font-size: 11pt;
           font-weight: bold;
           color: #2c3e50;
           border-bottom: 2px solid #3498db;
-          padding-bottom: 3pt;
-          margin-bottom: 8pt;
-          margin-top: 14pt;
+          padding-bottom: 2pt;
+          margin-bottom: 6pt;
+          margin-top: 10pt;
         }
         .section-title:first-child {
           margin-top: 0;
@@ -160,9 +160,9 @@ function OnePageResume() {
           font-weight: bold;
           color: #2c3e50;
           border-bottom: 3px solid #3498db;
-          padding-bottom: 4pt;
-          margin-bottom: 10pt;
-          margin-top: 16pt;
+          padding-bottom: 3pt;
+          margin-bottom: 8pt;
+          margin-top: 12pt;
         }
         .main-section-title:first-child {
           margin-top: 0;
@@ -407,27 +407,27 @@ function DetailedResume() {
       <style jsx>{`
         .resume-header {
           text-align: center;
-          padding: 0.6in 0.6in 0.4in;
+          padding: 0.3in 0.5in 0.2in;
           background: #f8f9fa;
           border-bottom: 2px solid #e9ecef;
         }
         .resume-name {
-          font-size: 28pt;
+          font-size: 24pt;
           font-weight: bold;
           color: #2c3e50;
-          margin-bottom: 8pt;
+          margin-bottom: 4pt;
           letter-spacing: 1pt;
         }
         .resume-title {
-          font-size: 14pt;
+          font-size: 12pt;
           color: #34495e;
-          margin-bottom: 12pt;
+          margin-bottom: 6pt;
           font-style: italic;
         }
         .contact-info {
           font-size: 10pt;
           color: #555;
-          line-height: 1.3;
+          line-height: 1.2;
         }
         .contact-info a {
           color: #3498db;
@@ -440,11 +440,11 @@ function DetailedResume() {
         }
         .sidebar {
           background: #f8f9fa;
-          padding: 1in 0.4in;
+          padding: 0.35in 0.35in;
           border-right: 2px solid #e9ecef;
         }
         .main-content {
-          padding: 1in 0.6in;
+          padding: 0.35in 0.5in;
         }
         .section-title {
           font-size: 12pt;
@@ -452,8 +452,8 @@ function DetailedResume() {
           color: #2c3e50;
           border-bottom: 2px solid #3498db;
           padding-bottom: 4pt;
-          margin-bottom: 12pt;
-          margin-top: 20pt;
+          margin-bottom: 10pt;
+          margin-top: 14pt;
         }
         .section-title:first-child {
           margin-top: 0;
@@ -463,9 +463,9 @@ function DetailedResume() {
           font-weight: bold;
           color: #2c3e50;
           border-bottom: 3px solid #3498db;
-          padding-bottom: 6pt;
-          margin-bottom: 16pt;
-          margin-top: 24pt;
+          padding-bottom: 4pt;
+          margin-bottom: 12pt;
+          margin-top: 16pt;
         }
         .main-section-title:first-child {
           margin-top: 0;
