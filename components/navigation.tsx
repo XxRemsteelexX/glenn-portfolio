@@ -52,6 +52,7 @@ export function Navigation({ className }: NavigationProps) {
     { href: "#skills", label: "Skills" },
     { href: "#certifications", label: "Certifications" },
     { href: "#ai-chat", label: "AI Assistant" },
+    { href: "/infrastructure", label: "Infrastructure" },
     { href: "#resume", label: "Resume" },
     { href: "#contact", label: "Contact" },
   ];
