@@ -366,13 +366,13 @@ export function AIChatbotSection() {
           <h3 className="text-xl font-semibold mb-6">Try asking about:</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Apollo Healthcare Connect project",
-              "Multi-modal AI implementation",
-              "YouTube Video Analyzer with Whisper",
-              "Production ML deployment experience",
-              "TensorFlow vs PyTorch preference",
-              "Healthcare AI challenges",
-              "Audio-visual fusion techniques"
+              "NFL Big Data Bowl Bronze Medal",
+              "AI Homelab hardware setup",
+              "RSNA 3D medical imaging project",
+              "Apollo Healthcare Connect",
+              "Kaggle competition experience",
+              "Deep learning architectures used",
+              "Dual RTX 5090 training setup"
             ].map((question) => (
               <Button
                 key={question}
