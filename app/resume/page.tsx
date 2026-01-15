@@ -290,21 +290,27 @@ function OnePageResume() {
           <div className="education-item">
             <div className="degree">MS, Data Science & Analytics</div>
             <div className="school">Western Governors University</div>
-            <div className="education-dates">August 2025</div>
+            <div className="education-dates">Aug 2024 - Aug 2025</div>
             <div className="education-notes">Healthcare AI Capstone (Production)</div>
           </div>
 
           <div className="education-item">
             <div className="degree">BS, Data Analytics</div>
             <div className="school">Western Governors University</div>
-            <div className="education-dates">March 2023 - September 2024</div>
+            <div className="education-dates">Mar 2023 - Sep 2024</div>
             <div className="education-notes">NFL Prediction Capstone</div>
           </div>
 
           <div className="education-item">
-            <div className="degree">AS, IT Programming</div>
+            <div className="degree">AS, IT / Programming + Data Analytics Cert</div>
             <div className="school">Clinton Community College</div>
-            <div className="education-dates">2022</div>
+            <div className="education-dates">Jan 2022 - Dec 2022</div>
+          </div>
+
+          <div className="education-item">
+            <div className="degree">AA, Art Studies</div>
+            <div className="school">Hawkeye Community College</div>
+            <div className="education-dates">Sep 2019 - Dec 2020</div>
           </div>
 
           <div className="section-title">CERTIFICATIONS</div>
@@ -595,8 +601,8 @@ function DetailedResume() {
           <div className="education-item">
             <div className="degree">MS, Data Science & Analytics</div>
             <div className="school">Western Governors University</div>
-            <div className="education-dates">Graduated August 2025</div>
-            <div className="education-notes">• Healthcare AI Capstone (Production)<br />• NSLS & Student Council Member</div>
+            <div className="education-dates">Aug 2024 - Aug 2025</div>
+            <div className="education-notes">• Healthcare AI Capstone (Production)<br />• NSLS & Student Insights Council</div>
           </div>
 
           <div className="education-item">
@@ -607,10 +613,30 @@ function DetailedResume() {
           </div>
 
           <div className="education-item">
-            <div className="degree">AS, IT Programming</div>
+            <div className="degree">AS, IT / Programming</div>
             <div className="school">Clinton Community College</div>
             <div className="education-dates">Jan 2022 - Dec 2022</div>
             <div className="education-notes">• Data Analytics Certificate<br />• Phi Theta Kappa</div>
+          </div>
+
+          <div className="education-item">
+            <div className="degree">Diploma, IT / Programming</div>
+            <div className="school">Clinton Community College</div>
+            <div className="education-dates">Jan 2021 - Dec 2021</div>
+            <div className="education-notes">• Phi Theta Kappa</div>
+          </div>
+
+          <div className="education-item">
+            <div className="degree">AA, Art Studies</div>
+            <div className="school">Hawkeye Community College</div>
+            <div className="education-dates">Sep 2019 - Dec 2020</div>
+            <div className="education-notes">• Phi Theta Kappa</div>
+          </div>
+
+          <div className="education-item">
+            <div className="degree">Graphic Communications</div>
+            <div className="school">Hawkeye Community College</div>
+            <div className="education-dates">Sep 1997 - May 1999</div>
           </div>
 
           <div className="section-title">CERTIFICATIONS</div>
