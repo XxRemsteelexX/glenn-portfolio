@@ -333,7 +333,10 @@ function OnePageResume() {
 
           <div className="main-section-title">FEATURED PROJECTS</div>
 
-          <div className="project-title">NFL Big Data Bowl 2026 | Kaggle Bronze Medal</div>
+          <div className="project-title" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <span>NFL Big Data Bowl 2026 | Kaggle Bronze Medal</span>
+            <img src="/images/kaggle-bronze-2026.png" alt="Kaggle Bronze Medal" style={{ height: "28px", width: "28px", borderRadius: "50%" }} />
+          </div>
           <div className="project-subtitle">Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams (Top 8%)</div>
           <ul>
             <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories</li>
@@ -665,7 +668,10 @@ function DetailedResume() {
 
           <div className="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
 
-          <div className="project-title">NFL Big Data Bowl 2026 - Kaggle Bronze Medal</div>
+          <div className="project-title" style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <span>NFL Big Data Bowl 2026 - Kaggle Bronze Medal</span>
+            <img src="/images/kaggle-bronze-2026.png" alt="Kaggle Bronze Medal 2026" style={{ height: "40px", width: "40px", borderRadius: "50%" }} />
+          </div>
           <div className="project-subtitle">Deep Learning Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams (Top 8%)</div>
           <div className="project-url">github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-</div>
           <ul>
