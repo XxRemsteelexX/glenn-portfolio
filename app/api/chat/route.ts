@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
 
 GLENN'S PROFILE:
 - Data Scientist & AI/ML Engineer with 3-4 years experience
-- Kaggle Bronze Medalist (NFL Big Data Bowl 2026 - 94th/1,134 teams, Top 8%)
+- Kaggle Bronze Medalist (NFL Big Data Bowl 2026 - 74th open / 94th closed of 1,134 teams, Top 8%)
 - Master's in Data Analytics - Data Science (WGU, Aug 2025)
 - Bachelor's in Data Analytics (WGU, Mar 2023 - Sep 2024)
 - Associate degrees from Clinton Community College (IT/Programming, Data Analytics)
@@ -39,7 +39,7 @@ CERTIFICATIONS:
 - Udacity: Deep Learning, Computer Vision, GANs, Transformers, ML DevOps
 
 KEY PROJECTS (LEAD WITH THESE):
-- NFL Big Data Bowl 2026: KAGGLE BRONZE MEDAL (94th/1,134 teams). Deep learning player trajectory prediction. 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO). Best ensemble: 0.540 Public LB. Engineered 167 features with Voronoi tessellation geometric attention.
+- NFL Big Data Bowl 2026: KAGGLE BRONZE MEDAL (74th open / 94th closed of 1,134 teams). Deep learning player trajectory prediction. 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO). Best ensemble: 0.540 Public LB. Engineered 167 features with Voronoi tessellation geometric attention.
 - RSNA Intracranial Aneurysm Detection: 3D medical imaging Kaggle - 105 models trained (21 architectures × 5 folds), best ensemble AUC 0.8624, discovered smaller models outperform larger on limited data (statistically significant)
 - Apollo Healthcare Connect: Multi-modal AI healthcare triage (93.8% accuracy, 98% burn classification), live at apollohealthcareconnect.com
 - Missing Persons Outlier Detection: Analyzed 41,200 cases identifying trafficking corridors, Pima County anomaly at 44.75σ, validated against known serial killers

@@ -38,7 +38,7 @@ interface CertificationData {
 const projects: ProjectData[] = [
   {
     name: "NFL_Big_Data_Bowl_2026",
-    description: "Bronze Medal (94th/1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
+    description: "Bronze Medal (74th open / 94th closed of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
     longDescription: "Bronze Medal achievement in Kaggle's NFL Big Data Bowl 2026 competition (94th place out of 1,134 teams, Top 8%). Developed comprehensive deep learning pipeline for player trajectory prediction featuring: 8 model architectures (Spatial-Temporal Transformers, Multi-scale CNN, GRU, Position-Specific ST, Geometric Network, Perceiver IO, Co4), 20-fold cross-validation with multi-seed ensembling, 167 engineered features (kinematics, ball-relative, temporal, geometric), novel geometric attention with Voronoi tessellation, and Test-Time Augmentation providing +0.005-0.010 improvement. Best ensemble achieved 0.540 Public LB score. Key discovery: Architecture diversity in ensembles outperforms model stacking.",
     githubUrl: "https://github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-",
     imageUrl: "https://storage.googleapis.com/kaggle-media/Images/competition-medals/bronze-medal-2026.png",
