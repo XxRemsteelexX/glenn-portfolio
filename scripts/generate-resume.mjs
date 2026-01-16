@@ -1,5 +1,5 @@
 import puppeteer from 'puppeteer';
-import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, convertInchesToTwip } from 'docx';
+import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, convertInchesToTwip, Header, Footer } from 'docx';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -799,32 +799,17 @@ const detailedHTML = `
 </html>
 `;
 
-// ATS-Friendly Word Document Content
+// ATS-Friendly Word Document Content - Full Detailed Version with Header
 function createATSWordDoc(isOnePage = false) {
   const sections = [];
 
-  // Header - compact, no extra spacing
-  sections.push(
-    new Paragraph({
-      children: [new TextRun({ text: "GLENN DALBEY", bold: true, size: 28 })],
-      alignment: AlignmentType.CENTER,
-    }),
-    new Paragraph({
-      children: [new TextRun({ text: "Data Science & Analytics Professional", italics: true, size: 22 })],
-      alignment: AlignmentType.CENTER,
-    }),
-    new Paragraph({
-      children: [new TextRun({ text: "319-233-4445 | dalbeyglenn@gmail.com | linkedin.com/in/glenn-dalbey-205b7a44 | github.com/XxRemsteelexX | glenndalbey.com", size: 18 })],
-      alignment: AlignmentType.CENTER,
-      spacing: { after: 120 },
-    })
-  );
+  // Contact info is in document header - body starts with Professional Summary
 
-  // Professional Summary
+  // Professional Summary - FULL TEXT
   sections.push(
     new Paragraph({
       children: [new TextRun({ text: "PROFESSIONAL SUMMARY", bold: true, size: 24 })],
-      spacing: { before: 100, after: 60 },
+      spacing: { before: 80, after: 60 },
     }),
     new Paragraph({
       children: [
@@ -832,130 +817,147 @@ function createATSWordDoc(isOnePage = false) {
         new TextRun({ text: "Kaggle Bronze Medalist", bold: true }),
         new TextRun({ text: " in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment." }),
       ],
-      spacing: { after: 200 },
+      spacing: { after: 120 },
     })
   );
 
-  // Technical Skills
+  // Technical Skills - FULL
   sections.push(
     new Paragraph({
       children: [new TextRun({ text: "TECHNICAL SKILLS", bold: true, size: 24 })],
-      spacing: { before: 120, after: 60 },
+      spacing: { before: 80, after: 60 },
     }),
     new Paragraph({ children: [new TextRun({ text: "Programming: ", bold: true }), new TextRun("Python (Expert), SQL, TypeScript, JavaScript, R, C++")] }),
     new Paragraph({ children: [new TextRun({ text: "Deep Learning: ", bold: true }), new TextRun("PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention")] }),
     new Paragraph({ children: [new TextRun({ text: "ML & Data Science: ", bold: true }), new TextRun("scikit-learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Ensemble Methods, Feature Engineering")] }),
     new Paragraph({ children: [new TextRun({ text: "Cloud & Infrastructure: ", bold: true }), new TextRun("AWS (Certified), Multi-GPU Training, Mixed Precision, Docker, Flask, FastAPI")] }),
-    new Paragraph({ children: [new TextRun({ text: "Specializations: ", bold: true }), new TextRun("Trajectory Prediction, 3D Medical Imaging, Computer Vision, NLP, Multi-modal AI")], spacing: { after: 200 } })
+    new Paragraph({ children: [new TextRun({ text: "Specializations: ", bold: true }), new TextRun("Trajectory Prediction, 3D Medical Imaging, Computer Vision, NLP, Multi-modal AI")], spacing: { after: 120 } })
   );
 
-  // Featured Projects
+  // Featured Projects - FULL BULLETS
   sections.push(
     new Paragraph({
       children: [new TextRun({ text: "FEATURED PROJECTS", bold: true, size: 24 })],
-      spacing: { before: 120, after: 60 },
+      spacing: { before: 80, after: 60 },
     }),
 
     new Paragraph({ children: [new TextRun({ text: "NFL Big Data Bowl 2026 - Kaggle Bronze Medal", bold: true })] }),
-    new Paragraph({ children: [new TextRun({ text: "Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams ", italics: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams", italics: true })] }),
     new Paragraph({ text: "• Bronze Medal in prestigious Kaggle competition predicting NFL player trajectories from tracking data", bullet: { level: 0 } }),
     new Paragraph({ text: "• Conducted 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)", bullet: { level: 0 } }),
     new Paragraph({ text: "• Best ensemble: 3-model blend achieving 0.540 Public LB with architecture diversity strategy", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Engineered 167 features (kinematics, ball-relative, temporal, geometric with Voronoi tessellation)", bullet: { level: 0 }, spacing: { after: 150 } }),
+    new Paragraph({ text: "• Engineered 167 features (kinematics, ball-relative, temporal, geometric with Voronoi tessellation)", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "RSNA Intracranial Aneurysm Detection - Kaggle Competition", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "3D Medical Imaging Deep Learning | 105 Models Trained", italics: true })] }),
     new Paragraph({ text: "• Trained 105 models (21 architectures × 5 folds) for CT angiography aneurysm detection", bullet: { level: 0 } }),
     new Paragraph({ text: "• Best ensemble AUC 0.8624; discovered smaller models outperform larger on limited medical data", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Built complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble on 4 GPUs", bullet: { level: 0 }, spacing: { after: 150 } }),
+    new Paragraph({ text: "• Built complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble on 4 GPUs", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "Apollo Healthcare Connect - apollohealthcareconnect.com", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Production Multi-modal AI Healthcare Triage | MS Capstone", italics: true })] }),
     new Paragraph({ text: "• Live production healthcare AI achieving 93.8% accuracy with sub-second response", bullet: { level: 0 } }),
     new Paragraph({ text: "• 5-model ensemble combining DistilBERT (NLP) and CNNs; handled 29.7:1 class imbalance", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Full production pipeline with Flask API, AWS S3, and safety protocols", bullet: { level: 0 }, spacing: { after: 200 } })
+    new Paragraph({ text: "• Full production pipeline with Flask API, AWS S3, and safety protocols", bullet: { level: 0 }, spacing: { after: 100 } }),
+
+    new Paragraph({ children: [new TextRun({ text: "Missing Persons Outlier Detection", bold: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Statistical Anomaly Detection for Trafficking & Organized Crime", italics: true })] }),
+    new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at 44.75σ significance", bullet: { level: 0 } }),
+    new Paragraph({ text: "• Built 7-page interactive Streamlit dashboard with geospatial visualization", bullet: { level: 0 }, spacing: { after: 100 } }),
+
+    new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),
+    new Paragraph({ text: "• Dual RTX 5090 training node + 256GB unified memory LLM inference cluster", bullet: { level: 0 } }),
+    new Paragraph({ text: "• Automated active-memory pipeline with n8n, RAG storage, and hot/warm/cold tiering", bullet: { level: 0 }, spacing: { after: 120 } })
   );
 
-  if (!isOnePage) {
-    // Additional projects for detailed version
-    sections.push(
-      new Paragraph({ children: [new TextRun({ text: "Missing Persons Outlier Detection", bold: true })] }),
-      new Paragraph({ children: [new TextRun({ text: "Statistical Anomaly Detection for Trafficking & Organized Crime", italics: true })] }),
-      new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at 44.75σ significance", bullet: { level: 0 } }),
-      new Paragraph({ text: "• Built 7-page interactive Streamlit dashboard with geospatial visualization", bullet: { level: 0 }, spacing: { after: 150 } }),
-
-      new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
-      new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),
-      new Paragraph({ text: "• Dual RTX 5090 training node + 256GB unified memory LLM inference cluster", bullet: { level: 0 } }),
-      new Paragraph({ text: "• Automated active-memory pipeline with n8n, RAG storage, and hot/warm/cold tiering", bullet: { level: 0 }, spacing: { after: 200 } })
-    );
-  }
-
-  // Professional Experience
+  // Professional Experience - FULL
   sections.push(
     new Paragraph({
       children: [new TextRun({ text: "PROFESSIONAL EXPERIENCE", bold: true, size: 24 })],
-      spacing: { before: 120, after: 60 },
+      spacing: { before: 80, after: 60 },
     }),
 
     new Paragraph({ children: [new TextRun({ text: "Freelance Data Science Consultant", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Thompson Parking & Mobility Consultants | Current", italics: true })] }),
     new Paragraph({ text: "• Develop AI-powered Excel analytics platform enabling natural language data queries", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Design custom ML solutions and support data-driven decision making", bullet: { level: 0 }, spacing: { after: 150 } }),
+    new Paragraph({ text: "• Design custom ML solutions and support data-driven decision making", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "Continuous Improvement Leader & Material Specialist", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "John Deere, Waterloo Works & Ankeny Works | 2005-2020, 2021-Present", italics: true })] }),
     new Paragraph({ text: "• Led CI Department as Representative and Trainer, facilitating process improvement frameworks", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Designed Zones Project modernizing material flow training; managed SAP inventory systems", bullet: { level: 0 }, spacing: { after: 200 } })
+    new Paragraph({ text: "• Designed Zones Project modernizing material flow training; managed SAP inventory systems", bullet: { level: 0 }, spacing: { after: 120 } })
   );
 
-  // Education
+  // Education - Compact (removed AA Art Studies to fit on 1 page)
   sections.push(
     new Paragraph({
       children: [new TextRun({ text: "EDUCATION", bold: true, size: 24 })],
-      spacing: { before: 120, after: 60 },
+      spacing: { before: 80, after: 60 },
     }),
     new Paragraph({ children: [new TextRun({ text: "MS, Data Science & Analytics", bold: true }), new TextRun(" - Western Governors University (Aug 2024 - Aug 2025)")] }),
     new Paragraph({ children: [new TextRun({ text: "BS, Data Analytics", bold: true }), new TextRun(" - Western Governors University (Mar 2023 - Sep 2024)")] }),
-    new Paragraph({ children: [new TextRun({ text: "AS, IT / Programming + Data Analytics Certificate", bold: true }), new TextRun(" - Clinton Community College (2022)")] }),
-    new Paragraph({ children: [new TextRun({ text: "AA, Art Studies", bold: true }), new TextRun(" - Hawkeye Community College (2019-2020)")], spacing: { after: 200 } })
+    new Paragraph({ children: [new TextRun({ text: "AS, IT / Programming + Data Analytics Certificate", bold: true }), new TextRun(" - Clinton Community College (2022)")], spacing: { after: 120 } })
   );
 
-  // Certifications
+  // Certifications - Compact (combined certs on fewer lines)
   sections.push(
     new Paragraph({
       children: [new TextRun({ text: "CERTIFICATIONS", bold: true, size: 24 })],
-      spacing: { before: 120, after: 60 },
+      spacing: { before: 80, after: 60 },
     }),
-    new Paragraph({ text: "• CompTIA Data+ (2024-2027)", bullet: { level: 0 } }),
+    new Paragraph({ text: "• CompTIA Data+ (2024-2027) and CompTIA A+ (2023-2026)", bullet: { level: 0 } }),
     new Paragraph({ text: "• AWS Cloud Practitioner (2024-2027)", bullet: { level: 0 } }),
-    new Paragraph({ text: "• CompTIA A+ (2023-2026)", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Udacity Nanodegrees: Deep Learning, Computer Vision, GANs, Transformers, ML DevOps", bullet: { level: 0 }, spacing: { after: 200 } })
+    new Paragraph({ text: "• Udacity Nanodegrees: Deep Learning, Computer Vision, GANs, Transformers, ML DevOps", bullet: { level: 0 } })
   );
 
-  // Key Accomplishments
-  sections.push(
-    new Paragraph({
-      children: [new TextRun({ text: "KEY ACCOMPLISHMENTS", bold: true, size: 24 })],
-      spacing: { before: 120, after: 60 },
-    }),
-    new Paragraph({ text: "• Kaggle Bronze Medal - NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams)", bullet: { level: 0 } }),
-    new Paragraph({ text: "• 847+ deep learning experiments; 105 3D medical imaging models trained", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Production healthcare AI achieving 93.8% accuracy with sub-second response", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Published 15+ open-source projects on GitHub", bullet: { level: 0 } })
-  );
+  // KEY ACCOMPLISHMENTS removed - redundant with projects section
+
+  // Create header with contact info - this doesn't take body space!
+  const docHeader = new Header({
+    children: [
+      new Paragraph({
+        children: [
+          new TextRun({ text: "GLENN DALBEY", bold: true, size: 32 }),
+        ],
+        alignment: AlignmentType.CENTER,
+      }),
+      new Paragraph({
+        children: [
+          new TextRun({ text: "Data Science & Analytics Professional", italics: true, size: 22 }),
+        ],
+        alignment: AlignmentType.CENTER,
+      }),
+      new Paragraph({
+        children: [
+          new TextRun({ text: "319-233-4445 | dalbeyglenn@gmail.com | glenndalbey.com", size: 18 }),
+        ],
+        alignment: AlignmentType.CENTER,
+      }),
+      new Paragraph({
+        children: [
+          new TextRun({ text: "linkedin.com/in/glenn-dalbey-205b7a44 | github.com/XxRemsteelexX", size: 18 }),
+        ],
+        alignment: AlignmentType.CENTER,
+        spacing: { after: 80 },
+      }),
+    ],
+  });
 
   return new Document({
     sections: [{
       properties: {
         page: {
           margin: {
-            top: convertInchesToTwip(0.4),
+            top: convertInchesToTwip(0.9),  // Space for header
             bottom: convertInchesToTwip(0.3),
             left: convertInchesToTwip(0.5),
             right: convertInchesToTwip(0.5),
           },
         },
+      },
+      headers: {
+        default: docHeader,
       },
       children: sections,
     }],
