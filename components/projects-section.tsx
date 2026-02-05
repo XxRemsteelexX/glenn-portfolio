@@ -29,7 +29,7 @@ const fallbackProjects: Project[] = [
   {
     id: "p0",
     name: "OceanEterna",
-    description: "High-performance local RAG system built in C++17. Indexes 2.45 billion tokens with sub-100ms search latency, 100% accuracy, and zero external dependencies. Single-binary deployment with no Docker, database, or cloud costs required.",
+    description: "High-performance local RAG system built in C++17. Indexes 2.45 billion tokens across 5M+ text chunks with 0-96ms search latency and 11-second cold startup. 100% accuracy on test suite, zero external dependencies, and zero per-query costs. Single-binary deployment — no Docker, database, or cloud required.",
     technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "Compression", "Memory-Mapped I/O"],
     featured: true,
     stars: 0,
