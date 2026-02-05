@@ -53,8 +53,11 @@ export function ResumeSection() {
   }
 
   return (
-    <section id="resume" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="resume" className="py-20 bg-background relative overflow-hidden">
+      {/* Subtle deep green gradient */}
+      <div className="absolute inset-0 bg-gradient-to-tl from-emerald-950/15 via-transparent to-emerald-950/10"></div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
