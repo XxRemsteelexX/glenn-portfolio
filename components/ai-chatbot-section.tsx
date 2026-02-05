@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { MessageSquare, Mic, MicOff, Volume2, VolumeX, Sparkles, Brain, Zap, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 // Extend window interface for speech APIs
 declare global {
@@ -166,8 +167,19 @@ export function AIChatbotSection() {
   }
 
   return (
-    <section id="ai-chat" className="py-20 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="ai-chat" className="py-20 bg-background relative overflow-hidden">
+      {/* Background image overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/chatbot-bg-llm.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.07]"
+          sizes="100vw"
+        />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
