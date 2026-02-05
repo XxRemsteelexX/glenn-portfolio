@@ -38,8 +38,8 @@ interface CertificationData {
 const projects: ProjectData[] = [
   {
     name: "OceanEterna",
-    description: "High-performance local RAG system built in C++17, running entirely on CPU with minimal RAM. Indexes 2.45 billion tokens across 5M+ chunks with 0-96ms search latency and 11-second cold startup. Custom compression pipeline reduces storage significantly while maintaining instant decompression at query time. Conversations and queries are continuously indexed into the knowledge base with intelligent tagging for current and historical context. Supports ingesting any file type to grow the corpus over time. 100% accuracy, zero per-query costs, single-binary deployment — no GPU, Docker, database, or cloud required.",
-    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "Compression", "Memory-Mapped I/O"],
+    description: "High-performance local RAG system built in C++17, running entirely on CPU with minimal RAM. Indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency (avg 12ms) and 12-second cold startup. Dual LZ4/Zstd compression with auto-format detection for instant decompression at query time. Conversations and queries are continuously indexed into the knowledge base with intelligent tagging for current and historical context. Supports ingesting any file type to grow the corpus. 47 tests passing at 100% accuracy, 15 REST API endpoints, zero per-query costs — no GPU, Docker, database, or cloud required.",
+    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "BM25"],
     featured: true,
     language: "C++"
   },
