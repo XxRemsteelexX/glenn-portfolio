@@ -68,17 +68,27 @@ export async function POST(request: Request) {
       );
     }
     
-    const contact = await prisma.contact.create({
-      data: {
-        name: body.name.trim(),
-        email: body.email.trim().toLowerCase(),
-        subject: body.subject.trim(),
-        message: body.message.trim(),
-        phone: body?.phone?.trim(),
-        company: body?.company?.trim(),
-        status: 'new'
-      }
-    });
+    // Try to save to database, but don't fail if DB is down
+    let contactId = null;
+    let contactCreatedAt = new Date();
+    try {
+      const contact = await prisma.contact.create({
+        data: {
+          name: body.name.trim(),
+          email: body.email.trim().toLowerCase(),
+          subject: body.subject.trim(),
+          message: body.message.trim(),
+          phone: body?.phone?.trim(),
+          company: body?.company?.trim(),
+          status: 'new'
+        }
+      });
+      contactId = contact.id;
+      contactCreatedAt = contact.createdAt;
+      console.log('[CONTACT] Saved to database');
+    } catch (dbError) {
+      console.error('[CONTACT] Database save failed, continuing with notifications:', dbError);
+    }
 
     // Send email notification
     console.log('[CONTACT] About to initialize Resend client');
@@ -107,7 +117,6 @@ export async function POST(request: Request) {
         console.log('Email sent successfully:', result);
       } catch (emailError) {
         console.error('Failed to send email notification:', emailError);
-        // Continue even if email fails
       }
     } else {
       console.log('Resend client not initialized - check RESEND_API_KEY');
@@ -123,7 +132,6 @@ export async function POST(request: Request) {
         });
       } catch (smsError) {
         console.error('Failed to send SMS notification:', smsError);
-        // Continue even if SMS fails
       }
     }
 
@@ -131,8 +139,8 @@ export async function POST(request: Request) {
       success: true,
       message: 'Thank you for your message! I\'ll get back to you soon.',
       contact: {
-        id: contact.id,
-        createdAt: contact.createdAt
+        id: contactId,
+        createdAt: contactCreatedAt
       }
     });
   } catch (error) {
