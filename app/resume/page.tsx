@@ -749,13 +749,13 @@ function DetailedResume() {
             <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
           </ul>
 
-          <div className="project-title">OceanEterna RAG Engine <span style={{ fontSize: "9pt", color: "#e67e22", fontWeight: "normal" }}>(In Progress)</span></div>
+          <div className="project-title">OceanEterna RAG Engine</div>
           <div className="project-subtitle">High-Performance Local Retrieval-Augmented Generation System | C++17 | CPU-Only</div>
           <ul>
-            <li>Engineering production-grade RAG system indexing <strong>2.45 billion tokens</strong> across 5M+ chunks with <strong>0-96ms search latency</strong> — runs entirely on CPU with minimal RAM</li>
-            <li>Custom compression pipeline reduces storage significantly with instant decompression at query time</li>
+            <li>Built production-grade RAG system indexing <strong>2.45 billion tokens</strong> across 5M+ chunks with <strong>0-42ms search latency</strong> (avg 12ms) — runs entirely on CPU with minimal RAM</li>
+            <li>Dual LZ4/Zstd compression with auto-format detection; 15 REST API endpoints; 47 tests at 100% accuracy</li>
             <li>Conversations and queries continuously indexed with intelligent tagging for current and historical context; supports ingesting any file type</li>
-            <li>11-second cold startup, 100% accuracy, single-binary deployment — no GPU, Docker, database, or cloud required</li>
+            <li>12-second cold startup, single-binary deployment — no GPU, Docker, database, or cloud required</li>
           </ul>
 
           <div className="project-title">AI Homelab & Active Memory Network</div>

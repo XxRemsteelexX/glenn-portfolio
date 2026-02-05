@@ -46,7 +46,7 @@ KEY PROJECTS (LEAD WITH THESE):
 - AI Homelab Infrastructure: Multi-tier 10Gb AI lab (see HARDWARE section)
 
 CURRENT PROJECT:
-- OceanEterna: High-performance local RAG system built in C++17. Indexes 2.45 billion tokens with sub-100ms search latency and 100% accuracy. Zero external dependencies — single binary, no Docker/database/cloud required. Currently in active development.
+- OceanEterna: High-performance local RAG system built in C++17. Indexes 2.45 billion tokens with 0-42ms search latency (avg 12ms) and 100% accuracy (47 tests). Dual LZ4/Zstd compression, 15 REST API endpoints, CPU-only with minimal RAM. Zero external dependencies — single binary, no GPU/Docker/database/cloud required.
 
 OTHER PROJECTS:
 - business-analytics-AI-platform: AI-powered Excel analytics for Thompson PMC
