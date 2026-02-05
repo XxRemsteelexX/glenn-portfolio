@@ -55,7 +55,7 @@ export function ResumeSection() {
   return (
     <section id="resume" className="py-20 bg-background relative overflow-hidden">
       {/* Subtle deep green gradient */}
-      <div className="absolute inset-0 bg-gradient-to-tl from-emerald-950/40 via-emerald-950/15 to-emerald-950/30"></div>
+      <div className="absolute inset-0 bg-emerald-950/50"></div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
