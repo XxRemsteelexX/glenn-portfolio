@@ -145,14 +145,25 @@ export function HeroSection() {
             </Link>
 
             {/* Featured Project */}
-            <div className="p-5 glass-effect rounded-xl hover-lift h-full">
+            <div className="p-5 glass-effect rounded-xl hover-lift h-full flex flex-col">
               <div className="flex items-center gap-3 mb-2">
                 <ExternalLink className="w-5 h-5 text-green-500" />
                 <h3 className="text-lg font-semibold">Live Production AI</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-3">
-                Apollo Healthcare Connect -- AI triage system serving patients with 93.8% accuracy.
+                Apollo Healthcare Connect -- Multi-modal AI triage system serving real patients with 93.8% accuracy and sub-second response times.
               </p>
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">DistilBERT</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">Computer Vision</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">Flask</span>
+                <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20">AWS</span>
+              </div>
+              <ul className="text-xs text-muted-foreground space-y-1 mb-4 flex-1">
+                <li>5-model ensemble (NLP + CV)</li>
+                <li>98% burn classification accuracy</li>
+                <li>Handles 29.7:1 class imbalance</li>
+              </ul>
               <div className="flex flex-wrap gap-2">
                 <Link
                   href="https://apollohealthcareconnect.com"
@@ -183,7 +194,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            className="flex justify-center space-x-6 pt-8"
+            className="flex justify-center space-x-6 pt-4"
           >
             <Link
               href="https://github.com/XxRemsteelexX"
