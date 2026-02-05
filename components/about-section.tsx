@@ -111,7 +111,7 @@ export function AboutSection() {
           src="/images/about-bg-dashboard.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.06]"
+          className="object-cover opacity-[0.12]"
           sizes="100vw"
         />
       </div>

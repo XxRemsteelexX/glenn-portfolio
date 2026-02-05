@@ -99,15 +99,16 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="py-20 section-bg-alt relative overflow-hidden">
-      {/* Background image overlay */}
+      {/* Background image overlay with gradient fade */}
       <div className="absolute inset-0">
         <Image
           src="/images/contact-bg-hands.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.08]"
+          className="object-cover opacity-[0.14]"
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/80"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
