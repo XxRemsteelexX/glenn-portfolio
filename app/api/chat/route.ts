@@ -45,6 +45,9 @@ KEY PROJECTS (LEAD WITH THESE):
 - Missing Persons Outlier Detection: Analyzed 41,200 cases identifying trafficking corridors, Pima County anomaly at 44.75σ, validated against known serial killers
 - AI Homelab Infrastructure: Multi-tier 10Gb AI lab (see HARDWARE section)
 
+CURRENT PROJECT:
+- OceanEterna: High-performance local RAG system built in C++17. Indexes 2.45 billion tokens with sub-100ms search latency and 100% accuracy. Zero external dependencies — single binary, no Docker/database/cloud required. Currently in active development.
+
 OTHER PROJECTS:
 - business-analytics-AI-platform: AI-powered Excel analytics for Thompson PMC
 - TandemAI: LLM ensemble orchestration platform

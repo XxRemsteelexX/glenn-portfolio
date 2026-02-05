@@ -385,6 +385,14 @@ function OnePageResume() {
             <li>Full production pipeline with Flask API, AWS S3, and safety protocols</li>
           </ul>
 
+          <div className="project-title">OceanEterna RAG Engine</div>
+          <div className="project-subtitle">High-Performance Local RAG System | C++17 | In Progress</div>
+          <ul>
+            <li>Built production-grade RAG system indexing <strong>2.45 billion tokens</strong> with 0-96ms search latency</li>
+            <li>Implemented TAAT inverted index achieving 10-100x faster search vs brute-force BM25</li>
+            <li>Single-binary deployment with zero dependencies (no Docker, database, or cloud costs)</li>
+          </ul>
+
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
           <div className="job-title">Freelance Data Science Consultant</div>
@@ -747,6 +755,14 @@ function DetailedResume() {
             <li>Reduced overfitting gap from 18.5% to 0.4% (97.8% reduction) through feature optimization (46→20 features)</li>
             <li>Implemented temporal validation strategy ensuring model generalization to future NFL seasons</li>
             <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
+          </ul>
+
+          <div className="project-title">OceanEterna RAG Engine <span style={{ fontSize: "9pt", color: "#e67e22", fontWeight: "normal" }}>(In Progress)</span></div>
+          <div className="project-subtitle">High-Performance Local Retrieval-Augmented Generation System | C++17</div>
+          <ul>
+            <li>Engineering production-grade RAG system indexing <strong>2.45 billion tokens</strong> with <strong>sub-100ms search latency</strong></li>
+            <li>100% accuracy on test suite with zero external dependencies — single-binary, no Docker or cloud costs</li>
+            <li>Custom search engine, compression pipeline, and modular C++ architecture</li>
           </ul>
 
           <div className="project-title">AI Homelab & Active Memory Network</div>

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Star, GitFork, Zap, Eye } from "lucide-react";
+import { Github, ExternalLink, Star, GitFork, Zap, Eye, Construction } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -22,9 +22,22 @@ interface Project {
   forks: number;
   language?: string;
   createdAt: string;
+  status?: 'completed' | 'in-progress';
 }
 
 const fallbackProjects: Project[] = [
+  {
+    id: "p0",
+    name: "OceanEterna",
+    description: "High-performance local RAG system built in C++17. Indexes 2.45 billion tokens with sub-100ms search latency, 100% accuracy, and zero external dependencies. Single-binary deployment with no Docker, database, or cloud costs required.",
+    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "Compression", "Memory-Mapped I/O"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "C++",
+    createdAt: new Date().toISOString(),
+    status: "in-progress"
+  },
   {
     id: "p1",
     name: "NFL_Big_Data_Bowl_2026",
@@ -296,6 +309,12 @@ export function ProjectsSection() {
                         {project.name}
                         {project.featured && (
                           <Star className="inline-block w-4 h-4 ml-2 text-yellow-500 fill-current" />
+                        )}
+                        {project.status === 'in-progress' && (
+                          <Badge className="ml-2 bg-amber-500/10 text-amber-500 border-amber-500/30 text-xs align-middle">
+                            <Construction className="w-3 h-3 mr-1" />
+                            In Progress
+                          </Badge>
                         )}
                       </CardTitle>
                       <p className="text-sm text-muted-foreground">
