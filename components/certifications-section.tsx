@@ -88,7 +88,7 @@ export function CertificationsSection() {
 
           <div className="max-w-4xl mx-auto text-left">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
+              <div className="glass-effect rounded-xl p-5">
                 <h3 className="text-lg font-semibold mb-3">Industry Certifications</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• CompTIA Data+ (Valid until Feb 2027)</li>
@@ -97,7 +97,7 @@ export function CertificationsSection() {
                 </ul>
               </div>
 
-              <div>
+              <div className="glass-effect rounded-xl p-5">
                 <h3 className="text-lg font-semibold mb-3">Specialized Training</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• Advanced Computer Vision & Deep Learning - Udacity</li>
