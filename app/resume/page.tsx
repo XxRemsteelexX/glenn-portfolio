@@ -385,14 +385,6 @@ function OnePageResume() {
             <li>Full production pipeline with Flask API, AWS S3, and safety protocols</li>
           </ul>
 
-          <div className="project-title">OceanEterna RAG Engine</div>
-          <div className="project-subtitle">High-Performance Local RAG System | C++17 | In Progress</div>
-          <ul>
-            <li>Built production-grade RAG system indexing <strong>2.45 billion tokens</strong> with 0-96ms search latency</li>
-            <li>Implemented TAAT inverted index achieving 10-100x faster search vs brute-force BM25</li>
-            <li>Single-binary deployment with zero dependencies (no Docker, database, or cloud costs)</li>
-          </ul>
-
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
           <div className="job-title">Freelance Data Science Consultant</div>
