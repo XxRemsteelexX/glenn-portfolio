@@ -69,8 +69,8 @@ export function CertificationsSection() {
 
   return (
     <section id="certifications" className="py-20 section-bg relative overflow-hidden">
-      {/* Subtle deep green gradient */}
-      <div className="absolute inset-0 bg-emerald-950/50"></div>
+      {/* Dot grid pattern with fade */}
+      <div className="absolute inset-0 bg-[radial-gradient(rgba(34,197,94,0.15)_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
