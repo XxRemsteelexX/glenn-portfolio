@@ -37,6 +37,13 @@ interface CertificationData {
 
 const projects: ProjectData[] = [
   {
+    name: "OceanEterna",
+    description: "High-performance local RAG system built in C++17. Indexes 2.45 billion tokens with sub-100ms search latency, 100% accuracy, and zero external dependencies. Single-binary deployment with no Docker, database, or cloud costs required.",
+    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "Compression", "Memory-Mapped I/O"],
+    featured: true,
+    language: "C++"
+  },
+  {
     name: "NFL_Big_Data_Bowl_2026",
     description: "Kaggle Bronze Medal (Top 8% of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
     longDescription: "Bronze Medal achievement in Kaggle's NFL Big Data Bowl 2026 competition (Top 8% of 1,134 teams). Developed comprehensive deep learning pipeline for player trajectory prediction featuring: 8 model architectures (Spatial-Temporal Transformers, Multi-scale CNN, GRU, Position-Specific ST, Geometric Network, Perceiver IO, Co4), 20-fold cross-validation with multi-seed ensembling, 167 engineered features (kinematics, ball-relative, temporal, geometric), novel geometric attention with Voronoi tessellation, and Test-Time Augmentation providing +0.005-0.010 improvement. Best ensemble achieved 0.540 Public LB score. Key discovery: Architecture diversity in ensembles outperforms model stacking.",
