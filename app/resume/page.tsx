@@ -752,9 +752,10 @@ function DetailedResume() {
           <div className="project-title">OceanEterna RAG Engine <span style={{ fontSize: "9pt", color: "#e67e22", fontWeight: "normal" }}>(In Progress)</span></div>
           <div className="project-subtitle">High-Performance Local Retrieval-Augmented Generation System | C++17 | CPU-Only</div>
           <ul>
-            <li>Built search engine core indexing <strong>2.45 billion tokens</strong> across 5M+ chunks with <strong>0-42ms search latency</strong> (avg 12ms) — runs entirely on CPU with minimal RAM</li>
-            <li>Dual LZ4/Zstd compression, 15 REST API endpoints, 47 tests at 100% accuracy, single-binary deployment</li>
-            <li>Conversations and file uploads continuously indexed with intelligent tagging; building LLM interface and MCP tool for AI-assisted workflows</li>
+            <li>Originally prototyped in Python, rewritten in C++17 for performance — evolved through <strong>4 major versions</strong> with systematic optimization</li>
+            <li>Indexes <strong>2.45 billion tokens</strong> across 5M+ chunks with <strong>0-42ms search</strong> (avg 12ms, down from 500ms in v1) — CPU-only, minimal RAM</li>
+            <li>Dual LZ4/Zstd compression, 15 REST API endpoints, 47 tests at 100% accuracy; conversations and files continuously indexed</li>
+            <li>Building LLM chat interface and MCP tool for terminal-based AI workflows and project knowledge management</li>
           </ul>
 
           <div className="project-title">AI Homelab & Active Memory Network</div>
