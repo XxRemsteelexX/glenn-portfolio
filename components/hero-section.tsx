@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, MessageSquare, Github, Linkedin, ExternalLink, Trophy } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function HeroSection() {
@@ -116,23 +117,30 @@ export function HeroSection() {
           >
             {/* Kaggle Bronze Medal */}
             <Link
-              href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2026"
+              href="/images/kaggle-bronze-medal.png"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
             >
-              <div className="p-5 glass-effect rounded-xl hover-lift cursor-pointer group border-yellow-500/20 hover:border-yellow-500/50 transition-colors h-full">
-                <div className="flex items-center gap-3 mb-2">
-                  <Trophy className="w-5 h-5 text-yellow-500" />
-                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">Kaggle Bronze Medal</h3>
+              <div className="glass-effect rounded-xl hover-lift cursor-pointer group border-yellow-500/20 hover:border-yellow-500/50 transition-colors h-full overflow-hidden">
+                <div className="relative w-full aspect-[4/3]">
+                  <Image
+                    src="/images/kaggle-bronze-medal.png"
+                    alt="Kaggle Bronze Medal - NFL Big Data Bowl 2026"
+                    fill
+                    className="object-contain p-2"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
                 </div>
-                <p className="text-sm text-muted-foreground mb-3">
-                  NFL Big Data Bowl 2026 -- Top 8% of 1,134 teams. 847+ experiments across 15+ deep learning architectures.
-                </p>
-                <span className="inline-flex items-center text-xs text-primary font-medium">
-                  View Competition
-                  <ExternalLink className="w-3 h-3 ml-1" />
-                </span>
+                <div className="px-5 pb-4">
+                  <div className="flex items-center gap-2">
+                    <Trophy className="w-4 h-4 text-yellow-500" />
+                    <span className="text-sm font-semibold">Kaggle Bronze Medal</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    NFL Big Data Bowl 2026 -- Top 8% of 1,134 teams
+                  </p>
+                </div>
               </div>
             </Link>
 
