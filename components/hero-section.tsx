@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, MessageSquare, Github, Linkedin, ExternalLink } from "lucide-react";
+import { ArrowDown, Download, MessageSquare, Github, Linkedin, ExternalLink, Trophy } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -61,6 +61,10 @@ export function HeroSection() {
             className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground"
           >
             <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+              <span>Kaggle Bronze Medalist</span>
+            </div>
+            <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-primary rounded-full"></div>
               <span>93.8% Healthcare AI Accuracy</span>
             </div>
@@ -103,38 +107,66 @@ export function HeroSection() {
             </Link>
           </motion.div>
 
-          {/* Featured project highlight */}
+          {/* Achievement highlights */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-12 p-6 glass-effect rounded-xl hover-lift max-w-2xl mx-auto"
+            className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto"
           >
-            <h3 className="text-lg font-semibold mb-2">Featured Project</h3>
-            <p className="text-muted-foreground mb-4">
-              Apollo Healthcare Connect - Live AI triage system serving patients with 93.8% accuracy
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center">
-              <Link
-                href="https://apollohealthcareconnect.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" size="sm" className="text-xs">
-                  <ExternalLink className="w-3 h-3 mr-1" />
-                  Live Demo
-                </Button>
-              </Link>
-              <Link
-                href="https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="outline" size="sm" className="text-xs">
-                  <Github className="w-3 h-3 mr-1" />
-                  Source Code
-                </Button>
-              </Link>
+            {/* Kaggle Bronze Medal */}
+            <Link
+              href="https://www.kaggle.com/competitions/nfl-big-data-bowl-2026"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <div className="p-5 glass-effect rounded-xl hover-lift cursor-pointer group border-yellow-500/20 hover:border-yellow-500/50 transition-colors h-full">
+                <div className="flex items-center gap-3 mb-2">
+                  <Trophy className="w-5 h-5 text-yellow-500" />
+                  <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">Kaggle Bronze Medal</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-3">
+                  NFL Big Data Bowl 2026 -- Top 8% of 1,134 teams. 847+ experiments across 15+ deep learning architectures.
+                </p>
+                <span className="inline-flex items-center text-xs text-primary font-medium">
+                  View Competition
+                  <ExternalLink className="w-3 h-3 ml-1" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Featured Project */}
+            <div className="p-5 glass-effect rounded-xl hover-lift h-full">
+              <div className="flex items-center gap-3 mb-2">
+                <ExternalLink className="w-5 h-5 text-green-500" />
+                <h3 className="text-lg font-semibold">Live Production AI</h3>
+              </div>
+              <p className="text-sm text-muted-foreground mb-3">
+                Apollo Healthcare Connect -- AI triage system serving patients with 93.8% accuracy.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <Link
+                  href="https://apollohealthcareconnect.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm" className="text-xs">
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Live Demo
+                  </Button>
+                </Link>
+                <Link
+                  href="https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm" className="text-xs">
+                    <Github className="w-3 h-3 mr-1" />
+                    Source Code
+                  </Button>
+                </Link>
+              </div>
             </div>
           </motion.div>
 

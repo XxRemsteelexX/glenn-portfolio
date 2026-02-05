@@ -38,8 +38,8 @@ interface CertificationData {
 const projects: ProjectData[] = [
   {
     name: "NFL_Big_Data_Bowl_2026",
-    description: "Bronze Medal (74th open / 94th closed of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
-    longDescription: "Bronze Medal achievement in Kaggle's NFL Big Data Bowl 2026 competition (94th place out of 1,134 teams, Top 8%). Developed comprehensive deep learning pipeline for player trajectory prediction featuring: 8 model architectures (Spatial-Temporal Transformers, Multi-scale CNN, GRU, Position-Specific ST, Geometric Network, Perceiver IO, Co4), 20-fold cross-validation with multi-seed ensembling, 167 engineered features (kinematics, ball-relative, temporal, geometric), novel geometric attention with Voronoi tessellation, and Test-Time Augmentation providing +0.005-0.010 improvement. Best ensemble achieved 0.540 Public LB score. Key discovery: Architecture diversity in ensembles outperforms model stacking.",
+    description: "Kaggle Bronze Medal (Top 8% of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
+    longDescription: "Bronze Medal achievement in Kaggle's NFL Big Data Bowl 2026 competition (Top 8% of 1,134 teams). Developed comprehensive deep learning pipeline for player trajectory prediction featuring: 8 model architectures (Spatial-Temporal Transformers, Multi-scale CNN, GRU, Position-Specific ST, Geometric Network, Perceiver IO, Co4), 20-fold cross-validation with multi-seed ensembling, 167 engineered features (kinematics, ball-relative, temporal, geometric), novel geometric attention with Voronoi tessellation, and Test-Time Augmentation providing +0.005-0.010 improvement. Best ensemble achieved 0.540 Public LB score. Key discovery: Architecture diversity in ensembles outperforms model stacking.",
     githubUrl: "https://github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-",
     imageUrl: "https://storage.googleapis.com/kaggle-media/Images/competition-medals/bronze-medal-2026.png",
     technologies: ["Python", "PyTorch", "Spatial-Temporal Transformers", "GRU/RNN", "Multi-scale CNN", "Geometric Attention", "Perceiver IO", "Mixed Precision Training", "Multi-GPU Training", "Test-Time Augmentation", "Kaggle Competition"],
@@ -348,11 +348,11 @@ const certifications: CertificationData[] = [
 ];
 
 async function main() {
-  console.log('🌱 Starting database seeding...');
+  console.log('Starting database seeding...');
   
   try {
     // Clear existing data
-    console.log('🧹 Clearing existing data...');
+    console.log('Clearing existing data...');
     await prisma.contact.deleteMany();
     await prisma.project.deleteMany();
     await prisma.skill.deleteMany();
@@ -361,7 +361,7 @@ async function main() {
     await prisma.gitHubSync.deleteMany();
     
     // Seed Projects
-    console.log('📁 Seeding projects...');
+    console.log('Seeding projects...');
     for (const project of projects) {
       await prisma.project.create({
         data: {
@@ -372,10 +372,10 @@ async function main() {
         }
       });
     }
-    console.log(`✅ Created ${projects.length} projects`);
+    console.log(`Created ${projects.length} projects`);
     
     // Seed Skills
-    console.log('🛠️  Seeding skills...');
+    console.log('Seeding skills...');
     for (const skill of skills) {
       await prisma.skill.create({
         data: {
@@ -384,10 +384,10 @@ async function main() {
         }
       });
     }
-    console.log(`✅ Created ${skills.length} skills`);
+    console.log(`Created ${skills.length} skills`);
 
     // Seed Certifications
-    console.log('📜 Seeding certifications...');
+    console.log('Seeding certifications...');
     for (const certification of certifications) {
       await prisma.certification.create({
         data: {
@@ -396,10 +396,10 @@ async function main() {
         }
       });
     }
-    console.log(`✅ Created ${certifications.length} certifications`);
+    console.log(`Created ${certifications.length} certifications`);
 
     // Create initial GitHub sync record
-    console.log('🔄 Creating GitHub sync record...');
+    console.log('Creating GitHub sync record...');
     await prisma.gitHubSync.create({
       data: {
         username: 'XxRemsteelexX',
@@ -408,12 +408,12 @@ async function main() {
         lastSyncAt: new Date()
       }
     });
-    console.log('✅ GitHub sync record created');
+    console.log('GitHub sync record created');
     
-    console.log('🎉 Database seeding completed successfully!');
+    console.log('Database seeding completed successfully!');
     
   } catch (error) {
-    console.error('❌ Error during seeding:', error);
+    console.error('Error during seeding:', error);
     throw error;
   }
 }

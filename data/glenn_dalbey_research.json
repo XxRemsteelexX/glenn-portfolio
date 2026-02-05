@@ -25,7 +25,7 @@
   "github_projects": [
     {
       "name": "NFL_Big_Data_Bowl_2026",
-      "description": "Deep learning solution for predicting NFL player trajectories from tracking data. Bronze Medal (74th open / 94th closed of 1,134 teams) in Kaggle's NFL Big Data Bowl 2026 competition. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
+      "description": "Deep learning solution for predicting NFL player trajectories from tracking data. Kaggle Bronze Medal (Top 8% of 1,134 teams) in NFL Big Data Bowl 2026 competition. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
       "technologies": [
         "Python",
         "PyTorch",
@@ -40,7 +40,7 @@
         "Test-Time Augmentation"
       ],
       "notable_features": [
-        "Bronze Medal - 74th open / 94th closed of 1,134 teams (Top 8%)",
+        "Kaggle Bronze Medal - Top 8% of 1,134 teams",
         "847+ experiments across 15+ model architectures",
         "Best ensemble: 0.540 Public LB (3-model: ST Transformer + CNN + GRU)",
         "Best single model: 6-Layer ST Transformer (0.547 Public LB)",
@@ -350,7 +350,7 @@
     "Law Enforcement Analytics and Social Impact"
   ],
   "notable_achievements": [
-    "Bronze Medal in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) - Player Trajectory Prediction",
+    "Kaggle Bronze Medal in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) - Player Trajectory Prediction",
     "847+ deep learning experiments across 15+ architectures for trajectory prediction",
     "Trained 105 deep learning models for 3D medical imaging (21 architectures × 5 folds)",
     "Discovered smaller models outperform larger ones on limited medical data (statistically significant)",

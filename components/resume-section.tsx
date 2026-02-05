@@ -181,7 +181,7 @@ export function ResumeSection() {
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Data Science professional with <strong>Master's in Data Science and Analytics</strong> and proven expertise in competitive ML.
-                    <strong> Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8%, 74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ architectures.
+                    <strong> Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8% of 1,134 teams) with 847+ experiments across 15+ architectures.
                     Trained 105 3D medical imaging models and deployed production healthcare AI achieving <strong>93.8% accuracy</strong>.
                     Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI.
                   </p>
@@ -271,7 +271,7 @@ export function ResumeSection() {
                       GitHub
                     </Link>
                   </div>
-                  <p className="text-sm text-primary font-medium mb-2">Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams (Top 8%)</p>
+                  <p className="text-sm text-primary font-medium mb-2">Player Trajectory Prediction | Bronze Medal - Top 8% of 1,134 teams</p>
                   <ul className="text-sm text-muted-foreground space-y-1 mb-3">
                     <li>• <strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories</li>
                     <li>• 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)</li>
@@ -422,7 +422,7 @@ export function ResumeSection() {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-yellow-500 flex-shrink-0" />
-                      <strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8%, 74th open / 94th closed of 1,134)
+                      <strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />

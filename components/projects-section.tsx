@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github, ExternalLink, Star, GitFork, Calendar, Zap, Eye } from "lucide-react";
+import { Github, ExternalLink, Star, GitFork, Zap, Eye } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -24,9 +24,160 @@ interface Project {
   createdAt: string;
 }
 
+const fallbackProjects: Project[] = [
+  {
+    id: "p1",
+    name: "NFL_Big_Data_Bowl_2026",
+    description: "Kaggle Bronze Medal (Top 8% of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
+    githubUrl: "https://github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-",
+    technologies: ["Python", "PyTorch", "Spatial-Temporal Transformers", "GRU/RNN", "Multi-scale CNN", "Geometric Attention", "Perceiver IO", "Mixed Precision Training", "Multi-GPU Training", "Test-Time Augmentation", "Kaggle Competition"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p2",
+    name: "RSNA_Intracranial_Aneurysm_Detection",
+    description: "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
+    githubUrl: "https://github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle",
+    technologies: ["Python", "PyTorch", "3D CNNs", "SE-ResNet", "DenseNet", "EfficientNet", "Medical Imaging", "DICOM/NIfTI", "Multi-GPU Training", "Kaggle"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p3",
+    name: "missing-persons-outlier-detection",
+    description: "Statistical analysis of 41K missing persons cases to detect serial crime patterns and trafficking corridors",
+    githubUrl: "https://github.com/XxRemsteelexX/missing-persons-outlier-detection",
+    liveUrl: "https://xxremsteelexx-missing-persons-outlier-dete-streamlit-app-dwe4j4.streamlit.app/",
+    technologies: ["Python", "Streamlit", "Plotly", "Statistical Analysis", "Geospatial Analysis", "Time Series Forecasting", "Crime Analytics", "Data Visualization"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p4",
+    name: "Kaggle_House_Prices_Advanced_Regression",
+    description: "Comprehensive machine learning solution for Kaggle House Prices competition featuring advanced feature engineering, ensemble methods, and modern AutoML techniques",
+    githubUrl: "https://github.com/XxRemsteelexX/Kaggle--House-Prices---Advanced-Regression-Techniques",
+    technologies: ["Python", "Jupyter Notebook", "XGBoost", "LightGBM", "CatBoost", "TabPFN", "AutoGluon", "scikit-learn", "GPU Acceleration", "Feature Engineering", "Ensemble Learning", "Kaggle"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Jupyter Notebook",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p5",
+    name: "Blue-Zones-Longevity-Analysis",
+    description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
+    githubUrl: "https://github.com/XxRemsteelexX/Blue-Zones-Longevity-Analysis",
+    liveUrl: "https://xxremsteelexx-blue-zones-longevity--blue-zones-dashboard-xgbvew.streamlit.app/",
+    technologies: ["Jupyter Notebook", "Machine Learning", "Statistical Analysis", "Research", "Data Science", "Ensemble Methods", "Streamlit"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Jupyter Notebook",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p6",
+    name: "business-analytics-AI-platform",
+    description: "AI-powered Excel analytics platform for Thompson Parking & Mobility Consultants. Upload Excel files, get instant business insights, generate professional charts, and chat with your data using natural language queries.",
+    githubUrl: "https://github.com/XxRemsteelexX/business-analytics-AI-platform",
+    liveUrl: "https://business-analytics-ai-platform-production.up.railway.app/",
+    technologies: ["TypeScript", "Next.js", "AI", "Excel Processing", "Business Intelligence", "Natural Language Processing"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "TypeScript",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p7",
+    name: "TandemAI",
+    description: "Local-First LLM Ensemble Orchestration Platform. Let your AI models work together: relay, debate, verify. Support for Ollama, LM Studio, OpenAI, Anthropic, Groq and more.",
+    githubUrl: "https://github.com/XxRemsteelexX/TandemAI",
+    technologies: ["TypeScript", "React", "Node.js", "AI Orchestration", "LLM Integration", "Privacy-First"],
+    featured: false,
+    stars: 0,
+    forks: 0,
+    language: "TypeScript",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p8",
+    name: "Ml-Model-Recommender",
+    description: "Automated ML model selection for tabular data. Analyzes datasets, compares preprocessing strategies, trains baselines, and provides actionable recommendations.",
+    githubUrl: "https://github.com/XxRemsteelexX/Ml-Model-Recommender",
+    technologies: ["Jupyter Notebook", "Python", "Machine Learning", "AutoML", "Data Analysis", "scikit-learn", "Model Selection"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Jupyter Notebook",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p9",
+    name: "Computer-Vision-Portfolio",
+    description: "Advanced computer vision portfolio featuring GAN face generation and CNN landmark classification with production-ready implementations",
+    githubUrl: "https://github.com/XxRemsteelexX/Computer-Vision-Portfolio",
+    technologies: ["HTML", "Computer Vision", "GANs", "CNNs", "Deep Learning", "Production Ready"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "HTML",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p10",
+    name: "Apollo_Healthcare_Connect",
+    description: "Multi-modal AI healthcare triage system with deep learning models for intelligent patient routing and provider preparation",
+    githubUrl: "https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect",
+    liveUrl: "https://apollohealthcareconnect.com",
+    technologies: ["HTML", "Python", "PyTorch", "TensorFlow", "DistilBERT", "Flask", "AWS", "Multi-modal AI", "Healthcare AI"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "HTML",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p11",
+    name: "NFL_Rookie_WR_1K_Analysis",
+    description: "Capstone project for Master's in Data Science - using previous years rookie statistics to determine future WR production",
+    githubUrl: "https://github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis",
+    technologies: ["Jupyter Notebook", "Python", "scikit-learn", "XGBoost", "Sports Analytics", "Machine Learning", "Feature Engineering"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Jupyter Notebook",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p12",
+    name: "YouTube_Video_Analyzer",
+    description: "GPU-accelerated multimodal AI for YouTube video analysis with transcription, visual frame analysis, and comprehensive summaries",
+    githubUrl: "https://github.com/XxRemsteelexX/XxRemsteelexX-YouTube_Video_text_-_Description_Analyzer",
+    technologies: ["Python", "FastAPI", "Streamlit", "PyTorch", "Whisper", "BLIP", "BART", "Multi-modal AI", "Computer Vision", "NLP", "GPU Acceleration"],
+    featured: false,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString()
+  },
+];
+
 export function ProjectsSection() {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>(fallbackProjects);
+  const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState<'all' | 'featured'>('all');
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
@@ -39,28 +190,18 @@ export function ProjectsSection() {
       const response = await fetch('/api/projects');
       if (response.ok) {
         const data = await response.json();
-        setProjects(data.projects || []);
+        if (data.projects && data.projects.length > 0) {
+          setProjects(data.projects);
+        }
       }
     } catch (error) {
       console.error('Failed to fetch projects:', error);
-    } finally {
-      setLoading(false);
     }
   };
 
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     filter === 'all' || (filter === 'featured' && project.featured)
   );
-
-  if (loading) {
-    return (
-      <section className="py-20 section-bg-alt">
-        <div className="container mx-auto px-4">
-          <div className="loading-skeleton w-full h-96"></div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="projects" className="py-20 section-bg-alt">
@@ -74,7 +215,7 @@ export function ProjectsSection() {
         >
           <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Explore my portfolio of AI and data science projects, from healthcare applications 
+            Explore my portfolio of AI and data science projects, from healthcare applications
             to sports analytics and optimization solutions.
           </p>
 
@@ -244,17 +385,6 @@ export function ProjectsSection() {
                         </Button>
                       </Link>
                     )}
-                  </div>
-
-                  {/* Date */}
-                  <div className="flex items-center space-x-2 text-xs text-muted-foreground mt-3 pt-3 border-t border-border/50">
-                    <Calendar className="w-3 h-3" />
-                    <span>
-                      {new Date(project.createdAt).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short'
-                      })}
-                    </span>
                   </div>
                 </CardContent>
               </Card>

@@ -303,7 +303,7 @@ const onePageHTML = `
     <div class="main-content">
       <div class="main-section-title">PROFESSIONAL SUMMARY</div>
       <div class="compact-summary">
-        Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
+        Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
       </div>
 
       <div class="main-section-title">FEATURED PROJECTS</div>
@@ -312,7 +312,7 @@ const onePageHTML = `
         <span>NFL Big Data Bowl 2026 | Kaggle Bronze Medal</span>
         ${badgeBase64 ? `<img src="data:image/png;base64,${badgeBase64}" class="badge-img" alt="Kaggle Bronze">` : ''}
       </div>
-      <div class="project-subtitle">Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams </div>
+      <div class="project-subtitle">Player Trajectory Prediction | Top 8% of 1,134 teams </div>
       <ul>
         <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories</li>
         <li>Conducted 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)</li>
@@ -357,7 +357,7 @@ const onePageHTML = `
 
       <div class="main-section-title">KEY ACCOMPLISHMENTS</div>
       <ul>
-        <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams)</li>
+        <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
         <li>847+ deep learning experiments across 15+ architectures; 105 3D medical imaging models trained</li>
         <li>Production healthcare AI achieving 93.8% accuracy with sub-second response</li>
         <li>Identified trafficking patterns at 44.75σ significance from 41,200 missing persons cases</li>
@@ -683,7 +683,7 @@ const detailedHTML = `
     <div class="main-content">
       <div class="main-section-title">PROFESSIONAL SUMMARY</div>
       <p style="font-size: 11pt; line-height: 1.4; margin-bottom: 16pt;">
-        Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
+        Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
       </p>
 
       <div class="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
@@ -692,7 +692,7 @@ const detailedHTML = `
         <span>NFL Big Data Bowl 2026 - Kaggle Bronze Medal</span>
         ${badgeBase64 ? `<img src="data:image/png;base64,${badgeBase64}" class="badge-img" alt="Kaggle Bronze">` : ''}
       </div>
-      <div class="project-subtitle">Deep Learning Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams </div>
+      <div class="project-subtitle">Deep Learning Player Trajectory Prediction | Top 8% of 1,134 teams </div>
       <div class="project-url">github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-</div>
       <ul>
         <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories from tracking data</li>
@@ -784,7 +784,7 @@ const detailedHTML = `
 
       <div class="main-section-title">KEY ACCOMPLISHMENTS</div>
       <ul>
-        <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams)</li>
+        <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
         <li>Conducted 847+ deep learning experiments across 15+ architectures with systematic hyperparameter optimization</li>
         <li>Trained 105 3D medical imaging models achieving AUC 0.8624 in ensemble configuration</li>
         <li>Built and deployed production healthcare AI achieving 93.8% accuracy with sub-second response</li>
@@ -815,7 +815,7 @@ function createATSWordDoc(isOnePage = false) {
       children: [
         new TextRun({ text: "Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. " }),
         new TextRun({ text: "Kaggle Bronze Medalist", bold: true }),
-        new TextRun({ text: " in NFL Big Data Bowl 2026 (74th open / 94th closed of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment." }),
+        new TextRun({ text: " in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment." }),
       ],
       spacing: { after: 120 },
     })
@@ -842,7 +842,7 @@ function createATSWordDoc(isOnePage = false) {
     }),
 
     new Paragraph({ children: [new TextRun({ text: "NFL Big Data Bowl 2026 - Kaggle Bronze Medal", bold: true })] }),
-    new Paragraph({ children: [new TextRun({ text: "Player Trajectory Prediction | 74th open / 94th closed of 1,134 teams", italics: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Player Trajectory Prediction | Top 8% of 1,134 teams", italics: true })] }),
     new Paragraph({ text: "• Bronze Medal in prestigious Kaggle competition predicting NFL player trajectories from tracking data", bullet: { level: 0 } }),
     new Paragraph({ text: "• Conducted 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)", bullet: { level: 0 } }),
     new Paragraph({ text: "• Best ensemble: 3-model blend achieving 0.540 Public LB with architecture diversity strategy", bullet: { level: 0 } }),
