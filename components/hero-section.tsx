@@ -25,9 +25,21 @@ export function HeroSection() {
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
+      {/* Background image overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-bg-gears.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.07]"
+          sizes="100vw"
+          priority
+        />
+      </div>
+
       {/* Background with gradient */}
       <div className="absolute inset-0 hero-gradient opacity-10"></div>
-      
+
       {/* Animated background pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
