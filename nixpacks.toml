@@ -5,7 +5,7 @@ nixPkgs = ['nodejs_18', 'yarn-1_x', 'openssl']
 cmds = ['yarn install --frozen-lockfile --network-timeout 100000']
 
 [phases.build]
-cmds = ['yarn run build', 'npx prisma db seed']
+cmds = ['yarn run build', 'npx prisma db seed || echo "Seeding skipped - database not available"']
 
 [start]
 cmd = 'yarn run start'
