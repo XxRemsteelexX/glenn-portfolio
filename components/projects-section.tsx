@@ -29,8 +29,8 @@ const fallbackProjects: Project[] = [
   {
     id: "p0",
     name: "OceanEterna",
-    description: "High-performance local RAG system built in C++17, running entirely on CPU with minimal RAM. Indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency (avg 12ms) and 12-second cold startup. Dual LZ4/Zstd compression with auto-format detection for instant decompression at query time. Conversations and queries are continuously indexed into the knowledge base with intelligent tagging for current and historical context. Supports ingesting any file type to grow the corpus. 47 tests passing at 100% accuracy, 15 REST API endpoints, zero per-query costs — no GPU, Docker, database, or cloud required.",
-    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "BM25"],
+    description: "High-performance local RAG system built in C++17, running entirely on CPU with minimal RAM. Search engine core indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency (avg 12ms) and 12-second cold startup. Dual LZ4/Zstd compression with auto-format detection. Conversations and queries continuously indexed with intelligent tagging; supports ingesting any file type. 47 tests at 100% accuracy, 15 REST API endpoints, zero per-query costs — no GPU, Docker, database, or cloud required. Next: LLM chat interface and MCP tool integration for terminal-based AI workflows and project knowledge management.",
+    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "BM25", "MCP"],
     featured: true,
     stars: 0,
     forks: 0,
