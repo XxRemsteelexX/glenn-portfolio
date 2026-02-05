@@ -65,13 +65,13 @@ export function AboutSection() {
   const achievements = [
     {
       icon: <Award className="w-8 h-8 text-yellow-500" />,
-      title: "93.8% AI Accuracy",
-      description: "Live healthcare triage system serving real patients",
+      title: "Kaggle Bronze Medal",
+      description: "NFL Big Data Bowl 2026 -- Top 8% of 1,134 teams",
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-      title: "90.9% ML Precision",
-      description: "NFL rookie performance prediction model",
+      title: "93.8% AI Accuracy",
+      description: "Live healthcare triage system serving real patients",
     },
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
