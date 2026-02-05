@@ -174,7 +174,7 @@ export function AIChatbotSection() {
           src="/images/chatbot-bg-llm.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.07]"
+          className="object-cover opacity-[0.10]"
           sizes="100vw"
         />
       </div>

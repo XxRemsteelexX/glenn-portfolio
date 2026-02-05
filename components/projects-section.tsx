@@ -225,7 +225,7 @@ export function ProjectsSection() {
           src="/images/projects-bg-neural.jpg"
           alt=""
           fill
-          className="object-cover opacity-[0.07]"
+          className="object-cover opacity-[0.12]"
           sizes="100vw"
         />
       </div>
