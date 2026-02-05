@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Github, ExternalLink, Star, GitFork, Zap, Eye, Construction } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Project {
   id: string;
@@ -217,8 +218,19 @@ export function ProjectsSection() {
   );
 
   return (
-    <section id="projects" className="py-20 section-bg-alt">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 section-bg-alt relative overflow-hidden">
+      {/* Background image overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/projects-bg-neural.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.07]"
+          sizes="100vw"
+        />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
