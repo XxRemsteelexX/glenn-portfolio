@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function InfrastructurePage() {
   const computeNodes = [
@@ -205,9 +206,19 @@ export default function InfrastructurePage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative">
+      {/* Background image overlay */}
+      <div className="fixed inset-0 z-0">
+        <Image
+          src="/images/infrastructure-bg-data.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-[0.12]"
+          sizes="100vw"
+        />
+      </div>
       {/* Header */}
-      <div className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <div className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b relative">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -228,7 +239,7 @@ export default function InfrastructurePage() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -268,7 +279,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Design Principles */}
-      <section className="py-12 px-4 bg-muted/30">
+      <section className="py-12 px-4 bg-muted/30 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl font-bold mb-8 text-center">Core Design Principles</h2>
           <div className="grid md:grid-cols-5 gap-4">
@@ -289,7 +300,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Heavy Compute Tier */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center space-x-3 mb-8">
             <Zap className="w-8 h-8 text-yellow-500" />
@@ -348,7 +359,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Inference Tier */}
-      <section className="py-12 px-4 bg-muted/30">
+      <section className="py-12 px-4 bg-muted/30 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center space-x-3 mb-8">
             <Brain className="w-8 h-8 text-purple-500" />
@@ -421,7 +432,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Infrastructure Tier */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center space-x-3 mb-8">
             <Database className="w-8 h-8 text-blue-500" />
@@ -494,7 +505,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Utility Tier */}
-      <section className="py-12 px-4 bg-muted/30">
+      <section className="py-12 px-4 bg-muted/30 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <div className="flex items-center space-x-3 mb-8">
             <Monitor className="w-8 h-8 text-gray-500" />
@@ -541,7 +552,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Software Stack */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-2xl font-bold mb-8 text-center">Software Stack</h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -598,7 +609,7 @@ export default function InfrastructurePage() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-16 px-4 bg-muted/30 relative z-10">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-2xl font-bold mb-4">Built for AI Research & Production</h2>
           <p className="text-muted-foreground mb-8">
