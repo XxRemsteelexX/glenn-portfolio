@@ -19,10 +19,6 @@ function getResendClient() {
     // Remove leading equals signs (must be after trim)
     cleanApiKey = cleanApiKey.replace(/^=+/, '');
 
-    console.log('[CONTACT] Original key length:', process.env.RESEND_API_KEY.length);
-    console.log('[CONTACT] Cleaned key length:', cleanApiKey.length);
-    console.log('[CONTACT] Cleaned key starts with:', cleanApiKey.substring(0, 5));
-
     resend = new Resend(cleanApiKey);
   }
   return resend;
@@ -41,8 +37,6 @@ export const dynamic = 'force-dynamic';
 
 export async function POST(request: Request) {
   try {
-    console.log('[CONTACT] Processing contact form submission');
-    console.log('[CONTACT] RESEND_API_KEY exists:', !!process.env.RESEND_API_KEY);
     const body = await request.json();
     
     // Validate required fields
@@ -85,19 +79,15 @@ export async function POST(request: Request) {
       });
       contactId = contact.id;
       contactCreatedAt = contact.createdAt;
-      console.log('[CONTACT] Saved to database');
     } catch (dbError) {
-      console.error('[CONTACT] Database save failed, continuing with notifications:', dbError);
+      console.error('Database save failed, continuing with notifications:', dbError);
     }
 
     // Send email notification
-    console.log('[CONTACT] About to initialize Resend client');
     const resendClient = getResendClient();
-    console.log('[CONTACT] Resend client initialized:', !!resendClient);
 
     if (resendClient) {
       try {
-        console.log('[CONTACT] Attempting to send email notification to dalbeyglenn@gmail.com');
         const result = await resendClient.emails.send({
           from: 'Acme <onboarding@resend.dev>',
           to: ['dalbeyglenn@gmail.com'],
@@ -114,12 +104,9 @@ export async function POST(request: Request) {
             <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
           `
         });
-        console.log('Email sent successfully:', result);
       } catch (emailError) {
         console.error('Failed to send email notification:', emailError);
       }
-    } else {
-      console.log('Resend client not initialized - check RESEND_API_KEY');
     }
 
     // Send SMS notification
@@ -128,7 +115,7 @@ export async function POST(request: Request) {
         await twilioClient.messages.create({
           body: `New contact from ${body.name}: ${body.subject}`,
           from: process.env.TWILIO_PHONE_NUMBER,
-          to: '+13192334445'
+          to: process.env.TWILIO_TO_PHONE_NUMBER || ''
         });
       } catch (smsError) {
         console.error('Failed to send SMS notification:', smsError);
@@ -155,38 +142,3 @@ export async function POST(request: Request) {
   }
 }
 
-export async function GET(request: Request) {
-  try {
-    const { searchParams } = new URL(request.url);
-    const status = searchParams.get('status');
-    const limit = searchParams.get('limit');
-    
-    let whereClause: any = {};
-    if (status) {
-      whereClause.status = status;
-    }
-    
-    const contacts = await prisma.contact.findMany({
-      where: whereClause,
-      orderBy: { createdAt: 'desc' },
-      take: limit ? parseInt(limit) : undefined
-    });
-
-    return NextResponse.json({
-      success: true,
-      contacts: contacts || [],
-      count: contacts?.length || 0
-    });
-  } catch (error) {
-    console.error('Error fetching contacts:', error);
-    return NextResponse.json(
-      { 
-        success: false, 
-        error: 'Failed to fetch contacts',
-        contacts: [],
-        count: 0
-      },
-      { status: 500 }
-    );
-  }
-}
