@@ -57,12 +57,6 @@ function CountUp({ end, suffix = "", duration = 2000 }: CountUpProps) {
 }
 
 export function AboutSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const achievements = [
     {
       icon: <Award className="w-8 h-8 text-yellow-500" />,
@@ -93,15 +87,6 @@ export function AboutSection() {
     { label: "Production Systems", value: 3, suffix: "" },
   ];
 
-  if (!mounted) {
-    return (
-      <section className="py-20 section-bg-alt">
-        <div className="container mx-auto px-4">
-          <div className="loading-skeleton w-full h-96"></div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="about" className="py-20 section-bg-alt relative overflow-hidden">

@@ -1,7 +1,6 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -27,12 +26,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export function ResumeSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const downloadFile = (filename: string) => {
     const link = document.createElement('a');
     link.href = `/resume/${filename}`;
@@ -41,16 +34,6 @@ export function ResumeSection() {
     link.click();
     document.body.removeChild(link);
   };
-
-  if (!mounted) {
-    return (
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="loading-skeleton w-full h-96"></div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="resume" className="py-20 bg-background relative overflow-hidden">

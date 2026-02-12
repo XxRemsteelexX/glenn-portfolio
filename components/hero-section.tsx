@@ -1,7 +1,6 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, MessageSquare, Github, Linkedin, ExternalLink, Trophy } from "lucide-react";
 import Link from "next/link";
@@ -9,20 +8,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return (
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="loading-skeleton w-full max-w-4xl h-96 mx-auto"></div>
-      </section>
-    );
-  }
-
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Background image overlay */}
