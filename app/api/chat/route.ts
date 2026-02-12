@@ -8,10 +8,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Message is required' }, { status: 400 });
     }
 
-    // Debug logging
-    console.log('GROQ_API_KEY exists:', !!process.env.GROQ_API_KEY);
-    console.log('GROQ_API_KEY starts with gsk_:', process.env.GROQ_API_KEY?.startsWith('gsk_'));
-
     const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -106,7 +102,6 @@ What would you like to know more about?
     }
 
     const data = await response.json();
-    console.log('Groq API response:', data);
     const aiMessage = data.choices[0]?.message?.content || 'Sorry, I could not process your request.';
 
     return NextResponse.json({ message: aiMessage });

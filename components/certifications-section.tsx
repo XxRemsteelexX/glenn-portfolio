@@ -27,13 +27,10 @@ export function CertificationsSection() {
 
   const fetchCertifications = async () => {
     try {
-      console.log('[CERTS] Fetching certifications...');
       const response = await fetch('/api/certifications');
-      console.log('[CERTS] Response status:', response.status);
 
       if (response.ok) {
         const data = await response.json();
-        console.log('[CERTS] Data received:', data);
         setCertifications(data.certifications || []);
       } else {
         console.error('[CERTS] Response not OK:', response.status, await response.text());
