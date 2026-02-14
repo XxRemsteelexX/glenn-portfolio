@@ -352,7 +352,7 @@ function OnePageResume() {
         <div className="main-content">
           <div className="main-section-title">PROFESSIONAL SUMMARY</div>
           <div className="compact-summary">
-            Data Science professional with MS in Data Science and proven expertise in deep learning and competitive ML. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8%, Top 8% of 1,134 teams) with 847+ experiments across 15+ architectures. Built production healthcare AI achieving 93.8% accuracy, trained 105 3D medical imaging models, and deployed multiple live systems. Expert in spatial-temporal modeling, trajectory prediction, and ensemble methods.
+            Data Science professional with MS in Data Science and proven expertise in deep learning and competitive ML. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8% of 1,134 teams) with 847+ experiments across 15+ architectures. Built production healthcare AI achieving 93.8% accuracy, trained 105 3D medical imaging models, and deployed multiple live systems. Expert in spatial-temporal modeling, trajectory prediction, and ensemble methods.
           </div>
 
           <div className="main-section-title">FEATURED PROJECTS</div>
@@ -361,7 +361,7 @@ function OnePageResume() {
             <span>NFL Big Data Bowl 2026 | Kaggle Bronze Medal</span>
             <img src="/images/kaggle-bronze-2026.png" alt="Kaggle Bronze Medal" style={{ height: "28px", width: "28px", borderRadius: "50%" }} />
           </div>
-          <div className="project-subtitle">Player Trajectory Prediction | Top 8% of 1,134 teams (Top 8%)</div>
+          <div className="project-subtitle">Player Trajectory Prediction | Top 8% of 1,134 teams</div>
           <ul>
             <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories</li>
             <li>Conducted 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO)</li>
@@ -406,11 +406,11 @@ function OnePageResume() {
 
           <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
           <ul>
-            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams, Top 8%)</li>
+            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
             <li>847+ deep learning experiments across 15+ architectures; 105 3D medical imaging models trained</li>
             <li>Production healthcare AI achieving 93.8% accuracy with sub-second response</li>
-            <li>Identified trafficking patterns at 44.75σ significance from 41,200 missing persons cases</li>
-            <li>Published 15+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
+            <li>Identified trafficking patterns at up to 46.86σ significance from 41,200 missing persons cases</li>
+            <li>Published 20+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
           </ul>
         </div>
       </div>
@@ -685,7 +685,7 @@ function DetailedResume() {
         <div className="main-content">
           <div className="main-section-title">PROFESSIONAL SUMMARY</div>
           <p style={{ fontSize: "11pt", lineHeight: 1.4, marginBottom: "16pt" }}>
-            Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams, Top 8%) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
+            Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
           </p>
 
           <div className="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
@@ -694,7 +694,7 @@ function DetailedResume() {
             <span>NFL Big Data Bowl 2026 - Kaggle Bronze Medal</span>
             <img src="/images/kaggle-bronze-2026.png" alt="Kaggle Bronze Medal 2026" style={{ height: "40px", width: "40px", borderRadius: "50%" }} />
           </div>
-          <div className="project-subtitle">Deep Learning Player Trajectory Prediction | Top 8% of 1,134 teams (Top 8%)</div>
+          <div className="project-subtitle">Deep Learning Player Trajectory Prediction | Top 8% of 1,134 teams</div>
           <div className="project-url">github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-</div>
           <ul>
             <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories from tracking data</li>
@@ -734,7 +734,7 @@ function DetailedResume() {
           <ul>
             <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
             <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
-            <li>Discovered Pima County, AZ anomaly: 44.75 standard deviations above baseline (529 bodies)</li>
+            <li>Discovered Kenedy County, TX anomaly: 46.86 standard deviations above baseline</li>
             <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
             <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
           </ul>
@@ -756,6 +756,15 @@ function DetailedResume() {
             <li>Indexes <strong>2.45 billion tokens</strong> across 5M+ chunks with <strong>0-42ms search</strong> (avg 12ms, down from 500ms in v1) — CPU-only, minimal RAM</li>
             <li>Dual LZ4/Zstd compression, 15 REST API endpoints, 47 tests at 100% accuracy; conversations and files continuously indexed</li>
             <li>Building LLM chat interface and MCP tool for terminal-based AI workflows and project knowledge management</li>
+          </ul>
+
+          <div className="project-title">OE-OS <span style={{ fontSize: "9pt", color: "#e67e22", fontWeight: "normal" }}>(In Progress)</span></div>
+          <div className="project-subtitle">Distributed AI Orchestration Platform | Python / FastAPI</div>
+          <ul>
+            <li>Three-tier LLM routing (local Ollama to cheap API to Claude Opus) reducing costs by routing ~80% of requests to free local models</li>
+            <li>Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache with graceful degradation</li>
+            <li>18 MCP-compatible tools and multi-agent sandbox where 4 LLM personas deliberate at zero API cost</li>
+            <li>4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster</li>
           </ul>
 
           <div className="project-title">AI Homelab & Active Memory Network</div>
@@ -795,14 +804,14 @@ function DetailedResume() {
 
           <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
           <ul>
-            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams, Top 8%)</li>
+            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
             <li>Conducted 847+ deep learning experiments across 15+ architectures with systematic hyperparameter optimization</li>
             <li>Trained 105 3D medical imaging models achieving AUC 0.8624 in ensemble configuration</li>
             <li>Built and deployed production healthcare AI achieving 93.8% accuracy with sub-second response</li>
             <li>Discovered smaller models outperform larger on limited medical data (statistically significant: r=-0.42, p&lt;0.01)</li>
-            <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at 44.75σ significance</li>
+            <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at up to 46.86σ significance</li>
             <li>Achieved 90.9% ROC AUC on temporal validation for NFL rookie prediction with 97.8% overfitting reduction</li>
-            <li>Published 15+ open-source projects on GitHub with comprehensive documentation</li>
+            <li>Published 20+ open-source projects on GitHub with comprehensive documentation</li>
           </ul>
         </div>
       </div>

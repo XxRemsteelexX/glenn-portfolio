@@ -28,18 +28,6 @@ interface Project {
 
 const fallbackProjects: Project[] = [
   {
-    id: "p0",
-    name: "OceanEterna",
-    description: "Multi-month engineering effort building a high-performance local RAG system. Originally prototyped in Python but rewritten from scratch in C++17 for performance — evolved through 4 major versions with systematic optimization. Search engine core indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency (avg 12ms, down from 500ms in v1) and 12-second cold startup (down from 41s). Runs entirely on CPU with minimal RAM. Dual LZ4/Zstd compression with auto-format detection. Conversations and queries continuously indexed with intelligent tagging; supports ingesting any file type to grow the corpus. 47 tests at 100% accuracy, 15 REST API endpoints, zero per-query costs — no GPU, Docker, database, or cloud required. Next: LLM chat interface and MCP tool integration for terminal-based AI workflows and project knowledge management.",
-    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "BM25", "MCP"],
-    featured: true,
-    stars: 0,
-    forks: 0,
-    language: "C++",
-    createdAt: new Date().toISOString(),
-    status: "in-progress"
-  },
-  {
     id: "p1",
     name: "NFL_Big_Data_Bowl_2026",
     description: "Kaggle Bronze Medal (Top 8% of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
@@ -52,21 +40,9 @@ const fallbackProjects: Project[] = [
     createdAt: new Date().toISOString()
   },
   {
-    id: "p2",
-    name: "RSNA_Intracranial_Aneurysm_Detection",
-    description: "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
-    githubUrl: "https://github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle",
-    technologies: ["Python", "PyTorch", "3D CNNs", "SE-ResNet", "DenseNet", "EfficientNet", "Medical Imaging", "DICOM/NIfTI", "Multi-GPU Training", "Kaggle"],
-    featured: true,
-    stars: 0,
-    forks: 0,
-    language: "Python",
-    createdAt: new Date().toISOString()
-  },
-  {
     id: "p3",
     name: "missing-persons-outlier-detection",
-    description: "Statistical analysis of 41K missing persons cases to detect serial crime patterns and trafficking corridors",
+    description: "Multi-method statistical and ML pipeline analyzing 41,200 NamUs cases across 55 jurisdictions and 101 years. Applies 7 outlier detection methods, Isolation Forest and LOF ensemble, spatial autocorrelation (Moran's I), and ARIMA forecasting. Identified the I-35 trafficking corridor (+170% acceleration) and validated against known serial killers. Live Streamlit dashboard.",
     githubUrl: "https://github.com/XxRemsteelexX/missing-persons-outlier-detection",
     liveUrl: "https://xxremsteelexx-missing-persons-outlier-dete-streamlit-app-dwe4j4.streamlit.app/",
     technologies: ["Python", "Streamlit", "Plotly", "Statistical Analysis", "Geospatial Analysis", "Time Series Forecasting", "Crime Analytics", "Data Visualization"],
@@ -77,11 +53,61 @@ const fallbackProjects: Project[] = [
     createdAt: new Date().toISOString()
   },
   {
-    id: "p4",
-    name: "Kaggle_House_Prices_Advanced_Regression",
-    description: "Comprehensive machine learning solution for Kaggle House Prices competition featuring advanced feature engineering, ensemble methods, and modern AutoML techniques",
-    githubUrl: "https://github.com/XxRemsteelexX/Kaggle--House-Prices---Advanced-Regression-Techniques",
-    technologies: ["Python", "Jupyter Notebook", "XGBoost", "LightGBM", "CatBoost", "TabPFN", "AutoGluon", "scikit-learn", "GPU Acceleration", "Feature Engineering", "Ensemble Learning", "Kaggle"],
+    id: "p10",
+    name: "Apollo_Healthcare_Connect",
+    description: "Production-deployed multi-modal AI healthcare triage system achieving 93.8% combined accuracy. Analyzes text symptoms (DistilBERT, 94%) and medical images (5-model CNN ensemble, 98% burn classification) across 8,085 images with 29.7:1 class imbalance handling. WGU MS Data Science Capstone. Live at apollohealthcareconnect.com.",
+    githubUrl: "https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect",
+    liveUrl: "https://apollohealthcareconnect.com",
+    technologies: ["HTML", "Python", "PyTorch", "TensorFlow", "DistilBERT", "Flask", "AWS", "Multi-modal AI", "Healthcare AI"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "HTML",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p2",
+    name: "RSNA_Intracranial_Aneurysm_Detection",
+    description: "3D deep learning solution for detecting intracranial aneurysms from CT angiography. Trained 105 models (21 architectures x 5 folds), tested 51 ensemble configurations achieving best AUC 0.8624. Key finding: smaller models significantly outperform larger ones on limited medical data (r=-0.42, p<0.01).",
+    githubUrl: "https://github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle",
+    technologies: ["Python", "PyTorch", "3D CNNs", "SE-ResNet", "DenseNet", "EfficientNet", "Medical Imaging", "DICOM/NIfTI", "Multi-GPU Training", "Kaggle"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p0",
+    name: "OceanEterna",
+    description: "Multi-month engineering effort building a high-performance local RAG system. Originally prototyped in Python but rewritten from scratch in C++17 for performance — evolved through 4 major versions with systematic optimization. Search engine core indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency (avg 12ms, down from 500ms in v1) and 12-second cold startup (down from 41s). Runs entirely on CPU with minimal RAM. Dual LZ4/Zstd compression with auto-format detection. Conversations and queries continuously indexed with intelligent tagging; supports ingesting any file type to grow the corpus. 47 tests at 100% accuracy, 15 REST API endpoints, zero per-query costs — no GPU, Docker, database, or cloud required. Next: LLM chat interface and MCP tool integration for terminal-based AI workflows and project knowledge management.",
+    technologies: ["C++17", "Information Retrieval", "RAG", "Search Engine", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "BM25", "MCP"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "C++",
+    createdAt: new Date().toISOString(),
+    status: "in-progress"
+  },
+  {
+    id: "p13",
+    name: "OE-OS",
+    description: "Distributed AI orchestration platform for a private multi-node GPU cluster. Features three-tier LLM routing (local Ollama to cheap API to Claude Opus) reducing costs by routing ~80% of requests to free local models, triple-layer RAG memory (BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache), 18 MCP-compatible tools, and a multi-agent sandbox where 4 LLM personas deliberate at zero API cost. 4,200+ lines of async Python on FastAPI.",
+    technologies: ["Python", "FastAPI", "ChromaDB", "Redis", "Ollama", "Pydantic", "Distributed Systems", "RAG", "Multi-Agent Systems"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString(),
+    status: "in-progress"
+  },
+  {
+    id: "p5",
+    name: "Blue-Zones-Longevity-Analysis",
+    description: "Longitudinal statistical analysis of life expectancy trends across Blue Zone countries vs. 88-nation global baseline, 1960-2023. Formal hypothesis testing with bootstrap confidence intervals, GDP-controlled partial correlations, sigma and beta convergence testing, and COVID impact analysis. Live Streamlit dashboard.",
+    githubUrl: "https://github.com/XxRemsteelexX/Blue-Zones-Longevity-Analysis",
+    liveUrl: "https://xxremsteelexx-blue-zones-longevity--blue-zones-dashboard-xgbvew.streamlit.app/",
+    technologies: ["Jupyter Notebook", "Statistical Hypothesis Testing", "Bootstrap", "Partial Correlations", "Convergence Analysis", "Streamlit"],
     featured: true,
     stars: 0,
     forks: 0,
@@ -89,12 +115,11 @@ const fallbackProjects: Project[] = [
     createdAt: new Date().toISOString()
   },
   {
-    id: "p5",
-    name: "Blue-Zones-Longevity-Analysis",
-    description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
-    githubUrl: "https://github.com/XxRemsteelexX/Blue-Zones-Longevity-Analysis",
-    liveUrl: "https://xxremsteelexx-blue-zones-longevity--blue-zones-dashboard-xgbvew.streamlit.app/",
-    technologies: ["Jupyter Notebook", "Machine Learning", "Statistical Analysis", "Research", "Data Science", "Ensemble Methods", "Streamlit"],
+    id: "p4",
+    name: "Kaggle_House_Prices_Advanced_Regression",
+    description: "Comprehensive machine learning solution for Kaggle House Prices competition featuring advanced feature engineering, ensemble methods, and modern AutoML techniques",
+    githubUrl: "https://github.com/XxRemsteelexX/Kaggle--House-Prices---Advanced-Regression-Techniques",
+    technologies: ["Python", "Jupyter Notebook", "XGBoost", "LightGBM", "CatBoost", "TabPFN", "AutoGluon", "scikit-learn", "GPU Acceleration", "Feature Engineering", "Ensemble Learning", "Kaggle"],
     featured: true,
     stars: 0,
     forks: 0,
@@ -139,40 +164,27 @@ const fallbackProjects: Project[] = [
     createdAt: new Date().toISOString()
   },
   {
-    id: "p9",
-    name: "Computer-Vision-Portfolio",
-    description: "Advanced computer vision portfolio featuring GAN face generation and CNN landmark classification with production-ready implementations",
-    githubUrl: "https://github.com/XxRemsteelexX/Computer-Vision-Portfolio",
-    technologies: ["HTML", "Computer Vision", "GANs", "CNNs", "Deep Learning", "Production Ready"],
-    featured: true,
-    stars: 0,
-    forks: 0,
-    language: "HTML",
-    createdAt: new Date().toISOString()
-  },
-  {
-    id: "p10",
-    name: "Apollo_Healthcare_Connect",
-    description: "Multi-modal AI healthcare triage system with deep learning models for intelligent patient routing and provider preparation",
-    githubUrl: "https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect",
-    liveUrl: "https://apollohealthcareconnect.com",
-    technologies: ["HTML", "Python", "PyTorch", "TensorFlow", "DistilBERT", "Flask", "AWS", "Multi-modal AI", "Healthcare AI"],
-    featured: true,
-    stars: 0,
-    forks: 0,
-    language: "HTML",
-    createdAt: new Date().toISOString()
-  },
-  {
     id: "p11",
     name: "NFL_Rookie_WR_1K_Analysis",
-    description: "Capstone project for Master's in Data Science - using previous years rookie statistics to determine future WR production",
+    description: "Capstone project for Bachelor's in Data Analytics - using previous years rookie statistics to determine future WR production. Achieved 90.9% ROC AUC.",
     githubUrl: "https://github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis",
     technologies: ["Jupyter Notebook", "Python", "scikit-learn", "XGBoost", "Sports Analytics", "Machine Learning", "Feature Engineering"],
     featured: true,
     stars: 0,
     forks: 0,
     language: "Jupyter Notebook",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "p9",
+    name: "Computer-Vision-Portfolio",
+    description: "CNN-based landmark classification using PyTorch with custom 4-block convolutional architecture, batch normalization, dropout regularization, and transfer learning comparison studies.",
+    githubUrl: "https://github.com/XxRemsteelexX/Computer-Vision-Portfolio",
+    technologies: ["HTML", "Computer Vision", "CNNs", "Deep Learning", "PyTorch"],
+    featured: false,
+    stars: 0,
+    forks: 0,
+    language: "HTML",
     createdAt: new Date().toISOString()
   },
   {

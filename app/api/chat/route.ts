@@ -38,11 +38,12 @@ KEY PROJECTS (LEAD WITH THESE):
 - NFL Big Data Bowl 2026: KAGGLE BRONZE MEDAL (Top 8% of 1,134 teams). Deep learning player trajectory prediction. 847+ experiments across 15+ architectures (ST Transformers, GRU, CNN, Perceiver IO). Best ensemble: 0.540 Public LB. Engineered 167 features with Voronoi tessellation geometric attention.
 - RSNA Intracranial Aneurysm Detection: 3D medical imaging Kaggle - 105 models trained (21 architectures × 5 folds), best ensemble AUC 0.8624, discovered smaller models outperform larger on limited data (statistically significant)
 - Apollo Healthcare Connect: Multi-modal AI healthcare triage (93.8% accuracy, 98% burn classification), live at apollohealthcareconnect.com
-- Missing Persons Outlier Detection: Analyzed 41,200 cases identifying trafficking corridors, Pima County anomaly at 44.75σ, validated against known serial killers
+- Missing Persons Outlier Detection: Analyzed 41,200 cases identifying trafficking corridors, Kenedy County anomaly at 46.86σ, validated against known serial killers
 - AI Homelab Infrastructure: Multi-tier 10Gb AI lab (see HARDWARE section)
 
-CURRENT PROJECT:
+CURRENT PROJECTS (IN DEVELOPMENT):
 - OceanEterna: High-performance local RAG system built in C++17. Search engine core indexes 2.45 billion tokens with 0-42ms search latency (avg 12ms), 47 tests at 100% accuracy. Dual LZ4/Zstd compression, 15 REST API endpoints, CPU-only with minimal RAM. Currently building LLM chat interface and MCP tool for terminal-based AI workflows and project knowledge management. Zero external dependencies — single binary, no GPU/Docker/database/cloud required.
+- OE-OS: Distributed AI orchestration platform for private multi-node GPU cluster. Three-tier LLM routing (local Ollama -> cheap API -> Claude Opus) routing ~80% of requests to free local models. Triple-layer RAG memory (BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache). 18 MCP-compatible tools, multi-agent sandbox with 4 temperature-tuned personas at zero API cost. 4,200+ lines of async Python on FastAPI.
 
 OTHER PROJECTS:
 - business-analytics-AI-platform: AI-powered Excel analytics for Thompson PMC

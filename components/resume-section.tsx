@@ -132,7 +132,7 @@ export function ResumeSection() {
                   <div className="flex flex-wrap justify-center items-center gap-6 text-muted-foreground">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-4 h-4" />
-                      <span>319.233.4445</span>
+                      <span>319-233-4445</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Mail className="w-4 h-4" />
@@ -218,7 +218,7 @@ export function ResumeSection() {
 
                     <h4 className="font-semibold mb-3">Specializations</h4>
                     <div className="flex flex-wrap gap-2">
-                      {["Trajectory Prediction", "3D Medical Imaging", "Multi-modal AI", "Ensemble Methods"].map((skill) => (
+                      {["Trajectory Prediction", "3D Medical Imaging", "Multi-modal AI", "Ensemble Methods", "Distributed AI Systems"].map((skill) => (
                         <Badge key={skill} variant="default">{skill}</Badge>
                       ))}
                     </div>
@@ -427,11 +427,11 @@ export function ResumeSection() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Analyzed 41,200 cases identifying trafficking patterns at 44.75σ significance
+                      Analyzed 41,200 cases identifying trafficking patterns at up to 46.86σ significance
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="w-4 h-4 mr-2 mt-0.5 text-green-500 flex-shrink-0" />
-                      Published 15+ open-source projects on GitHub
+                      Published 20+ open-source projects on GitHub
                     </li>
                   </ul>
                 </div>

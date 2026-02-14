@@ -44,6 +44,14 @@ const projects: ProjectData[] = [
     language: "C++"
   },
   {
+    name: "OE-OS",
+    description: "Distributed AI orchestration platform for a private multi-node GPU cluster. Features three-tier LLM routing (local Ollama to cheap API to Claude Opus) reducing costs by routing ~80% of requests to free local models, triple-layer RAG memory (BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache), 18 MCP-compatible tools, and a multi-agent sandbox where 4 LLM personas deliberate at zero API cost. 4,200+ lines of async Python on FastAPI.",
+    longDescription: "Distributed AI orchestration platform designed to coordinate inference, memory, and compute across a 9-node heterogeneous GPU cluster (RTX 5090s, Ryzen AI Max+ 395 with 128GB unified memory). Three-tier LLM routing with automatic escalation (local Ollama -> cheap API -> Claude Opus), routing ~80% of requests to free local models. Triple-layer RAG memory combining BM25 keyword search over 5M+ document chunks, ChromaDB semantic embedding search, and Redis session caching with graceful degradation. 18 MCP-compatible tools covering sandboxed shell execution, ML job queuing, YouTube ingestion, and ARC-AGI reasoning. Multi-agent deliberation sandbox with 4 temperature-tuned personas running on local hardware at zero API cost. ReAct agent loop, async Python on FastAPI.",
+    technologies: ["Python", "FastAPI", "ChromaDB", "Redis", "Ollama", "Pydantic", "Distributed Systems", "RAG", "Multi-Agent Systems"],
+    featured: true,
+    language: "Python"
+  },
+  {
     name: "NFL_Big_Data_Bowl_2026",
     description: "Kaggle Bronze Medal (Top 8% of 1,134 teams) - Deep learning solution for predicting NFL player trajectories from tracking data. Explored 15+ architectures across 847+ experiments with systematic hyperparameter optimization.",
     longDescription: "Bronze Medal achievement in Kaggle's NFL Big Data Bowl 2026 competition (Top 8% of 1,134 teams). Developed comprehensive deep learning pipeline for player trajectory prediction featuring: 8 model architectures (Spatial-Temporal Transformers, Multi-scale CNN, GRU, Position-Specific ST, Geometric Network, Perceiver IO, Co4), 20-fold cross-validation with multi-seed ensembling, 167 engineered features (kinematics, ball-relative, temporal, geometric), novel geometric attention with Voronoi tessellation, and Test-Time Augmentation providing +0.005-0.010 improvement. Best ensemble achieved 0.540 Public LB score. Key discovery: Architecture diversity in ensembles outperforms model stacking.",
@@ -55,7 +63,7 @@ const projects: ProjectData[] = [
   },
   {
     name: "RSNA_Intracranial_Aneurysm_Detection",
-    description: "Comprehensive 3D deep learning solution for detecting and localizing intracranial aneurysms from CT angiography scans. First Kaggle competition with systematic exploration of 21 architectures across 5-fold cross-validation.",
+    description: "3D deep learning solution for detecting intracranial aneurysms from CT angiography. Trained 105 models (21 architectures x 5 folds), tested 51 ensemble configurations achieving best AUC 0.8624. Key finding: smaller models significantly outperform larger ones on limited medical data (r=-0.42, p<0.01).",
     longDescription: "Advanced 3D medical imaging project for Kaggle RSNA competition. Trained 105 models (21 architectures × 5 folds), tested 51 ensemble configurations. Best ensemble achieved AUC 0.8624. Key discovery: smaller models outperform larger ones on limited medical data (r=-0.42, p<0.01). Multi-GPU training on 4 GPUs with complete DICOM→NIfTI→ROI extraction→Training→Ensemble pipeline.",
     githubUrl: "https://github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle",
     technologies: ["Python", "PyTorch", "3D CNNs", "SE-ResNet", "DenseNet", "EfficientNet", "Medical Imaging", "DICOM/NIfTI", "Multi-GPU Training", "Kaggle"],
@@ -64,7 +72,7 @@ const projects: ProjectData[] = [
   },
   {
     name: "missing-persons-outlier-detection",
-    description: "Statistical analysis of 41K missing persons cases to detect serial crime patterns and trafficking corridors",
+    description: "Multi-method statistical and ML pipeline analyzing 41,200 NamUs cases across 55 jurisdictions and 101 years. Applies 7 outlier detection methods, Isolation Forest and LOF ensemble, spatial autocorrelation (Moran's I), and ARIMA forecasting. Identified the I-35 trafficking corridor (+170% acceleration) and validated against known serial killers. Live Streamlit dashboard.",
     longDescription: "Statistical outlier detection system analyzing 41,200 cases (15,457 bodies + 25,743 missing persons) across 54 states and 101 years. Uses standard deviation methodology to identify anomalous crime patterns. Detected I-35 corridor trafficking crisis (+170% increase), validated against known serial killers (Ridgway 4.38σ detected, Gacy 1.34σ detected). Flags 269 counties (2.9%) for priority investigation. Interactive Streamlit dashboard with geospatial visualization, temporal forecasting, and multi-tier correlation analysis.",
     githubUrl: "https://github.com/XxRemsteelexX/missing-persons-outlier-detection",
     liveUrl: "https://xxremsteelexx-missing-persons-outlier-dete-streamlit-app-dwe4j4.streamlit.app/",
@@ -83,11 +91,11 @@ const projects: ProjectData[] = [
   },
   {
     name: "Blue-Zones-Longevity-Analysis",
-    description: "Independent research investigating gravitational variations and longevity in Blue Zones. Advanced ML ensemble, statistical analysis, and actionable policy recommendations for extending life expectancy.",
-    longDescription: "Cutting-edge research project combining gravitational physics with longevity studies. Uses advanced machine learning ensembles to analyze patterns in Blue Zones regions where people live exceptionally long lives. Features comprehensive statistical analysis and provides actionable policy recommendations based on scientific findings.",
+    description: "Longitudinal statistical analysis of life expectancy trends across Blue Zone countries vs. 88-nation global baseline, 1960-2023. Formal hypothesis testing with bootstrap confidence intervals, GDP-controlled partial correlations, sigma and beta convergence testing, and COVID impact analysis. Live Streamlit dashboard.",
+    longDescription: "Rigorous longitudinal study analyzing life expectancy trends in Blue Zone countries versus a global 88-nation baseline from 1960-2023. Features formal hypothesis testing confirming a persistent 6.7-year advantage (p<0.003), GDP-controlled partial correlations, sigma and beta convergence testing, pre-COVID/full-period comparison, and structural break detection. 93 countries, 5,952 country-year observations, 24 variables. Data sourced from World Bank and WHO.",
     githubUrl: "https://github.com/XxRemsteelexX/Blue-Zones-Longevity-Analysis",
     liveUrl: "https://xxremsteelexx-blue-zones-longevity--blue-zones-dashboard-xgbvew.streamlit.app/",
-    technologies: ["Jupyter Notebook", "Machine Learning", "Statistical Analysis", "Research", "Data Science", "Ensemble Methods", "Streamlit"],
+    technologies: ["Jupyter Notebook", "Statistical Hypothesis Testing", "Bootstrap", "Partial Correlations", "Convergence Analysis", "Streamlit"],
     featured: true,
     language: "Jupyter Notebook"
   },
@@ -121,17 +129,17 @@ const projects: ProjectData[] = [
   },
   {
     name: "Computer-Vision-Portfolio",
-    description: "Advanced computer vision portfolio featuring GAN face generation and CNN landmark classification with production-ready implementations",
-    longDescription: "Comprehensive computer vision portfolio showcasing advanced techniques including Generative Adversarial Networks for face generation and Convolutional Neural Networks for landmark classification. Features production-ready implementations with optimized performance and deployment considerations.",
+    description: "CNN-based landmark classification using PyTorch with custom 4-block convolutional architecture, batch normalization, dropout regularization, and transfer learning comparison studies.",
+    longDescription: "Computer vision project featuring CNN-based landmark classification using PyTorch. Implements a custom 4-block convolutional architecture with batch normalization, dropout regularization, and comparison studies against transfer learning approaches.",
     githubUrl: "https://github.com/XxRemsteelexX/Computer-Vision-Portfolio",
-    technologies: ["HTML", "Computer Vision", "GANs", "CNNs", "Deep Learning", "Production Ready"],
-    featured: true,
+    technologies: ["HTML", "Computer Vision", "CNNs", "Deep Learning", "PyTorch"],
+    featured: false,
     language: "HTML"
   },
   {
     name: "Apollo_Healthcare_Connect",
-    description: "Multi-modal AI healthcare triage system with deep learning models for intelligent patient routing and provider preparation",
-    longDescription: "Apollo Healthcare Connect - A comprehensive AI-powered healthcare triage system that analyzes both text descriptions and medical images to provide accurate initial assessments with 93.8% accuracy. Combines DistilBERT for NLP and computer vision models for image analysis. Live production deployment serving real patients.",
+    description: "Production-deployed multi-modal AI healthcare triage system achieving 93.8% combined accuracy. Analyzes text symptoms (DistilBERT, 94%) and medical images (5-model CNN ensemble, 98% burn classification) across 8,085 images with 29.7:1 class imbalance handling. WGU MS Data Science Capstone. Live at apollohealthcareconnect.com.",
+    longDescription: "Production-deployed multi-modal AI healthcare triage system achieving 93.8% combined accuracy. 5-model deep learning ensemble (EfficientNetB0/B1, ResNet50, DenseNet121 variants) for medical image classification with 98% burn classification accuracy. DistilBERT-based symptom classifier at 94% accuracy. Handles 29.7:1 class imbalance across 8,085 medical images using focal loss and label smoothing. WGU MS Data Science Capstone. Live at apollohealthcareconnect.com.",
     githubUrl: "https://github.com/XxRemsteelexX/Apollo_Healthcare_Connect",
     liveUrl: "https://apollohealthcareconnect.com",
     technologies: ["HTML", "Python", "PyTorch", "TensorFlow", "DistilBERT", "Flask", "AWS", "Multi-modal AI", "Healthcare AI"],
@@ -140,7 +148,7 @@ const projects: ProjectData[] = [
   },
   {
     name: "NFL_Rookie_WR_1K_Analysis",
-    description: "Capstone project for Master's in Data Science - using previous years rookie statistics to determine future WR production",
+    description: "Capstone project for Bachelor's in Data Analytics - using previous years rookie statistics to determine future WR production. Achieved 90.9% ROC AUC.",
     longDescription: "Advanced machine learning analysis with feature optimization and temporal validation to predict which NFL rookie wide receivers will achieve 1000+ yard receiving seasons. Achieved 90.9% ROC AUC with sophisticated overfitting reduction techniques and comprehensive data pipeline covering 2006-2024.",
     githubUrl: "https://github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis",
     technologies: ["Jupyter Notebook", "Python", "scikit-learn", "XGBoost", "Sports Analytics", "Machine Learning", "Feature Engineering"],

@@ -137,7 +137,7 @@
         "Analyzed 41,200 cases over 101 years (9,204 county-decade combinations)",
         "Identified I-35 corridor trafficking pattern (+10.80 cases/year acceleration)",
         "Discovered Texas border worsening (+81%) while CA/AZ improved",
-        "Pima County, AZ: 44.75 standard deviations above baseline (529 bodies)",
+        "Kenedy County, TX: 46.86 standard deviations above baseline",
         "7-page interactive dashboard with geospatial visualization",
         "Validated against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)",
         "Multi-decade trend analysis with 5-year forecasting",
@@ -277,6 +277,127 @@
       "primary_language": "Python",
       "project_type": "Forked - Educational",
       "deployment_status": "Learning Project"
+    },
+    {
+      "name": "OceanEterna",
+      "description": "High-performance local RAG system rewritten from Python to C++17 for performance. Indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency. 47 tests at 100% accuracy, 15 REST API endpoints, zero per-query costs.",
+      "technologies": ["C++17", "BM25", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "Information Retrieval", "RAG"],
+      "notable_features": [
+        "Evolved through 4 major versions with systematic optimization",
+        "0-42ms search latency (avg 12ms, down from 500ms in v1)",
+        "12-second cold startup (down from 41s)",
+        "Dual LZ4/Zstd compression with auto-format detection",
+        "CPU-only, minimal RAM, zero external dependencies"
+      ],
+      "primary_language": "C++",
+      "project_type": "Original - Infrastructure",
+      "deployment_status": "In Development"
+    },
+    {
+      "name": "OE-OS",
+      "description": "Distributed AI orchestration platform for a private multi-node GPU cluster. Features three-tier LLM routing, triple-layer RAG memory, 18 MCP-compatible tools, and multi-agent deliberation sandbox. 4,200+ lines of async Python on FastAPI.",
+      "technologies": ["Python", "FastAPI", "ChromaDB", "Redis", "Ollama", "Pydantic", "Distributed Systems", "RAG", "Multi-Agent Systems"],
+      "notable_features": [
+        "Three-tier LLM routing: local Ollama -> cheap API -> Claude Opus, routing ~80% to free local models",
+        "Triple-layer RAG memory: BM25 (5M+ chunks), ChromaDB semantic search, Redis session cache",
+        "18 MCP-compatible tools covering sandboxed shell, ML job queuing, YouTube ingestion, ARC-AGI reasoning",
+        "Multi-agent sandbox with 4 temperature-tuned personas at zero API cost",
+        "ReAct agent loop with max 10 iterations",
+        "Designed for 9-node heterogeneous GPU cluster (RTX 5090s, Ryzen AI Max+ 395)"
+      ],
+      "primary_language": "Python",
+      "project_type": "Original - Infrastructure",
+      "deployment_status": "In Development"
+    },
+    {
+      "name": "Blue-Zones-Longevity-Analysis",
+      "description": "Longitudinal statistical analysis of life expectancy trends across Blue Zone countries vs. 88-nation global baseline, 1960-2023. Formal hypothesis testing with bootstrap confidence intervals, GDP-controlled partial correlations, sigma and beta convergence testing.",
+      "technologies": ["Python", "Jupyter Notebook", "Statistical Hypothesis Testing", "Bootstrap", "Streamlit"],
+      "notable_features": [
+        "93 countries, 5,952 country-year observations, 24 variables",
+        "Persistent 6.7-year Blue Zone advantage confirmed (p<0.003)",
+        "GDP-controlled partial correlations",
+        "Pre-COVID vs full-period comparison",
+        "Live Streamlit dashboard"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/Blue-Zones-Longevity-Analysis",
+      "primary_language": "Jupyter Notebook",
+      "project_type": "Original - Research",
+      "deployment_status": "Interactive Dashboard Complete"
+    },
+    {
+      "name": "business-analytics-AI-platform",
+      "description": "AI-powered Excel analytics platform for Thompson Parking & Mobility Consultants. Natural language data querying, automated chart generation, and AI-powered business insights.",
+      "technologies": ["TypeScript", "Next.js", "Azure OpenAI", "Prisma ORM", "Railway"],
+      "notable_features": [
+        "Natural language queries on Excel data",
+        "Enterprise authentication with NextAuth.js",
+        "Thompson PMC branding",
+        "Live production deployment on Railway"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/business-analytics-AI-platform",
+      "primary_language": "TypeScript",
+      "project_type": "Original - Client Work",
+      "deployment_status": "Live Production System"
+    },
+    {
+      "name": "TandemAI",
+      "description": "Local-first LLM ensemble orchestration platform supporting 10+ providers including Ollama, LM Studio, OpenAI, Anthropic, and Groq. 4 orchestration modes: Conversation, Answer, Argumentative, Research.",
+      "technologies": ["TypeScript", "React", "Node.js", "AI Orchestration", "LLM Integration"],
+      "notable_features": [
+        "4 orchestration modes",
+        "10+ provider support",
+        "Offline capability",
+        "Real-time streaming"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/TandemAI",
+      "primary_language": "TypeScript",
+      "project_type": "Original - AI Platform",
+      "deployment_status": "Complete"
+    },
+    {
+      "name": "Ml-Model-Recommender",
+      "description": "Automated ML model selection for tabular data. Analyzes datasets, compares preprocessing strategies, trains baselines, and provides actionable recommendations.",
+      "technologies": ["Python", "scikit-learn", "Machine Learning", "AutoML"],
+      "notable_features": [
+        "Automatic problem type inference",
+        "Smart preprocessing with high-cardinality detection",
+        "Class imbalance handling",
+        "Exportable markdown and HTML reports"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/Ml-Model-Recommender",
+      "primary_language": "Jupyter Notebook",
+      "project_type": "Original - ML Tool",
+      "deployment_status": "Complete"
+    },
+    {
+      "name": "Computer-Vision-Portfolio",
+      "description": "CNN-based landmark classification using PyTorch with custom 4-block convolutional architecture, batch normalization, dropout regularization, and transfer learning comparison studies.",
+      "technologies": ["Python", "PyTorch", "CNNs", "Computer Vision", "Deep Learning"],
+      "notable_features": [
+        "Custom 4-block convolutional architecture",
+        "Transfer learning comparison studies",
+        "Batch normalization and dropout regularization"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/Computer-Vision-Portfolio",
+      "primary_language": "HTML",
+      "project_type": "Original - Deep Learning",
+      "deployment_status": "Complete"
+    },
+    {
+      "name": "YouTube_Video_Analyzer",
+      "description": "GPU-accelerated multimodal AI for YouTube video analysis. Whisper for transcription, BLIP for visual captioning, BART for summarization. Audio-visual fusion with 84% average confidence.",
+      "technologies": ["Python", "FastAPI", "Streamlit", "PyTorch", "Whisper", "BLIP", "BART"],
+      "notable_features": [
+        "GPU-accelerated Whisper transcription",
+        "BLIP visual frame captioning",
+        "Audio-visual fusion with confidence scoring",
+        "Multiple export formats"
+      ],
+      "repo_url": "https://github.com/XxRemsteelexX/XxRemsteelexX-YouTube_Video_text_-_Description_Analyzer",
+      "primary_language": "Python",
+      "project_type": "Original - Multi-modal AI",
+      "deployment_status": "Complete"
     }
   ],
   "technical_skills": {
@@ -362,6 +483,8 @@
     "Engineered 100+ features for advanced regression ensemble achieving competitive Kaggle performance",
     "Demonstrated end-to-end ML project lifecycle management across multiple domains",
     "25.4% cost reduction in supply chain optimization",
+    "Built OceanEterna: C++17 RAG engine indexing 2.45B tokens with 0-42ms search latency",
+    "Designed OE-OS: distributed AI orchestration platform with three-tier LLM routing across 9-node GPU cluster",
     "Graduated from Western Governors University Data Science program"
   ],
   "research_interests": [
@@ -377,6 +500,8 @@
     "Feature engineering and representation learning",
     "Sports analytics and predictive modeling",
     "Operations research and optimization",
-    "Modern AutoML techniques (TabPFN, AutoGluon)"
+    "Modern AutoML techniques (TabPFN, AutoGluon)",
+    "Distributed AI systems and GPU cluster orchestration",
+    "Local-first LLM inference and cost-optimized routing"
   ]
 }

@@ -360,8 +360,8 @@ const onePageHTML = `
         <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
         <li>847+ deep learning experiments across 15+ architectures; 105 3D medical imaging models trained</li>
         <li>Production healthcare AI achieving 93.8% accuracy with sub-second response</li>
-        <li>Identified trafficking patterns at 44.75σ significance from 41,200 missing persons cases</li>
-        <li>Published 15+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
+        <li>Identified trafficking patterns at up to 46.86σ significance from 41,200 missing persons cases</li>
+        <li>Published 20+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
       </ul>
     </div>
   </div>
@@ -732,7 +732,7 @@ const detailedHTML = `
       <ul>
         <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
         <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
-        <li>Discovered Pima County, AZ anomaly: 44.75 standard deviations above baseline (529 bodies)</li>
+        <li>Discovered Kenedy County, TX anomaly: 46.86 standard deviations above baseline</li>
         <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
         <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
       </ul>
@@ -745,6 +745,15 @@ const detailedHTML = `
         <li>Reduced overfitting gap from 18.5% to 0.4% (97.8% reduction) through feature optimization (46→20 features)</li>
         <li>Implemented temporal validation strategy ensuring model generalization to future NFL seasons</li>
         <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
+      </ul>
+
+      <div class="project-title">OE-OS <span style="font-size: 9pt; color: #e67e22; font-weight: normal;">(In Progress)</span></div>
+      <div class="project-subtitle">Distributed AI Orchestration Platform | Python / FastAPI</div>
+      <ul>
+        <li>Three-tier LLM routing (local Ollama to cheap API to Claude Opus) reducing costs by routing ~80% of requests to free local models</li>
+        <li>Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache with graceful degradation</li>
+        <li>18 MCP-compatible tools and multi-agent sandbox where 4 LLM personas deliberate at zero API cost</li>
+        <li>4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster</li>
       </ul>
 
       <div class="project-title">AI Homelab & Active Memory Network</div>
@@ -789,9 +798,9 @@ const detailedHTML = `
         <li>Trained 105 3D medical imaging models achieving AUC 0.8624 in ensemble configuration</li>
         <li>Built and deployed production healthcare AI achieving 93.8% accuracy with sub-second response</li>
         <li>Discovered smaller models outperform larger on limited medical data (statistically significant: r=-0.42, p&lt;0.01)</li>
-        <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at 44.75σ significance</li>
+        <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at up to 46.86σ significance</li>
         <li>Achieved 90.9% ROC AUC on temporal validation for NFL rookie prediction with 97.8% overfitting reduction</li>
-        <li>Published 15+ open-source projects on GitHub with comprehensive documentation</li>
+        <li>Published 20+ open-source projects on GitHub with comprehensive documentation</li>
       </ul>
     </div>
   </div>
@@ -862,7 +871,7 @@ function createATSWordDoc(isOnePage = false) {
 
     new Paragraph({ children: [new TextRun({ text: "Missing Persons Outlier Detection", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Statistical Anomaly Detection for Trafficking & Organized Crime", italics: true })] }),
-    new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at 44.75σ significance", bullet: { level: 0 } }),
+    new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at up to 46.86σ significance", bullet: { level: 0 } }),
     new Paragraph({ text: "• Built 7-page interactive Streamlit dashboard with geospatial visualization", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
