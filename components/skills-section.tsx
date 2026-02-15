@@ -41,7 +41,7 @@ const proficiencyConfig: Record<string, { label: string; className: string }> = 
 const fallbackSkills: Skill[] = [
   // Programming Languages
   { id: "s1", name: "Python", category: "Programming Languages", proficiency: "Expert", yearsExp: 4, featured: true },
-  { id: "s2", name: "R", category: "Programming Languages", proficiency: "Advanced", yearsExp: 2, featured: true },
+  { id: "s2", name: "R", category: "Programming Languages", proficiency: "Intermediate", yearsExp: 2, featured: true },
   { id: "s3", name: "TypeScript", category: "Programming Languages", proficiency: "Advanced", yearsExp: 2, featured: true },
   { id: "s4", name: "JavaScript", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: true },
   { id: "s5", name: "SQL", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: false },
