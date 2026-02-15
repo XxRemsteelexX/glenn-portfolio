@@ -19,8 +19,8 @@
     ]
   },
   "professional_background": {
-    "note": "LinkedIn profile content was not accessible for scraping",
-    "additional_info": "Web search indicates potential employment history at John Deere in Facilities Management, though this may be outdated or refer to a different individual"
+    "years_experience": "2 years",
+    "focus_areas": "Production AI systems, deep learning, statistical analysis, LLM orchestration"
   },
   "github_projects": [
     {
@@ -327,12 +327,12 @@
     },
     {
       "name": "business-analytics-AI-platform",
-      "description": "AI-powered Excel analytics platform for Thompson Parking & Mobility Consultants. Natural language data querying, automated chart generation, and AI-powered business insights.",
+      "description": "AI-powered Excel analytics platform with natural language data querying, automated chart generation, and AI-powered business insights.",
       "technologies": ["TypeScript", "Next.js", "Azure OpenAI", "Prisma ORM", "Railway"],
       "notable_features": [
         "Natural language queries on Excel data",
         "Enterprise authentication with NextAuth.js",
-        "Thompson PMC branding",
+        "Automated chart generation and executive-ready visualizations",
         "Live production deployment on Railway"
       ],
       "repo_url": "https://github.com/XxRemsteelexX/business-analytics-AI-platform",
