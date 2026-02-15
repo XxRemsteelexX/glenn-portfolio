@@ -761,7 +761,7 @@ function DetailedResume() {
           <div className="project-title">OE-OS <span style={{ fontSize: "9pt", color: "#e67e22", fontWeight: "normal" }}>(In Progress)</span></div>
           <div className="project-subtitle">Distributed AI Orchestration Platform | Python / FastAPI</div>
           <ul>
-            <li>Three-tier LLM routing (local Ollama to cheap API to Claude Opus) reducing costs by routing ~80% of requests to free local models</li>
+            <li>Three-tier LLM routing (local Ollama to cheap API to premium models) reducing costs by routing ~80% of requests to free local models</li>
             <li>Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache with graceful degradation</li>
             <li>18 MCP-compatible tools and multi-agent sandbox where 4 LLM personas deliberate at zero API cost</li>
             <li>4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster</li>

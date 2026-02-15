@@ -574,6 +574,16 @@ const detailedHTML = `
       border-radius: 50%;
       vertical-align: middle;
     }
+    /* Page break controls */
+    .project-block, .job-block {
+      page-break-inside: avoid;
+    }
+    .main-section-title {
+      page-break-after: avoid;
+    }
+    .section-title {
+      page-break-after: avoid;
+    }
   </style>
 </head>
 <body>
@@ -688,120 +698,127 @@ const detailedHTML = `
 
       <div class="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
 
-      <div class="project-title">
-        <span>NFL Big Data Bowl 2026 - Kaggle Bronze Medal</span>
-        ${badgeBase64 ? `<img src="data:image/png;base64,${badgeBase64}" class="badge-img" alt="Kaggle Bronze">` : ''}
+      <div class="project-block">
+        <div class="project-title">
+          <span>NFL Big Data Bowl 2026 - Kaggle Bronze Medal</span>
+          ${badgeBase64 ? `<img src="data:image/png;base64,${badgeBase64}" class="badge-img" alt="Kaggle Bronze">` : ''}
+        </div>
+        <div class="project-subtitle">Deep Learning Player Trajectory Prediction | Top 8% of 1,134 teams</div>
+        <div class="project-url">github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-</div>
+        <ul>
+          <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories from tracking data</li>
+          <li>Conducted systematic exploration of 847+ experiments across 15+ neural network architectures</li>
+          <li>Best single model: 6-Layer Spatial-Temporal Transformer achieving 0.547 Public LB score</li>
+          <li>Best ensemble: 3-model blend (ST Transformer + CNN + GRU) achieving 0.540 Public LB with architecture diversity</li>
+          <li>Engineered 167 features including kinematics, ball-relative positions, temporal patterns, and geometric features with Voronoi tessellation</li>
+          <li>Implemented novel geometric attention with spatial distance modulation and frozen encoder fine-tuning</li>
+          <li>Utilized multi-GPU training, mixed precision (FP16), and test-time augmentation for +0.005-0.010 improvement</li>
+        </ul>
       </div>
-      <div class="project-subtitle">Deep Learning Player Trajectory Prediction | Top 8% of 1,134 teams </div>
-      <div class="project-url">github.com/XxRemsteelexX/NFL-Big-Data-Bowl-2026-</div>
-      <ul>
-        <li><strong>Bronze Medal</strong> in prestigious Kaggle competition predicting NFL player trajectories from tracking data</li>
-        <li>Conducted systematic exploration of 847+ experiments across 15+ neural network architectures</li>
-        <li>Best single model: 6-Layer Spatial-Temporal Transformer achieving 0.547 Public LB score</li>
-        <li>Best ensemble: 3-model blend (ST Transformer + CNN + GRU) achieving 0.540 Public LB with architecture diversity</li>
-        <li>Engineered 167 features including kinematics, ball-relative positions, temporal patterns, and geometric features with Voronoi tessellation</li>
-        <li>Implemented novel geometric attention with spatial distance modulation and frozen encoder fine-tuning</li>
-        <li>Utilized multi-GPU training, mixed precision (FP16), and test-time augmentation for +0.005-0.010 improvement</li>
-      </ul>
 
-      <div class="project-title">RSNA Intracranial Aneurysm Detection - Kaggle Competition</div>
-      <div class="project-subtitle">3D Deep Learning Medical Imaging | 105 Models Trained</div>
-      <div class="project-url">github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle</div>
-      <ul>
-        <li>Trained 105 deep learning models (21 architectures × 5 folds) for CT angiography aneurysm detection</li>
-        <li>Tested 51 ensemble configurations; best ensemble META_E_top3_weighted achieved AUC 0.8624</li>
-        <li>Key discovery: Smaller models (SE-ResNet18) statistically outperform larger models on limited medical data (r=-0.42, p&lt;0.01)</li>
-        <li>Built complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble across 4 GPUs simultaneously</li>
-        <li>Multi-label classification across 14 classes with severe class imbalance handling (1.2% to 42.8%)</li>
-      </ul>
+      <div class="project-block">
+        <div class="project-title">RSNA Intracranial Aneurysm Detection - Kaggle Competition</div>
+        <div class="project-subtitle">3D Deep Learning Medical Imaging | 105 Models Trained</div>
+        <div class="project-url">github.com/XxRemsteelexX/RSNA-Intracranial-Aneurysm-Detection-Kaggle</div>
+        <ul>
+          <li>Trained 105 deep learning models (21 architectures × 5 folds) for CT angiography aneurysm detection</li>
+          <li>Tested 51 ensemble configurations; best ensemble META_E_top3_weighted achieved AUC 0.8624</li>
+          <li>Key discovery: Smaller models (SE-ResNet18) statistically outperform larger models on limited medical data (r=-0.42, p&lt;0.01)</li>
+          <li>Built complete pipeline: DICOM→NIfTI→ROI extraction→Training→Ensemble across 4 GPUs simultaneously</li>
+          <li>Multi-label classification across 14 classes with severe class imbalance handling (1.2% to 42.8%)</li>
+        </ul>
+      </div>
 
-      <div class="project-title">Apollo Healthcare Connect</div>
-      <div class="project-subtitle">Production Multi-modal AI Healthcare Triage System | MS Capstone</div>
-      <div class="project-url">apollohealthcareconnect.com</div>
-      <ul>
-        <li>Built and deployed live production healthcare AI triage system with sub-second response times</li>
-        <li>Achieved <strong>93.8% combined multi-modal accuracy</strong> and <strong>98.0% burn classification accuracy</strong></li>
-        <li>Implemented 5-model ensemble architecture combining DistilBERT (NLP) and CNNs (Computer Vision)</li>
-        <li>Successfully handled extreme class imbalance (29.7:1 ratio) with advanced loss functions</li>
-        <li>Built production pipeline with Flask API, AWS S3 integration, and comprehensive safety protocols</li>
-      </ul>
+      <div class="project-block">
+        <div class="project-title">Apollo Healthcare Connect</div>
+        <div class="project-subtitle">Production Multi-modal AI Healthcare Triage System | MS Capstone</div>
+        <div class="project-url">apollohealthcareconnect.com</div>
+        <ul>
+          <li>Built and deployed live production healthcare AI triage system with sub-second response times</li>
+          <li>Achieved <strong>93.8% combined multi-modal accuracy</strong> and <strong>98.0% burn classification accuracy</strong></li>
+          <li>Implemented 5-model ensemble architecture combining DistilBERT (NLP) and CNNs (Computer Vision)</li>
+          <li>Successfully handled extreme class imbalance (29.7:1 ratio) with advanced loss functions</li>
+          <li>Built production pipeline with Flask API, AWS S3 integration, and comprehensive safety protocols</li>
+        </ul>
+      </div>
 
-      <div class="project-title">Missing Persons Outlier Detection</div>
-      <div class="project-subtitle">Statistical Anomaly Detection for Trafficking & Organized Crime Analysis</div>
-      <div class="project-url">github.com/XxRemsteelexX/missing-persons-outlier-detection</div>
-      <ul>
-        <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
-        <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
-        <li>Discovered Kenedy County, TX anomaly: 46.86 standard deviations above baseline</li>
-        <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
-        <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
-      </ul>
+      <div class="project-block">
+        <div class="project-title">Missing Persons Outlier Detection</div>
+        <div class="project-subtitle">Statistical Anomaly Detection for Trafficking & Organized Crime Analysis</div>
+        <div class="project-url">github.com/XxRemsteelexX/missing-persons-outlier-detection</div>
+        <ul>
+          <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
+          <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
+          <li>Discovered Kenedy County, TX anomaly: 46.86 standard deviations above baseline</li>
+          <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
+          <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
+        </ul>
+      </div>
 
-      <div class="project-title">NFL Rookie Wide Receiver Performance Prediction</div>
-      <div class="project-subtitle">Advanced ML Analysis with Feature Optimization | BS Capstone</div>
-      <div class="project-url">github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis</div>
-      <ul>
-        <li>Developed predictive model achieving <strong>90.9% ROC AUC</strong> on future data validation for 1000+ yard seasons</li>
-        <li>Reduced overfitting gap from 18.5% to 0.4% (97.8% reduction) through feature optimization (46→20 features)</li>
-        <li>Implemented temporal validation strategy ensuring model generalization to future NFL seasons</li>
-        <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
-      </ul>
+      <div class="project-block">
+        <div class="project-title">NFL Rookie Wide Receiver Performance Prediction</div>
+        <div class="project-subtitle">Advanced ML Analysis with Feature Optimization | BS Capstone</div>
+        <div class="project-url">github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis</div>
+        <ul>
+          <li>Developed predictive model achieving <strong>90.9% ROC AUC</strong> on future data validation for 1000+ yard seasons</li>
+          <li>Reduced overfitting gap from 18.5% to 0.4% (97.8% reduction) through feature optimization (46→20 features)</li>
+          <li>Implemented temporal validation strategy ensuring model generalization to future NFL seasons</li>
+          <li>Created production-ready ensemble model for NFL draft analysis with comprehensive data pipeline (2006-2024)</li>
+        </ul>
+      </div>
 
-      <div class="project-title">OE-OS <span style="font-size: 9pt; color: #e67e22; font-weight: normal;">(In Progress)</span></div>
-      <div class="project-subtitle">Distributed AI Orchestration Platform | Python / FastAPI</div>
-      <ul>
-        <li>Three-tier LLM routing (local Ollama to cheap API to Claude Opus) reducing costs by routing ~80% of requests to free local models</li>
-        <li>Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache with graceful degradation</li>
-        <li>18 MCP-compatible tools and multi-agent sandbox where 4 LLM personas deliberate at zero API cost</li>
-        <li>4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster</li>
-      </ul>
+      <div class="project-block">
+        <div class="project-title">OE-OS <span style="font-size: 9pt; color: #e67e22; font-weight: normal;">(In Progress)</span></div>
+        <div class="project-subtitle">Distributed AI Orchestration Platform | Python / FastAPI</div>
+        <ul>
+          <li>Three-tier LLM routing (local Ollama to cheap API to premium models) reducing costs by routing ~80% of requests to free local models</li>
+          <li>Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache with graceful degradation</li>
+          <li>18 MCP-compatible tools and multi-agent sandbox where 4 LLM personas deliberate at zero API cost</li>
+          <li>4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster</li>
+        </ul>
+      </div>
 
-      <div class="project-title">AI Homelab & Active Memory Network</div>
-      <div class="project-subtitle">Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline</div>
-      <div class="project-url">glenndalbey.com/infrastructure</div>
-      <ul>
-        <li>Designed and operate multi-tier AI homelab: <strong>dual RTX 5090</strong> training node + RTX 3090 Ti/3090 secondary node</li>
-        <li>Built 256GB unified memory LLM inference cluster (2× Ryzen AI Max+ 395) running Kimi K2, Qwen 3, GLM 4.6</li>
-        <li>Implemented automated active-memory pipeline with n8n orchestration, RAG storage, and hot/warm/cold tiering</li>
-        <li>Deployed Proxmox VE backbone with pfSense firewall, VLAN segmentation, and 10Gb networking (100TB+ storage)</li>
-      </ul>
+      <div class="project-block">
+        <div class="project-title">AI Homelab & Active Memory Network</div>
+        <div class="project-subtitle">Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline</div>
+        <div class="project-url">glenndalbey.com/infrastructure</div>
+        <ul>
+          <li>Designed and operate multi-tier AI homelab: <strong>dual RTX 5090</strong> training node + RTX 3090 Ti/3090 secondary node</li>
+          <li>Built 256GB unified memory LLM inference cluster (2× Ryzen AI Max+ 395) running Kimi K2, Qwen 3, GLM 4.6</li>
+          <li>Implemented automated active-memory pipeline with n8n orchestration, RAG storage, and hot/warm/cold tiering</li>
+          <li>Deployed Proxmox VE backbone with pfSense firewall, VLAN segmentation, and 10Gb networking (100TB+ storage)</li>
+        </ul>
+      </div>
 
       <div class="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
-      <div class="job-title">Freelance Data Science Consultant</div>
-      <div class="company">Thompson Parking & Mobility Consultants</div>
-      <div class="dates">Current</div>
-      <ul>
-        <li>Provide data science and analytics consulting services for business intelligence initiatives</li>
-        <li>Develop AI-powered Excel analytics platform enabling natural language data queries</li>
-        <li>Design custom analytical solutions and machine learning models for client-specific challenges</li>
-        <li>Support data-driven decision making through advanced analytics and predictive modeling</li>
-      </ul>
+      <div class="job-block">
+        <div class="job-title">Freelance Data Science Consultant</div>
+        <div class="company">Thompson Parking & Mobility Consultants</div>
+        <div class="dates">Current</div>
+        <ul>
+          <li>Provide data science and analytics consulting services for business intelligence initiatives</li>
+          <li>Develop AI-powered Excel analytics platform enabling natural language data queries</li>
+          <li>Design custom analytical solutions and machine learning models for client-specific challenges</li>
+          <li>Support data-driven decision making through advanced analytics and predictive modeling</li>
+        </ul>
+      </div>
 
-      <div class="job-title">Continuous Improvement Leader & Material Specialist</div>
-      <div class="company">John Deere, Waterloo Works & Ankeny Works</div>
-      <div class="dates">2005-2020, 2021-Present</div>
-      <ul>
-        <li>Led CI Department as Representative and Wage CI Trainer, facilitating process improvement frameworks</li>
-        <li>Developed comprehensive training curriculum for warehouse personnel, improving onboarding efficiency</li>
-        <li>Designed and implemented the Zones Project, modernizing material flow training systems</li>
-        <li>Led departmental CI mapping initiatives to improve operational efficiency and reduce cycle times</li>
-        <li>Optimized material replenishment processes using bin methodology, reducing operational inefficiencies</li>
-        <li>Managed supply chain logistics, vendor relations, and SAP-integrated inventory management</li>
-        <li>Supported engineering teams in workflow re-splits and cycle time analysis for production optimization</li>
-      </ul>
+      <div class="job-block">
+        <div class="job-title">Continuous Improvement Leader & Material Specialist</div>
+        <div class="company">John Deere, Waterloo Works & Ankeny Works</div>
+        <div class="dates">2005-2020, 2021-Present</div>
+        <ul>
+          <li>Led CI Department as Representative and Wage CI Trainer, facilitating process improvement frameworks</li>
+          <li>Developed comprehensive training curriculum for warehouse personnel, improving onboarding efficiency</li>
+          <li>Designed and implemented the Zones Project, modernizing material flow training systems</li>
+          <li>Led departmental CI mapping initiatives to improve operational efficiency and reduce cycle times</li>
+          <li>Optimized material replenishment processes using bin methodology, reducing operational inefficiencies</li>
+          <li>Managed supply chain logistics, vendor relations, and SAP-integrated inventory management</li>
+          <li>Supported engineering teams in workflow re-splits and cycle time analysis for production optimization</li>
+        </ul>
+      </div>
 
-      <div class="main-section-title">KEY ACCOMPLISHMENTS</div>
-      <ul>
-        <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
-        <li>Conducted 847+ deep learning experiments across 15+ architectures with systematic hyperparameter optimization</li>
-        <li>Trained 105 3D medical imaging models achieving AUC 0.8624 in ensemble configuration</li>
-        <li>Built and deployed production healthcare AI achieving 93.8% accuracy with sub-second response</li>
-        <li>Discovered smaller models outperform larger on limited medical data (statistically significant: r=-0.42, p&lt;0.01)</li>
-        <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at up to 46.86σ significance</li>
-        <li>Achieved 90.9% ROC AUC on temporal validation for NFL rookie prediction with 97.8% overfitting reduction</li>
-        <li>Published 20+ open-source projects on GitHub with comprehensive documentation</li>
-      </ul>
     </div>
   </div>
 </body>
@@ -873,6 +890,13 @@ function createATSWordDoc(isOnePage = false) {
     new Paragraph({ children: [new TextRun({ text: "Statistical Anomaly Detection for Trafficking & Organized Crime", italics: true })] }),
     new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at up to 46.86σ significance", bullet: { level: 0 } }),
     new Paragraph({ text: "• Built 7-page interactive Streamlit dashboard with geospatial visualization", bullet: { level: 0 }, spacing: { after: 100 } }),
+
+    new Paragraph({ children: [new TextRun({ text: "OE-OS (In Progress)", bold: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Distributed AI Orchestration Platform | Python / FastAPI", italics: true })] }),
+    new Paragraph({ text: "• Three-tier LLM routing (local Ollama to cheap API to premium models) routing ~80% of requests to free local models", bullet: { level: 0 } }),
+    new Paragraph({ text: "• Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache", bullet: { level: 0 } }),
+    new Paragraph({ text: "• 18 MCP-compatible tools and multi-agent sandbox with 4 LLM personas at zero API cost", bullet: { level: 0 } }),
+    new Paragraph({ text: "• 4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),
