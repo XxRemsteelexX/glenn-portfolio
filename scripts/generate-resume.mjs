@@ -336,6 +336,14 @@ const onePageHTML = `
         <li>Full production pipeline with Flask API, AWS S3, and safety protocols</li>
       </ul>
 
+      <div class="project-title">Missing Persons Outlier Detection</div>
+      <div class="project-subtitle">Geospatial Crime Pattern Analysis | 41,200 NamUs Cases</div>
+      <ul>
+        <li>7 statistical methods + 3 ML models detecting trafficking corridors at up to 46.86σ significance</li>
+        <li>I-35 corridor acceleration: 170% increase in missing persons, structural break at 2020</li>
+        <li>Live Streamlit dashboard with spatial autocorrelation (Moran's I), ARIMA forecasting, and LISA clustering</li>
+      </ul>
+
       <div class="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
       <div class="job-title">Freelance Data Science Consultant</div>
@@ -735,14 +743,15 @@ const detailedHTML = `
 
       <div class="project-block">
         <div class="project-title">Missing Persons Outlier Detection</div>
-        <div class="project-subtitle">Statistical Anomaly Detection for Trafficking & Organized Crime Analysis</div>
+        <div class="project-subtitle">Geospatial Crime Pattern Analysis | 41,200 NamUs Cases</div>
         <div class="project-url">github.com/XxRemsteelexX/missing-persons-outlier-detection</div>
         <ul>
-          <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
-          <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
-          <li>Discovered Kenedy County, TX anomaly: 46.86 standard deviations above baseline</li>
-          <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
-          <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
+          <li>7 statistical methods + 3 ML models applied to 41,200 cases across 101 years (9,204 county-decade combinations)</li>
+          <li>Kenedy County, TX: 46.86σ composite z-score persists after Bayes shrinkage, OLS, Random Forest, and FDR correction</li>
+          <li>I-35 corridor: 170% increase in missing persons (193 to 521 cases), structural break at 2020 (p &lt; 0.001)</li>
+          <li>Spatial autocorrelation confirmed (Moran's I = 0.22, z = 26.03) with LISA hotspot clustering along TX border</li>
+          <li>Validated against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
+          <li>Live 7-page Streamlit dashboard with geospatial visualization and ARIMA 5-year forecasting</li>
         </ul>
       </div>
 
@@ -876,9 +885,10 @@ function createATSWordDoc(isOnePage = false) {
     new Paragraph({ text: "• Full production pipeline with Flask API, AWS S3, and safety protocols", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "Missing Persons Outlier Detection", bold: true })] }),
-    new Paragraph({ children: [new TextRun({ text: "Statistical Anomaly Detection for Trafficking & Organized Crime", italics: true })] }),
-    new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at up to 46.86σ significance", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Built 7-page interactive Streamlit dashboard with geospatial visualization", bullet: { level: 0 }, spacing: { after: 100 } }),
+    new Paragraph({ children: [new TextRun({ text: "Geospatial Crime Pattern Analysis | 41,200 NamUs Cases", italics: true })] }),
+    new Paragraph({ text: "• 7 statistical methods + 3 ML models detecting trafficking corridors at up to 46.86σ significance", bullet: { level: 0 } }),
+    new Paragraph({ text: "• I-35 corridor acceleration: 170% increase in missing persons, structural break at 2020", bullet: { level: 0 } }),
+    new Paragraph({ text: "• Live Streamlit dashboard with spatial autocorrelation (Moran's I), ARIMA forecasting, and LISA clustering", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),

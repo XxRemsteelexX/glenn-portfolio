@@ -372,6 +372,14 @@ function OnePageResume() {
             <li>Full production pipeline with Flask API, AWS S3, and safety protocols</li>
           </ul>
 
+          <div className="project-title">Missing Persons Outlier Detection</div>
+          <div className="project-subtitle">Geospatial Crime Pattern Analysis | 41,200 NamUs Cases</div>
+          <ul>
+            <li>7 statistical methods + 3 ML models detecting trafficking corridors at up to 46.86σ significance</li>
+            <li>I-35 corridor acceleration: 170% increase in missing persons, structural break at 2020</li>
+            <li>Live Streamlit dashboard with spatial autocorrelation (Moran's I), ARIMA forecasting, and LISA clustering</li>
+          </ul>
+
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
           <div className="job-title">Freelance Data Science Consultant</div>
@@ -707,14 +715,15 @@ function DetailedResume() {
           </ul>
 
           <div className="project-title">Missing Persons Outlier Detection</div>
-          <div className="project-subtitle">Statistical Anomaly Detection for Trafficking & Organized Crime Analysis</div>
+          <div className="project-subtitle">Geospatial Crime Pattern Analysis | 41,200 NamUs Cases</div>
           <div className="project-url">github.com/XxRemsteelexX/missing-persons-outlier-detection</div>
           <ul>
-            <li>Analyzed 41,200 missing persons and unidentified bodies cases across 101 years (9,204 county-decade combinations)</li>
-            <li>Identified I-35 corridor trafficking pattern with +10.80 cases/year acceleration</li>
-            <li>Discovered Kenedy County, TX anomaly: 46.86 standard deviations above baseline</li>
-            <li>Built 7-page interactive Streamlit dashboard with geospatial visualization and 5-year forecasting</li>
-            <li>Validated methodology against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
+            <li>7 statistical methods + 3 ML models applied to 41,200 cases across 101 years (9,204 county-decade combinations)</li>
+            <li>Kenedy County, TX: 46.86σ composite z-score persists after Bayes shrinkage, OLS, Random Forest, and FDR correction</li>
+            <li>I-35 corridor: 170% increase in missing persons (193 to 521 cases), structural break at 2020 (p &lt; 0.001)</li>
+            <li>Spatial autocorrelation confirmed (Moran's I = 0.22, z = 26.03) with LISA hotspot clustering along TX border</li>
+            <li>Validated against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
+            <li>Live 7-page Streamlit dashboard with geospatial visualization and ARIMA 5-year forecasting</li>
           </ul>
 
           <div className="project-title">NFL Rookie Wide Receiver Performance Prediction</div>
