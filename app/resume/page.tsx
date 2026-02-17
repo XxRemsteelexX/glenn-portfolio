@@ -380,6 +380,13 @@ function OnePageResume() {
             <li>Live Streamlit dashboard with spatial autocorrelation (Moran's I), ARIMA forecasting, and LISA clustering</li>
           </ul>
 
+          <div className="project-title">Opportunity Intelligence Assistant</div>
+          <div className="project-subtitle">Agentic AI Market Analysis | Senior Living | 14 Statistical Analyses</div>
+          <ul>
+            <li>3-call LLM pipeline directing 22 statistical methods across Census Bureau and CMS public data</li>
+            <li>Scored Des Moines market 48.3/100; 622-word executive briefing with citation tags on every claim</li>
+          </ul>
+
           <div className="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
           <div className="job-title">Freelance Data Science Consultant</div>
@@ -724,6 +731,17 @@ function DetailedResume() {
             <li>Spatial autocorrelation confirmed (Moran's I = 0.22, z = 26.03) with LISA hotspot clustering along TX border</li>
             <li>Validated against known serial killers (Ridgway: 4.38σ, Gacy: 1.34σ)</li>
             <li>Live 7-page Streamlit dashboard with geospatial visualization and ARIMA 5-year forecasting</li>
+          </ul>
+
+          <div className="project-title">Opportunity Intelligence Assistant</div>
+          <div className="project-subtitle">Agentic AI Market Analysis | Senior Living Opportunity Evaluation</div>
+          <div className="project-url">github.com/XxRemsteelexX/opportunity-intelligence</div>
+          <ul>
+            <li>Agentic 3-call LLM pipeline that plans, executes, and synthesizes 22 statistical methods across Census and CMS data</li>
+            <li>First pass planned 9 analyses, follow-up requested 5 more for 14 total; full pipeline cost about 6 cents in LLM tokens</li>
+            <li>Market scored 48.3/100 overall (demand pressure 53.6, competitive position 40.3) across 10 nursing facilities with 896 beds</li>
+            <li>Chi-square confirmed significant link between ownership type and quality rating (p = 0.0067)</li>
+            <li>622-word executive briefing with source citations on every claim, traceable to Census Bureau and CMS Care Compare</li>
           </ul>
 
           <div className="project-title">NFL Rookie Wide Receiver Performance Prediction</div>

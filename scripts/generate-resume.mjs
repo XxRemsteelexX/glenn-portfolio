@@ -344,6 +344,13 @@ const onePageHTML = `
         <li>Live Streamlit dashboard with spatial autocorrelation (Moran's I), ARIMA forecasting, and LISA clustering</li>
       </ul>
 
+      <div class="project-title">Opportunity Intelligence Assistant</div>
+      <div class="project-subtitle">Agentic AI Market Analysis | Senior Living | 14 Statistical Analyses</div>
+      <ul>
+        <li>3-call LLM pipeline directing 22 statistical methods across Census Bureau and CMS public data</li>
+        <li>Scored Des Moines market 48.3/100; 622-word executive briefing with citation tags on every claim</li>
+      </ul>
+
       <div class="main-section-title">PROFESSIONAL EXPERIENCE</div>
 
       <div class="job-title">Freelance Data Science Consultant</div>
@@ -756,6 +763,19 @@ const detailedHTML = `
       </div>
 
       <div class="project-block">
+        <div class="project-title">Opportunity Intelligence Assistant</div>
+        <div class="project-subtitle">Agentic AI Market Analysis | Senior Living Opportunity Evaluation</div>
+        <div class="project-url">github.com/XxRemsteelexX/opportunity-intelligence</div>
+        <ul>
+          <li>Agentic 3-call LLM pipeline that plans, executes, and synthesizes 22 statistical methods across Census and CMS data</li>
+          <li>First pass planned 9 analyses, follow-up requested 5 more for 14 total; full pipeline cost about 6 cents in LLM tokens</li>
+          <li>Market scored 48.3/100 overall (demand pressure 53.6, competitive position 40.3) across 10 nursing facilities with 896 beds</li>
+          <li>Chi-square confirmed significant link between ownership type and quality rating (p = 0.0067)</li>
+          <li>622-word executive briefing with source citations on every claim, traceable to Census Bureau and CMS Care Compare</li>
+        </ul>
+      </div>
+
+      <div class="project-block">
         <div class="project-title">NFL Rookie Wide Receiver Performance Prediction</div>
         <div class="project-subtitle">Advanced ML Analysis with Feature Optimization | BS Capstone</div>
         <div class="project-url">github.com/XxRemsteelexX/NFL_Rookie_WR_1K_Analysis</div>
@@ -889,6 +909,11 @@ function createATSWordDoc(isOnePage = false) {
     new Paragraph({ text: "• 7 statistical methods + 3 ML models detecting trafficking corridors at up to 46.86σ significance", bullet: { level: 0 } }),
     new Paragraph({ text: "• I-35 corridor acceleration: 170% increase in missing persons, structural break at 2020", bullet: { level: 0 } }),
     new Paragraph({ text: "• Live Streamlit dashboard with spatial autocorrelation (Moran's I), ARIMA forecasting, and LISA clustering", bullet: { level: 0 }, spacing: { after: 100 } }),
+
+    new Paragraph({ children: [new TextRun({ text: "Opportunity Intelligence Assistant", bold: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Agentic AI Market Analysis | Senior Living | 14 Statistical Analyses", italics: true })] }),
+    new Paragraph({ text: "• 3-call LLM pipeline directing 22 statistical methods across Census Bureau and CMS public data", bullet: { level: 0 } }),
+    new Paragraph({ text: "• Scored Des Moines market 48.3/100; 622-word executive briefing with citation tags on every claim", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),
