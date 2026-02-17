@@ -346,13 +346,13 @@ const onePageHTML = `
         <li>Support data-driven decision making through advanced analytics and predictive modeling</li>
       </ul>
 
-      <div class="job-title">Continuous Improvement Leader & Material Specialist</div>
+      <div class="job-title">Continuous Improvement Leader & Material Flow Specialist</div>
       <div class="company">John Deere, Waterloo Works & Ankeny Works <span class="dates-inline">— 2005-2020, 2021-Present</span></div>
       <ul>
-        <li>Led CI Department as Representative and Trainer, facilitating process improvement frameworks</li>
+        <li>CI Department Representative leading process improvement and operational efficiency initiatives</li>
         <li>Designed and implemented Zones Project, modernizing material flow training systems</li>
         <li>Led departmental CI mapping initiatives improving operational efficiency and reducing cycle times</li>
-        <li>Managed supply chain logistics, vendor relations, and SAP-integrated inventory systems</li>
+        <li>Managed supply chain logistics and SAP-integrated inventory systems</li>
       </ul>
 
       <div class="main-section-title">KEY ACCOMPLISHMENTS</div>
@@ -805,16 +805,16 @@ const detailedHTML = `
       </div>
 
       <div class="job-block">
-        <div class="job-title">Continuous Improvement Leader & Material Specialist</div>
+        <div class="job-title">Continuous Improvement Leader & Material Flow Specialist</div>
         <div class="company">John Deere, Waterloo Works & Ankeny Works</div>
         <div class="dates">2005-2020, 2021-Present</div>
         <ul>
-          <li>Led CI Department as Representative and Wage CI Trainer, facilitating process improvement frameworks</li>
+          <li>CI Department Representative leading process improvement and operational efficiency initiatives</li>
           <li>Developed comprehensive training curriculum for warehouse personnel, improving onboarding efficiency</li>
           <li>Designed and implemented the Zones Project, modernizing material flow training systems</li>
           <li>Led departmental CI mapping initiatives to improve operational efficiency and reduce cycle times</li>
           <li>Optimized material replenishment processes using bin methodology, reducing operational inefficiencies</li>
-          <li>Managed supply chain logistics, vendor relations, and SAP-integrated inventory management</li>
+          <li>Managed supply chain logistics and SAP-integrated inventory management</li>
           <li>Supported engineering teams in workflow re-splits and cycle time analysis for production optimization</li>
         </ul>
       </div>
@@ -916,9 +916,9 @@ function createATSWordDoc(isOnePage = false) {
     new Paragraph({ text: "• Develop AI-powered Excel analytics platform enabling natural language data queries", bullet: { level: 0 } }),
     new Paragraph({ text: "• Design custom ML solutions and support data-driven decision making", bullet: { level: 0 }, spacing: { after: 100 } }),
 
-    new Paragraph({ children: [new TextRun({ text: "Continuous Improvement Leader & Material Specialist", bold: true })] }),
+    new Paragraph({ children: [new TextRun({ text: "Continuous Improvement Leader & Material Flow Specialist", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "John Deere, Waterloo Works & Ankeny Works | 2005-2020, 2021-Present", italics: true })] }),
-    new Paragraph({ text: "• Led CI Department as Representative and Trainer, facilitating process improvement frameworks", bullet: { level: 0 } }),
+    new Paragraph({ text: "• CI Department Representative leading process improvement and operational efficiency initiatives", bullet: { level: 0 } }),
     new Paragraph({ text: "• Designed Zones Project modernizing material flow training; managed SAP inventory systems", bullet: { level: 0 }, spacing: { after: 120 } })
   );
 

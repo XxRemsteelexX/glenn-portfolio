@@ -42,7 +42,7 @@ KEY PROJECTS (LEAD WITH THESE):
 - AI Homelab Infrastructure: Multi-tier 10Gb AI lab (see HARDWARE section)
 
 CURRENT PROJECTS (IN DEVELOPMENT):
-- OceanEterna: High-performance local RAG system built in C++17. Search engine core indexes 2.45 billion tokens with 0-42ms search latency (avg 12ms), 47 tests at 100% accuracy. Dual LZ4/Zstd compression, 15 REST API endpoints, CPU-only with minimal RAM. Currently building LLM chat interface and MCP tool for terminal-based AI workflows and project knowledge management. Zero external dependencies, single binary, no GPU/Docker/database/cloud required.
+- OceanEterna: High-performance local RAG system built in C++17. Search engine core indexes 2.45 billion tokens with 0-42ms search latency (avg 12ms), 47 tests at near 100% accuracy. Dual LZ4/Zstd compression, 15 REST API endpoints, CPU-only with minimal RAM. Currently building LLM chat interface and MCP tool for terminal-based AI workflows and project knowledge management. Zero external dependencies, single binary, no GPU/Docker/database/cloud required.
 - OE-OS: Distributed AI orchestration platform for private multi-node GPU cluster. Three-tier LLM routing (local Ollama -> cheap API -> Claude Opus) routing ~80% of requests to free local models. Triple-layer RAG memory (BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache). 18 MCP-compatible tools, multi-agent sandbox with 4 temperature-tuned personas at zero API cost. 4,200+ lines of async Python on FastAPI.
 
 OTHER PROJECTS:

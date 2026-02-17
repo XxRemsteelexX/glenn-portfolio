@@ -395,22 +395,13 @@ function OnePageResume() {
             <li>Support data-driven decision making through advanced analytics and predictive modeling</li>
           </ul>
 
-          <div className="job-title">Continuous Improvement Leader & Material Specialist</div>
+          <div className="job-title">Continuous Improvement Leader & Material Flow Specialist</div>
           <div className="company">John Deere, Waterloo Works & Ankeny Works <span className="dates-inline">— 2005-2020, 2021-Present</span></div>
           <ul>
-            <li>Led CI Department as Representative and Trainer, facilitating process improvement frameworks</li>
+            <li>CI Department Representative leading process improvement and operational efficiency initiatives</li>
             <li>Designed and implemented Zones Project, modernizing material flow training systems</li>
             <li>Led departmental CI mapping initiatives improving operational efficiency and reducing cycle times</li>
-            <li>Managed supply chain logistics, vendor relations, and SAP-integrated inventory systems</li>
-          </ul>
-
-          <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
-          <ul>
-            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
-            <li>847+ deep learning experiments across 15+ architectures; 105 3D medical imaging models trained</li>
-            <li>Production healthcare AI achieving 93.8% accuracy with sub-second response</li>
-            <li>Identified trafficking patterns at up to 46.86σ significance from 41,200 missing persons cases</li>
-            <li>Published 20+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
+            <li>Managed supply chain logistics and SAP-integrated inventory systems</li>
           </ul>
         </div>
       </div>
@@ -754,7 +745,7 @@ function DetailedResume() {
           <ul>
             <li>Originally prototyped in Python, rewritten in C++17 for performance — evolved through <strong>4 major versions</strong> with systematic optimization</li>
             <li>Indexes <strong>2.45 billion tokens</strong> across 5M+ chunks with <strong>0-42ms search</strong> (avg 12ms, down from 500ms in v1) — CPU-only, minimal RAM</li>
-            <li>Dual LZ4/Zstd compression, 15 REST API endpoints, 47 tests at 100% accuracy; conversations and files continuously indexed</li>
+            <li>Dual LZ4/Zstd compression, 15 REST API endpoints, 47 tests at near 100% accuracy; conversations and files continuously indexed</li>
             <li>Building LLM chat interface and MCP tool for terminal-based AI workflows and project knowledge management</li>
           </ul>
 
@@ -789,16 +780,16 @@ function DetailedResume() {
             <li>Support data-driven decision making through advanced analytics and predictive modeling</li>
           </ul>
 
-          <div className="job-title">Continuous Improvement Leader & Material Specialist</div>
+          <div className="job-title">Continuous Improvement Leader & Material Flow Specialist</div>
           <div className="company">John Deere, Waterloo Works & Ankeny Works</div>
           <div className="dates">2005-2020, 2021-Present</div>
           <ul>
-            <li>Led CI Department as Representative and Wage CI Trainer, facilitating process improvement frameworks</li>
+            <li>CI Department Representative leading process improvement and operational efficiency initiatives</li>
             <li>Developed comprehensive training curriculum for warehouse personnel, improving onboarding efficiency</li>
             <li>Designed and implemented the Zones Project, modernizing material flow training systems</li>
             <li>Led departmental CI mapping initiatives to improve operational efficiency and reduce cycle times</li>
             <li>Optimized material replenishment processes using bin methodology, reducing operational inefficiencies</li>
-            <li>Managed supply chain logistics, vendor relations, and SAP-integrated inventory management</li>
+            <li>Managed supply chain logistics and SAP-integrated inventory management</li>
             <li>Supported engineering teams in workflow re-splits and cycle time analysis for production optimization</li>
           </ul>
 

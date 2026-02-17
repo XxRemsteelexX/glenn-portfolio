@@ -280,7 +280,7 @@
     },
     {
       "name": "OceanEterna",
-      "description": "High-performance local RAG system rewritten from Python to C++17 for performance. Indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency. 47 tests at 100% accuracy, 15 REST API endpoints, zero per-query costs.",
+      "description": "High-performance local RAG system rewritten from Python to C++17 for performance. Indexes 2.45 billion tokens across 5M+ chunks with 0-42ms search latency. 47 tests at near 100% accuracy, 15 REST API endpoints, zero per-query costs.",
       "technologies": ["C++17", "BM25", "LZ4/Zstd Compression", "Memory-Mapped I/O", "REST API", "Information Retrieval", "RAG"],
       "notable_features": [
         "Evolved through 4 major versions with systematic optimization",
