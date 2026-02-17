@@ -15,7 +15,6 @@ import {
   Github,
   Linkedin,
   Award,
-  Briefcase,
   GraduationCap,
   Code,
   Target,
@@ -310,43 +309,6 @@ export function ResumeSection() {
                       <Badge key={tech} variant="outline" className="text-xs">{tech}</Badge>
                     ))}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          {/* Professional Experience */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <Card className="glass-effect mb-8">
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <Briefcase className="w-5 h-5 mr-2 text-primary" />
-                  Professional Experience
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <h4 className="font-bold text-lg">Freelance Data Science Consultant</h4>
-                    <Badge>Current</Badge>
-                  </div>
-                  <p className="text-primary font-medium mb-2">Thompson Parking and Consultants</p>
-                  <ul className="text-sm text-muted-foreground space-y-1">
-                    <li>• Provide data science and analytics consulting services</li>
-                    <li>• Develop custom analytical solutions and machine learning models</li>
-                    <li>• Support business intelligence and data-driven decision making</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg mb-2">Previous Professional Experience</h4>
-                  <p className="text-primary font-medium">John Deere</p>
-                  <p className="text-sm text-muted-foreground">Applied data science and analytical skills in corporate environment</p>
                 </div>
               </CardContent>
             </Card>
