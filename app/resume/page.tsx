@@ -60,19 +60,6 @@ export default function ResumePage() {
                 <Download className="w-4 h-4 mr-2" />
                 PDF
               </Button>
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={() => downloadFile(
-                  activeVersion === "onepage"
-                    ? "Glenn_Dalbey_Resume_OnePage.docx"
-                    : "Glenn_Dalbey_Resume_Detailed.docx"
-                )}
-                className="hover-lift"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Word
-              </Button>
             </div>
           </div>
         </div>
