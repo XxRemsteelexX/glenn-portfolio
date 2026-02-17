@@ -279,7 +279,7 @@ function OnePageResume() {
           <div className="section-title">TECHNICAL SKILLS</div>
 
           <div className="skills-category">Programming</div>
-          <div className="skills-list">Python (Expert), SQL, TypeScript, JavaScript, R, C++</div>
+          <div className="skills-list">Python, SQL, TypeScript, JavaScript, R, C++</div>
 
           <div className="skills-category">Deep Learning</div>
           <div className="skills-list">PyTorch, TensorFlow, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Geometric Attention</div>
@@ -593,7 +593,7 @@ function DetailedResume() {
           <div className="section-title">TECHNICAL SKILLS</div>
 
           <div className="skills-category">Programming</div>
-          <div className="skills-list">Python (Expert), SQL, TypeScript, JavaScript, R, C++, HTML/CSS</div>
+          <div className="skills-list">Python, SQL, TypeScript, JavaScript, R, C++, HTML/CSS</div>
 
           <div className="skills-category">Deep Learning</div>
           <div className="skills-list">PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention Networks</div>

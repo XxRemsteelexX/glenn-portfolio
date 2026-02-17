@@ -243,7 +243,7 @@ const onePageHTML = `
       <div class="section-title">TECHNICAL SKILLS</div>
 
       <div class="skills-category">Programming</div>
-      <div class="skills-list">Python (Expert), SQL, TypeScript, JavaScript, R, C++</div>
+      <div class="skills-list">Python, SQL, TypeScript, JavaScript, R, C++</div>
 
       <div class="skills-category">Deep Learning</div>
       <div class="skills-list">PyTorch, TensorFlow, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Geometric Attention</div>
@@ -614,7 +614,7 @@ const detailedHTML = `
       <div class="section-title">TECHNICAL SKILLS</div>
 
       <div class="skills-category">Programming</div>
-      <div class="skills-list">Python (Expert), SQL, TypeScript, JavaScript, R, C++, HTML/CSS</div>
+      <div class="skills-list">Python, SQL, TypeScript, JavaScript, R, C++, HTML/CSS</div>
 
       <div class="skills-category">Deep Learning</div>
       <div class="skills-list">PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention Networks</div>
@@ -871,7 +871,7 @@ function createATSWordDoc(isOnePage = false) {
       children: [new TextRun({ text: "TECHNICAL SKILLS", bold: true, size: 24 })],
       spacing: { before: 80, after: 60 },
     }),
-    new Paragraph({ children: [new TextRun({ text: "Programming: ", bold: true }), new TextRun("Python (Expert), SQL, TypeScript, JavaScript, R, C++")] }),
+    new Paragraph({ children: [new TextRun({ text: "Programming: ", bold: true }), new TextRun("Python, SQL, TypeScript, JavaScript, R, C++")] }),
     new Paragraph({ children: [new TextRun({ text: "Deep Learning: ", bold: true }), new TextRun("PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO")] }),
     new Paragraph({ children: [new TextRun({ text: "ML & Data Science: ", bold: true }), new TextRun("scikit-learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Ensemble Methods, Feature Engineering")] }),
     new Paragraph({ children: [new TextRun({ text: "Cloud & Infrastructure: ", bold: true }), new TextRun("AWS (Certified), Multi-GPU Training, Mixed Precision, Docker, Flask, FastAPI")] }),

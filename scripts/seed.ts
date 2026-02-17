@@ -240,7 +240,7 @@ const projects: ProjectData[] = [
 
 const skills: SkillData[] = [
   // Programming Languages
-  { name: "Python", category: "Programming Languages", proficiency: "Expert", yearsExp: 4, featured: true },
+  { name: "Python", category: "Programming Languages", proficiency: "Advanced", yearsExp: 4, featured: true },
   { name: "R", category: "Programming Languages", proficiency: "Intermediate", yearsExp: 2, featured: true },
   { name: "TypeScript", category: "Programming Languages", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "JavaScript", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: true },

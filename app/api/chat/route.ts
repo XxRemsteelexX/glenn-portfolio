@@ -67,7 +67,7 @@ Glenn operates a purpose-built multi-tier AI homelab with 10Gb networking:
 TOP SKILLS:
 - Deep Learning: PyTorch, TensorFlow, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention
 - ML: scikit-learn, XGBoost, LightGBM, CatBoost, ensemble methods, 20-fold cross-validation
-- Programming: Python (expert), SQL, TypeScript, R, C++
+- Programming: Python, SQL, TypeScript, R, C++
 - Infrastructure: Proxmox, pfSense, n8n automation, RAG pipelines, 10Gb networking, multi-GPU training
 - Cloud: AWS (certified), Docker, mixed precision (FP16), test-time augmentation
 - Data: Pandas, NumPy, DICOM/NIfTI medical imaging, advanced feature engineering
