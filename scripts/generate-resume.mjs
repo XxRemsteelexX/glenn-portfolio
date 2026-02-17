@@ -913,12 +913,7 @@ function createATSWordDoc(isOnePage = false) {
     new Paragraph({ children: [new TextRun({ text: "Opportunity Intelligence Assistant", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Agentic AI Market Analysis | Senior Living | 14 Statistical Analyses", italics: true })] }),
     new Paragraph({ text: "• 3-call LLM pipeline directing 22 statistical methods across Census Bureau and CMS public data", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Scored Des Moines market 48.3/100; 622-word executive briefing with citation tags on every claim", bullet: { level: 0 }, spacing: { after: 100 } }),
-
-    new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
-    new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),
-    new Paragraph({ text: "• Dual RTX 5090 training node + 256GB unified memory LLM inference cluster", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Automated active-memory pipeline with n8n, RAG storage, and hot/warm/cold tiering", bullet: { level: 0 }, spacing: { after: 120 } })
+    new Paragraph({ text: "• Scored Des Moines market 48.3/100; 622-word executive briefing with citation tags on every claim", bullet: { level: 0 }, spacing: { after: 120 } })
   );
 
   // Professional Experience - FULL
