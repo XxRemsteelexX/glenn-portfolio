@@ -165,10 +165,7 @@ export function ResumeSection() {
                     Professional Summary
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Data Science professional with <strong>Master's in Data Science and Analytics</strong> and proven expertise in competitive ML.
-                    <strong> Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026 - Top 8% of 1,134 teams) with 847+ experiments across 15+ architectures.
-                    Trained 105 3D medical imaging models and deployed production healthcare AI achieving <strong>93.8% accuracy</strong>.
-                    Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI.
+                    Data Scientist with an MS in Data Science who builds things that actually work. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
                   </p>
                 </div>
               </CardContent>

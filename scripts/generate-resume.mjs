@@ -303,7 +303,7 @@ const onePageHTML = `
     <div class="main-content">
       <div class="main-section-title">PROFESSIONAL SUMMARY</div>
       <div class="compact-summary">
-        Data Scientist with an MS in Data Science who builds things that actually work. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026, Top 8% of 1,134 teams) with 847+ deep learning experiments across 15+ architectures. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
+        Data Scientist with an MS in Data Science who builds things that actually work. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
       </div>
 
       <div class="main-section-title">FEATURED PROJECTS</div>
@@ -684,7 +684,7 @@ const detailedHTML = `
     <div class="main-content">
       <div class="main-section-title">PROFESSIONAL SUMMARY</div>
       <p style="font-size: 11pt; line-height: 1.4; margin-bottom: 16pt;">
-        Data Scientist with an MS in Data Science who builds things that actually work. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026, Top 8% of 1,134 teams) with 847+ deep learning experiments across 15+ architectures. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
+        Data Scientist with an MS in Data Science who builds things that actually work. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
       </p>
 
       <div class="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
@@ -830,9 +830,7 @@ function createATSWordDoc(isOnePage = false) {
     }),
     new Paragraph({
       children: [
-        new TextRun({ text: "Data Scientist with an MS in Data Science who builds things that actually work. " }),
-        new TextRun({ text: "Kaggle Bronze Medalist", bold: true }),
-        new TextRun({ text: " (NFL Big Data Bowl 2026, Top 8% of 1,134 teams) with 847+ deep learning experiments across 15+ architectures. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics." }),
+        new TextRun({ text: "Data Scientist with an MS in Data Science who builds things that actually work. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics." }),
       ],
       spacing: { after: 120 },
     })
@@ -845,7 +843,7 @@ function createATSWordDoc(isOnePage = false) {
       spacing: { before: 80, after: 60 },
     }),
     new Paragraph({ children: [new TextRun({ text: "Programming: ", bold: true }), new TextRun("Python (Expert), SQL, TypeScript, JavaScript, R, C++")] }),
-    new Paragraph({ children: [new TextRun({ text: "Deep Learning: ", bold: true }), new TextRun("PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO, Geometric Attention")] }),
+    new Paragraph({ children: [new TextRun({ text: "Deep Learning: ", bold: true }), new TextRun("PyTorch, TensorFlow/Keras, Spatial-Temporal Transformers, GRU/RNN, 3D CNNs, Perceiver IO")] }),
     new Paragraph({ children: [new TextRun({ text: "ML & Data Science: ", bold: true }), new TextRun("scikit-learn, XGBoost, LightGBM, CatBoost, Pandas, NumPy, Ensemble Methods, Feature Engineering")] }),
     new Paragraph({ children: [new TextRun({ text: "Cloud & Infrastructure: ", bold: true }), new TextRun("AWS (Certified), Multi-GPU Training, Mixed Precision, Docker, Flask, FastAPI")] }),
     new Paragraph({ children: [new TextRun({ text: "Specializations: ", bold: true }), new TextRun("Trajectory Prediction, 3D Medical Imaging, Computer Vision, NLP, Multi-modal AI")], spacing: { after: 120 } })
@@ -881,13 +879,6 @@ function createATSWordDoc(isOnePage = false) {
     new Paragraph({ children: [new TextRun({ text: "Statistical Anomaly Detection for Trafficking & Organized Crime", italics: true })] }),
     new Paragraph({ text: "• Analyzed 41,200 cases across 101 years identifying trafficking corridors at up to 46.86σ significance", bullet: { level: 0 } }),
     new Paragraph({ text: "• Built 7-page interactive Streamlit dashboard with geospatial visualization", bullet: { level: 0 }, spacing: { after: 100 } }),
-
-    new Paragraph({ children: [new TextRun({ text: "OE-OS (In Progress)", bold: true })] }),
-    new Paragraph({ children: [new TextRun({ text: "Distributed AI Orchestration Platform | Python / FastAPI", italics: true })] }),
-    new Paragraph({ text: "• Three-tier LLM routing (local Ollama to cheap API to premium models) routing ~80% of requests to free local models", bullet: { level: 0 } }),
-    new Paragraph({ text: "• Triple-layer RAG memory: BM25 over 5M+ chunks, ChromaDB semantic search, Redis session cache", bullet: { level: 0 } }),
-    new Paragraph({ text: "• 18 MCP-compatible tools and multi-agent sandbox with 4 LLM personas at zero API cost", bullet: { level: 0 } }),
-    new Paragraph({ text: "• 4,200+ lines of async Python on FastAPI for a private multi-node GPU cluster", bullet: { level: 0 }, spacing: { after: 100 } }),
 
     new Paragraph({ children: [new TextRun({ text: "AI Homelab & Active Memory Network", bold: true })] }),
     new Paragraph({ children: [new TextRun({ text: "Multi-Tier AI Infrastructure | 10Gb Network + RAG Pipeline", italics: true })] }),
