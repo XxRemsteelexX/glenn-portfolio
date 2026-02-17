@@ -165,7 +165,7 @@ export function ResumeSection() {
                     Professional Summary
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    Data Scientist with an MS in Data Science who builds things that actually work. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
+                    Data Scientist with an MS in Data Science who builds things that actually work. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why, and extract information that drives better outcomes. My multi-node homelab stack lets me run production applications, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
                   </p>
                 </div>
               </CardContent>
