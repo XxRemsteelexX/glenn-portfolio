@@ -303,7 +303,7 @@ const onePageHTML = `
     <div class="main-content">
       <div class="main-section-title">PROFESSIONAL SUMMARY</div>
       <div class="compact-summary">
-        Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
+        Data Scientist with an MS in Data Science who builds things that actually work. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026, Top 8% of 1,134 teams) with 847+ deep learning experiments across 15+ architectures. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
       </div>
 
       <div class="main-section-title">FEATURED PROJECTS</div>
@@ -684,7 +684,7 @@ const detailedHTML = `
     <div class="main-content">
       <div class="main-section-title">PROFESSIONAL SUMMARY</div>
       <p style="font-size: 11pt; line-height: 1.4; margin-bottom: 16pt;">
-        Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. <strong>Kaggle Bronze Medalist</strong> in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment.
+        Data Scientist with an MS in Data Science who builds things that actually work. <strong>Kaggle Bronze Medalist</strong> (NFL Big Data Bowl 2026, Top 8% of 1,134 teams) with 847+ deep learning experiments across 15+ architectures. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics.
       </p>
 
       <div class="main-section-title">FEATURED DATA SCIENCE PROJECTS</div>
@@ -830,9 +830,9 @@ function createATSWordDoc(isOnePage = false) {
     }),
     new Paragraph({
       children: [
-        new TextRun({ text: "Data Science professional with MS in Data Science and proven expertise in competitive machine learning and deep learning systems. " }),
+        new TextRun({ text: "Data Scientist with an MS in Data Science who builds things that actually work. " }),
         new TextRun({ text: "Kaggle Bronze Medalist", bold: true }),
-        new TextRun({ text: " in NFL Big Data Bowl 2026 (Top 8% of 1,134 teams) with 847+ experiments across 15+ neural network architectures. Trained 105 3D medical imaging models and deployed production healthcare AI achieving 93.8% accuracy. Expert in spatial-temporal modeling, trajectory prediction, ensemble methods, and multi-modal AI. Strong foundation in systematic ML experimentation, advanced feature engineering, and production deployment." }),
+        new TextRun({ text: " (NFL Big Data Bowl 2026, Top 8% of 1,134 teams) with 847+ deep learning experiments across 15+ architectures. I enjoy building and training models on my own multi-GPU homelab, deploying new techniques, and discovering unique ways to solve problems. Whether it's analysis, research, or projections, I dig into how something ticks, figure out why it ticks, and extract information that can be used to better understand future outcomes. That pairs with a constant drive to push my own knowledge of LLMs and deep learning, always learning new techniques and finding ways to improve or create better models. My multi-node homelab stack lets me run and deploy production applications locally or remotely, train models, and run MLflow, all on my own hardware. 20+ projects on GitHub covering deep learning, medical imaging, NLP, computer vision, and analytics." }),
       ],
       spacing: { after: 120 },
     })
