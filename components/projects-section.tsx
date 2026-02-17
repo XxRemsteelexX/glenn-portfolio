@@ -102,6 +102,18 @@ const fallbackProjects: Project[] = [
     status: "in-progress"
   },
   {
+    id: "p14",
+    name: "opportunity-intelligence",
+    description: "AI-powered market analysis assistant for senior living opportunity evaluation. Agentic 3-call LLM pipeline that pulls public data from Census Bureau and CMS Care Compare, runs it through a reusable analytics library of 22 statistical methods, then uses an LLM to direct the analysis and synthesize findings into an executive briefing with full citations. 14 analyses executed across two LLM-directed passes, 622-word briefing with source tags on every claim, total cost 6 cents.",
+    githubUrl: "https://github.com/XxRemsteelexX/opportunity-intelligence",
+    technologies: ["Python", "OpenAI API", "Pandas", "scipy", "scikit-learn", "matplotlib", "Census API", "CMS Data", "Agentic AI", "Statistical Analysis"],
+    featured: true,
+    stars: 0,
+    forks: 0,
+    language: "Python",
+    createdAt: new Date().toISOString()
+  },
+  {
     id: "p5",
     name: "Blue-Zones-Longevity-Analysis",
     description: "Longitudinal statistical analysis of life expectancy trends across Blue Zone countries vs. 88-nation global baseline, 1960-2023. Formal hypothesis testing with bootstrap confidence intervals, GDP-controlled partial correlations, sigma and beta convergence testing, and COVID impact analysis. Live Streamlit dashboard.",
