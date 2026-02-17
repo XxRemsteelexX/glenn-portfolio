@@ -792,18 +792,6 @@ function DetailedResume() {
             <li>Managed supply chain logistics and SAP-integrated inventory management</li>
             <li>Supported engineering teams in workflow re-splits and cycle time analysis for production optimization</li>
           </ul>
-
-          <div className="main-section-title">KEY ACCOMPLISHMENTS</div>
-          <ul>
-            <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
-            <li>Conducted 847+ deep learning experiments across 15+ architectures with systematic hyperparameter optimization</li>
-            <li>Trained 105 3D medical imaging models achieving AUC 0.8624 in ensemble configuration</li>
-            <li>Built and deployed production healthcare AI achieving 93.8% accuracy with sub-second response</li>
-            <li>Discovered smaller models outperform larger on limited medical data (statistically significant: r=-0.42, p&lt;0.01)</li>
-            <li>Analyzed 41,200 missing persons cases identifying trafficking corridors at up to 46.86σ significance</li>
-            <li>Achieved 90.9% ROC AUC on temporal validation for NFL rookie prediction with 97.8% overfitting reduction</li>
-            <li>Published 20+ open-source projects on GitHub with comprehensive documentation</li>
-          </ul>
         </div>
       </div>
     </div>
