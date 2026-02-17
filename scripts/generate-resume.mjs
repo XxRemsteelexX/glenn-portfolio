@@ -354,15 +354,6 @@ const onePageHTML = `
         <li>Led departmental CI mapping initiatives improving operational efficiency and reducing cycle times</li>
         <li>Managed supply chain logistics and SAP-integrated inventory systems</li>
       </ul>
-
-      <div class="main-section-title">KEY ACCOMPLISHMENTS</div>
-      <ul>
-        <li><strong>Kaggle Bronze Medal</strong> - NFL Big Data Bowl 2026 (Top 8% of 1,134 teams)</li>
-        <li>847+ deep learning experiments across 15+ architectures; 105 3D medical imaging models trained</li>
-        <li>Production healthcare AI achieving 93.8% accuracy with sub-second response</li>
-        <li>Identified trafficking patterns at up to 46.86σ significance from 41,200 missing persons cases</li>
-        <li>Published 20+ open-source projects; 97.8% overfitting reduction through feature optimization</li>
-      </ul>
     </div>
   </div>
 </body>
