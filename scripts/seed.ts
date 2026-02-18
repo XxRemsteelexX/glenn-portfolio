@@ -251,8 +251,8 @@ const skills: SkillData[] = [
   { name: "HTML/CSS", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: false },
   
   // AI/ML Frameworks
-  { name: "PyTorch", category: "AI/ML Frameworks", proficiency: "Expert", yearsExp: 3, featured: true },
-  { name: "TensorFlow", category: "AI/ML Frameworks", proficiency: "Expert", yearsExp: 3, featured: true },
+  { name: "PyTorch", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 3, featured: true },
+  { name: "TensorFlow", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 3, featured: true },
   { name: "scikit-learn", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 4, featured: true },
   { name: "XGBoost", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "LightGBM", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
@@ -276,8 +276,8 @@ const skills: SkillData[] = [
   { name: "Weights & Biases", category: "Cloud & Deployment", proficiency: "Advanced", yearsExp: 1, featured: false },
   
   // Data & Analytics
-  { name: "pandas", category: "Data & Analytics", proficiency: "Expert", yearsExp: 4, featured: true },
-  { name: "numpy", category: "Data & Analytics", proficiency: "Expert", yearsExp: 4, featured: false },
+  { name: "pandas", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 4, featured: true },
+  { name: "numpy", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 4, featured: false },
   { name: "Tableau", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 2, featured: true },
   { name: "Data Visualization", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 3, featured: true },
   { name: "Statistical Analysis", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 3, featured: false },

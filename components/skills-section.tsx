@@ -50,8 +50,8 @@ const fallbackSkills: Skill[] = [
   { id: "s8", name: "Java", category: "Programming Languages", proficiency: "Intermediate", yearsExp: 3, featured: false },
   { id: "s9", name: "HTML/CSS", category: "Programming Languages", proficiency: "Advanced", yearsExp: 3, featured: false },
   // AI/ML Frameworks
-  { id: "s10", name: "PyTorch", category: "AI/ML Frameworks", proficiency: "Expert", yearsExp: 3, featured: true },
-  { id: "s11", name: "TensorFlow", category: "AI/ML Frameworks", proficiency: "Expert", yearsExp: 3, featured: true },
+  { id: "s10", name: "PyTorch", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 3, featured: true },
+  { id: "s11", name: "TensorFlow", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 3, featured: true },
   { id: "s12", name: "scikit-learn", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 4, featured: true },
   { id: "s13", name: "XGBoost", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
   { id: "s14", name: "LightGBM", category: "AI/ML Frameworks", proficiency: "Advanced", yearsExp: 2, featured: true },
@@ -73,8 +73,8 @@ const fallbackSkills: Skill[] = [
   { id: "s27", name: "CI/CD", category: "Cloud & Deployment", proficiency: "Intermediate", yearsExp: 1, featured: false },
   { id: "s28", name: "Weights & Biases", category: "Cloud & Deployment", proficiency: "Advanced", yearsExp: 1, featured: false },
   // Data & Analytics
-  { id: "s29", name: "pandas", category: "Data & Analytics", proficiency: "Expert", yearsExp: 4, featured: true },
-  { id: "s30", name: "numpy", category: "Data & Analytics", proficiency: "Expert", yearsExp: 4, featured: false },
+  { id: "s29", name: "pandas", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 4, featured: true },
+  { id: "s30", name: "numpy", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 4, featured: false },
   { id: "s31", name: "Tableau", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 2, featured: true },
   { id: "s32", name: "Data Visualization", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 3, featured: true },
   { id: "s33", name: "Statistical Analysis", category: "Data & Analytics", proficiency: "Advanced", yearsExp: 3, featured: false },
