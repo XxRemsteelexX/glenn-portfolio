@@ -81,7 +81,7 @@ export function AboutSection() {
   ];
 
   const stats = [
-    { label: "Years Experience", value: 4, suffix: "+" },
+    { label: "Years Experience", value: 2, suffix: "+" },
     { label: "Projects Completed", value: 20, suffix: "+" },
     { label: "Technologies Mastered", value: 48, suffix: "" },
     { label: "Production Systems", value: 4, suffix: "" },
